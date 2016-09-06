@@ -1,0 +1,2 @@
+SEO Friendly URLs in Yii2
+http://blog.neattutorials.com/seo-friendly-urls-in-yii2/
