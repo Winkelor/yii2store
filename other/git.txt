@@ -1,8 +1,0 @@
-git clone ssh://winkelor@winkelor.ftp.ukraine.com.ua/home/winkelor/winkelor.com/yii2store
-git pull
-git add .
-git commit -m 'master'
-git push origin master
-git push
-
-Blr;S(30
