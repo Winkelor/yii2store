@@ -1,13 +1,12 @@
 #HTTPS
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP:SSL} !=1 [NC]
+RewriteRule ^(.*)$ https://%{SERVER_NAME}/%{REQUEST_URI}$1 [L,R]
 
 Options +SymLinksIfOwnerMatch
 IndexIgnore */*
 
 #RewriteEngine on
-
 # if a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
