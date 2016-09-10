@@ -43,3 +43,7 @@ phpunit.phar
 /frontend/web/.htaccess
 
 *.htaccess
+frontend/web/.htaccess
+*.htaccess
+backend/web/.htaccess
+*.htaccess
