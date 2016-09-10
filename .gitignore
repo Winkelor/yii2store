@@ -37,3 +37,9 @@ phpunit.phar
 
 # storm
 /.idea
+
+#local
+/backend/web/.htaccess
+/frontend/web/.htaccess
+
+*.htaccess
