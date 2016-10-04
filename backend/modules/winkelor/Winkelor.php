@@ -20,5 +20,10 @@ class Winkelor extends \yii\base\Module
         parent::init();
 
         // custom initialization code goes here
+        $this->modules = [
+           'rbac' => [
+               'class' => 'backend\modules\winkelor\modules\rbac\rbac',
+           ],
+       ];
     }
 }

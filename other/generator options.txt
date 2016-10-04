@@ -1,3 +1,5 @@
 backend\modules\winkelor\Winkelor
 backend\modules\admin\Admin
 backend\modules\admin\modules\catalog\Catalog
+
+backend\modules\winkelor\modules\rbac\rbac
