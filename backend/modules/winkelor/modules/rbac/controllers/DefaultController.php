@@ -2,7 +2,9 @@
 
 namespace backend\modules\winkelor\modules\rbac\controllers;
 
+use yii;
 use yii\web\Controller;
+
 
 /**
  * Default controller for the `rbac` module
@@ -15,6 +17,18 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $isGuest = (Yii::$app->user->isGuest) ? "Гость" : "Не гость";
+
+        $user = false;
+
+        if(!Yii::$app->user->isGuest)
+          $user = Yii::$app->user;
+
+        $data = [
+          'isGuest' => $isGuest,
+          'user'    => $user,
+        ];
+
+        return $this->render('index', $data);
     }
 }
