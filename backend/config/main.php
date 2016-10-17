@@ -56,6 +56,9 @@ return [
             /*'baseUrl' => '/backend/web',*/
             'rules' => $urlrules,
         ],
+        'MyBehavior' => [
+            'class' => 'backend\components\behaviors\MyBehavior',
+        ],
 
     ],
     'params' => $params,
