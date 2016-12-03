@@ -15,4 +15,7 @@
     <p>
       HI111 <?= $user->identity->username ?>!
     </p>
+    <p>
+        <?= $kurwa ?>
+    </p>
 </div>
