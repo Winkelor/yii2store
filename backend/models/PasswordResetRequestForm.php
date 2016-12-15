@@ -1,9 +1,18 @@
 <?php
+<<<<<<< HEAD
 namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
 use common\models\User;
+=======
+# add from frontend
+namespace backend\models;
+
+use Yii;
+use yii\base\Model;
+use backend\models\User;
+>>>>>>> rbac
 
 /**
  * Password reset request form
@@ -23,7 +32,11 @@ class PasswordResetRequestForm extends Model
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'exist',
+<<<<<<< HEAD
                 'targetClass' => '\common\models\User',
+=======
+                'targetClass' => '\backend\models\User',
+>>>>>>> rbac
                 'filter' => ['status' => User::STATUS_ACTIVE],
                 'message' => 'There is no user with such email.'
             ],
@@ -46,7 +59,11 @@ class PasswordResetRequestForm extends Model
         if (!$user) {
             return false;
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> rbac
         if (!User::isPasswordResetTokenValid($user->password_reset_token)) {
             $user->generatePasswordResetToken();
             if (!$user->save()) {

@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD
 
 namespace frontend\models;
+=======
+# add from frontend
+namespace backend\models;
+>>>>>>> rbac
 
 use Yii;
 use yii\base\Model;

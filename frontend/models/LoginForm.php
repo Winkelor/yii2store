@@ -1,12 +1,9 @@
 <?php
-<<<<<<< HEAD
-namespace common\models;
-=======
-namespace backend\models;
->>>>>>> rbac
+namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+
 
 /**
  * Login form

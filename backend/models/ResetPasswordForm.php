@@ -1,9 +1,18 @@
 <?php
+<<<<<<< HEAD
 namespace frontend\models;
 
 use yii\base\Model;
 use yii\base\InvalidParamException;
 use common\models\User;
+=======
+# add from frontend
+namespace backend\models;
+
+use yii\base\Model;
+use yii\base\InvalidParamException;
+use backend\models\User;
+>>>>>>> rbac
 
 /**
  * Password reset form
@@ -13,7 +22,11 @@ class ResetPasswordForm extends Model
     public $password;
 
     /**
+<<<<<<< HEAD
      * @var \common\models\User
+=======
+     * @var \backend\models\User
+>>>>>>> rbac
      */
     private $_user;
 

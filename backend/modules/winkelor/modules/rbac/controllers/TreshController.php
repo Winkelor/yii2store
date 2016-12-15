@@ -54,9 +54,10 @@ class TreshController extends Controller
      */
     public function actionIndex()
     {
-        $isGuest = (Yii::$app->user->isGuest) ? 'Гость' . Yii::$app->MyBehavior->foo(): 'Не гость' . Yii::$app->MyBehavior->foo();
+        $isGuest = (Yii::$app->user->isGuest) ? 'Гость' : 'Не гость';
         $user = (!Yii::$app->user->isGuest) ? Yii::$app->user : false;
-        $data = compact('isGuest', 'user', 'trash');
+        $kurwa = Yii::$app->MyBehavior->foo();
+        $data = compact('isGuest', 'user', 'trash', 'kurwa');
         return $this->render('index', $data);
     }
 

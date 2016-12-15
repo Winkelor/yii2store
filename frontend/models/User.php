@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-namespace common\models;
-=======
-namespace backend\models;
->>>>>>> rbac
+namespace frontend\models;
 
 use Yii;
 use yii\base\NotSupportedException;
@@ -36,11 +32,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-<<<<<<< HEAD
-        return '{{%user}}';
-=======
-        return '{{%user_seller}}';
->>>>>>> rbac
+        return '{{%user_customer}}';
     }
 
     /**
