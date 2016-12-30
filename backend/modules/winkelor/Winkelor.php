@@ -21,8 +21,13 @@ class Winkelor extends \yii\base\Module
 
         // custom initialization code goes here
         $this->modules = [
+          #RBAC 
            'rbac' => [
                'class' => 'backend\modules\winkelor\modules\rbac\rbac',
+           ],
+           #Winkelor admin panel
+           'admin' => [
+               'class' => 'backend\modules\winkelor\modules\admin\admin',
            ],
        ];
     }

@@ -4,7 +4,7 @@ namespace backend\models\admin;
 
 use Yii;
 use yii\base\Model;
-use backend\models\Admin;
+use backend\models\admin\UserAdmin;
 
 /**
  * Password reset request form
@@ -24,8 +24,8 @@ class PasswordResetRequestForm extends Model
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'exist',
-                'targetClass' => '\backend\models\Admin',
-                'filter' => ['status' => Admin::STATUS_ACTIVE],
+                'targetClass' => '\backend\models\admin\UserAdmin',
+                'filter' => ['status' => UserAdmin::STATUS_ACTIVE],
                 'message' => 'There is no user with such email.'
             ],
         ];
@@ -39,8 +39,8 @@ class PasswordResetRequestForm extends Model
     public function sendEmail()
     {
         /* @var $user User */
-        $user = Admin::findOne([
-            'status' => Admin::STATUS_ACTIVE,
+        $user = UserAdmin::findOne([
+            'status' => UserAdmin::STATUS_ACTIVE,
             'email' => $this->email,
         ]);
 
@@ -48,7 +48,7 @@ class PasswordResetRequestForm extends Model
             return false;
         }
 
-        if (!Admin::isPasswordResetTokenValid($user->password_reset_token)) {
+        if (!UserAdmin::isPasswordResetTokenValid($user->password_reset_token)) {
             $user->generatePasswordResetToken();
             if (!$user->save()) {
                 return false;
