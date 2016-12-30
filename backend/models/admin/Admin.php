@@ -1,6 +1,6 @@
 <?php
-# Admin User 
-namespace backend\models;
+# Admin User
+namespace backend\models\admin;
 
 use Yii;
 use yii\base\NotSupportedException;
