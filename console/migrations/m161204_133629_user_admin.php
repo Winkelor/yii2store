@@ -1,5 +1,4 @@
 <?php
-
 use yii\db\Migration;
 
 class m161204_133629_user_admin extends Migration
@@ -24,6 +23,15 @@ class m161204_133629_user_admin extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->insert('user_admin', [
+            'username' => 'AntonBeletsky',
+            'password_hash' => Yii::$app->security->generatePasswordHash('AntonBeletsky'),
+            'auth_key' => Yii::$app->security->generateRandomString(),
+            'email' => 'antonbeletskyeu@gmail.com',
+            'created_at' => '0',
+            'updated_at' => '0',
+        ]);
     }
 
     public function down()
