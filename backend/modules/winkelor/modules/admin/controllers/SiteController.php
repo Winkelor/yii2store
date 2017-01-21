@@ -10,6 +10,7 @@ use backend\models\admin\PasswordResetRequestForm;
 use backend\models\admin\ResetPasswordForm;
 use backend\models\admin\SignupForm;
 use backend\models\admin\ContactForm;
+use backend\models\admin\UserAdmin;
 
 /**
  * Site controller
