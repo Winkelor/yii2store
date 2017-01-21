@@ -12,6 +12,7 @@ use backend\models\admin\SignupForm;
 use backend\models\admin\ContactForm;
 use backend\models\admin\UserAdmin;
 
+
 /**
  * Site controller
  */
@@ -87,7 +88,12 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            $usr = UserAdmin::findByUsername("root@gmail.com");
+            User::setIdentity($usr);
+            #var_dump(Yii::$app->user);
+            #echo "юзер залогинен " . Yii::$app->user->id;
+            #exit;
+            return $this->goHome();
         } else {
             return $this->render('login', [
                 'model' => $model,

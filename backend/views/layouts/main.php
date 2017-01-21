@@ -38,10 +38,12 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Winkelor Admin', 'url' => ['winkelor/admin/default/index']],
     ];
-    if (Yii::$app->user->isGuest) {
+    # if (Yii::$app->user->isGuest) {
+    if(0) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        # var_dump(Yii::$app->user); exit;
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
