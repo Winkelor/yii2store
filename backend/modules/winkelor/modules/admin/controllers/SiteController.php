@@ -88,8 +88,10 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+          return $this->goHome();
+          /*
             #var_dump(Yii::$app->user);
-            Yii::$app->getUser()->login(Yii::$app->user->_identity);
+            #Yii::$app->getUser()->login(Yii::$app->user->_identity);
             echo "<pre>";
             var_dump(
                 Yii::$app->user->_identity
@@ -97,7 +99,7 @@ class SiteController extends Controller
             echo "</pre>";
             echo "юзер залогинен " . Yii::$app->user->id;
             exit;
-
+            */
             return $this->goHome();
         } else {
             return $this->render('login', [
