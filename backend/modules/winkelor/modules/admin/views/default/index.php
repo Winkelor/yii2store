@@ -16,6 +16,6 @@
         <a href="http://yii2store/backend/web/winkelor/admin/site/signup">signup admin</a>
     </p>
     <p>
-        <?= json_encode($this->context); ?>
+        User: <?= $user ?>
     </p>
 </div>

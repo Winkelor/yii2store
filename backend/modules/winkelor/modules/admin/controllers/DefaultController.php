@@ -17,9 +17,8 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $user = Yii::$app->user;
         return $this->render('index', [
-                'user' => $user,
+                'user' => Yii::$app->user->identityClass,
             ]);
     }
 }

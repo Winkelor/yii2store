@@ -56,6 +56,9 @@ class LoginForm extends Model
      */
     public function login()
     {
+        # var_dump(Yii::$app->user);
+        echo Yii::$app->user->identityClass; exit;
+
         if ($this->validate()) {
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
@@ -70,7 +73,7 @@ class LoginForm extends Model
      */
     protected function getUser()
     {
-        if ($this->_user === null) {
+        if ($this->_user == null) {
             $this->_user = UserAdmin::findByUsername($this->username);
         }
 
