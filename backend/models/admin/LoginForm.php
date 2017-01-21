@@ -56,10 +56,14 @@ class LoginForm extends Model
      */
     public function login()
     {
-        # var_dump(Yii::$app->user);
-        echo Yii::$app->user->identityClass; exit;
-
         if ($this->validate()) {
+            # подменить Yii::$app->user
+            # Yii::$app->user->switchIdentity($this->getUser(), 3600);
+            # var_dump($this->getUser()); exit;
+                #var_dump($this->getUser());
+                Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+                var_dump(Yii::$app->user);
+                exit;
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
