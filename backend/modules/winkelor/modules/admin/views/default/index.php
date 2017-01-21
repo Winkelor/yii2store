@@ -10,4 +10,12 @@
         Модуль адміна
         <code><?= __FILE__ ?></code>
     </p>
+    <p>
+
+        <a href="http://yii2store/backend/web/winkelor/admin/site/login">login admin</a>
+        <a href="http://yii2store/backend/web/winkelor/admin/site/signup">signup admin</a>
+    </p>
+    <p>
+        <?= json_encode($this->context); ?>
+    </p>
 </div>

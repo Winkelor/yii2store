@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
     <h1><?= Html::encode($this->title) ?></h1>
-    <p>Регистрация продавца</p>
+    <p>Регистрация админа</p>
     <p>Please fill out the following fields to signup:</p>
 
     <div class="row">

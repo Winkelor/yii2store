@@ -2,7 +2,9 @@
 
 namespace backend\modules\winkelor\modules\admin\controllers;
 
+use Yii;
 use yii\web\Controller;
+
 
 /**
  * Default controller for the `admin` module
@@ -15,6 +17,9 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $user = Yii::$app->user;
+        return $this->render('index', [
+                'user' => $user,
+            ]);
     }
 }
