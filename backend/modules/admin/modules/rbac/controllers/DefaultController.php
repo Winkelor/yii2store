@@ -1,7 +1,7 @@
 <?php
 
 namespace backend\modules\admin\modules\rbac\controllers;
-
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -15,6 +15,14 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        $role = Yii::$app->authManager->createRole('admin');
+        $role->description = 'Админ';
+        Yii::$app->authManager->add($role);
+
+        $role = Yii::$app->authManager->createRole('user');
+        $role->description = 'Юзер';
+        Yii::$app->authManager->add($role);
+
         return $this->render('index');
     }
 }
