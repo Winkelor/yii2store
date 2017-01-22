@@ -25,7 +25,7 @@ class m161204_133629_user_admin extends Migration
         ], $tableOptions);
 
         $this->insert('user_admin', [
-            'username' => 'AntonBeletsky',
+            'username' => 'antonbeletskyeu@gmail.com',
             'password_hash' => Yii::$app->security->generatePasswordHash('AntonBeletsky'),
             'auth_key' => Yii::$app->security->generateRandomString(),
             'email' => 'antonbeletskyeu@gmail.com',
