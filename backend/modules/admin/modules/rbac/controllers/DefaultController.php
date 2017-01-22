@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\modules\admin\modules\catalog\controllers;
+namespace backend\modules\admin\modules\rbac\controllers;
 
 use yii\web\Controller;
 
 /**
- * Default controller for the `catalog` module
+ * Default controller for the `rbac` module
  */
 class DefaultController extends Controller
 {

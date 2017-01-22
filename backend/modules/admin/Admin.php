@@ -22,8 +22,8 @@ class Admin extends \yii\base\Module
 
         // custom initialization code goes here
         $this->modules = [
-            'catalog' => [
-                'class' => 'backend\modules\admin\modules\catalog\Catalog',
+            'rbac' => [
+                'class' => 'backend\modules\admin\modules\rbac\RBAC',
             ],
         ];
 

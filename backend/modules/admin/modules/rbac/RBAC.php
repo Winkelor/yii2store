@@ -1,16 +1,16 @@
 <?php
 
-namespace backend\modules\winkelor\modules\rbac;
+namespace backend\modules\admin\modules\rbac;
 
 /**
  * rbac module definition class
  */
-class rbac extends \yii\base\Module
+class RBAC extends \yii\base\Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'backend\modules\winkelor\modules\rbac\controllers';
+    public $controllerNamespace = 'backend\modules\admin\modules\rbac\controllers';
 
     /**
      * @inheritdoc

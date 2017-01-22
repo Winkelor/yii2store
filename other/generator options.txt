@@ -2,4 +2,5 @@ frontend\modules\winkelor\Winkelor
 frontend\modules\admin\Admin
 frontend\modules\admin\modules\catalog\Catalog
 
-frontend\modules\winkelor\modules\rbac\rbac
+baclend\modules\admin\Admin
+backend\modules\admin\modules\rbac\RBAC
