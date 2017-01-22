@@ -38,8 +38,7 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Winkelor Admin', 'url' => ['winkelor/admin/default/index']],
     ];
-    # if (Yii::$app->user->isGuest) {
-    if(0) {
+    if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
