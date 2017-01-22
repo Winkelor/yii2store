@@ -18,10 +18,6 @@ return [
       'admin' => [
             'class' => 'backend\modules\admin\Admin',
         ],
-      // Winkelor administrator
-      'winkelor' => [
-            'class' => 'backend\modules\winkelor\Winkelor',
-          ],
     ],
     'components' => [
         'request' => [
@@ -56,6 +52,7 @@ return [
             /*'baseUrl' => '/backend/web',*/
             'rules' => $urlrules,
         ],
+        # моя поведінка
         'MyBehavior' => [
             'class' => 'backend\components\behaviors\MyBehavior',
         ],
