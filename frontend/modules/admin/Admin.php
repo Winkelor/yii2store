@@ -4,6 +4,7 @@ namespace frontend\modules\admin;
 
 /**
  * admin module definition class
+ * seller admin
  */
 class Admin extends \yii\base\Module
 {
