@@ -1,5 +1,5 @@
-backend\modules\winkelor\Winkelor
-backend\modules\admin\Admin
-backend\modules\admin\modules\catalog\Catalog
+frontend\modules\winkelor\Winkelor
+frontend\modules\admin\Admin
+frontend\modules\admin\modules\catalog\Catalog
 
-backend\modules\winkelor\modules\rbac\rbac
+frontend\modules\winkelor\modules\rbac\rbac
