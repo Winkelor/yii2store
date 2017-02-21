@@ -38,6 +38,7 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Admin', 'url' => ['/admin']],
         ['label' => 'GUI RBAC', 'url' => ['admin/guirbac']],
+        ['label' => 'RBAC', 'url' => ['/admin/rbac']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
