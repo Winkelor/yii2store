@@ -14,7 +14,7 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-      // admin panel for seller
+      // admin panel for Winkelor
       'admin' => [
             'class' => 'backend\modules\admin\Admin',
         ],
@@ -36,6 +36,15 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+        ],
+        'view' => [
+            'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
+                'basePath' => '@app/themes/basic',
+                'baseUrl' => '@web/themes/basic',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/basic/views',
+                ],
+            ],
         ],
         'user' => [
             'identityClass' => 'backend\models\User',
