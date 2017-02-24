@@ -47,3 +47,5 @@ frontend/web/.htaccess
 *.htaccess
 backend/web/.htaccess
 *.htaccess
+
+/other
