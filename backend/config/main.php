@@ -39,10 +39,10 @@ return [
         ],
         'view' => [
             'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
-                'basePath' => '@app/themes/basic',
-                'baseUrl' => '@web/themes/basic',
+                'basePath' => '@app/themes/adminlte',
+                'baseUrl' => '@web/themes/adminlte',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/basic/views',
+                    '@app/views' => '@app/themes/adminlte/views',
                 ],
             ],
         ],
