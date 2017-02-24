@@ -37,6 +37,16 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'assetManager' => [ /* http://www.yiiframework.com/doc-2.0/guide-structure-assets.html */
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // не опубликовывать комплект
+                    'js' => [
+                        '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',
+                    ]
+                ],
+            ],
+        ],
         'view' => [
             'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
                 'basePath' => '@app/themes/adminlte',

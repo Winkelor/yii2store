@@ -293,6 +293,7 @@ desired effect
         <section class="content">
 
             <!-- Your Page Content Here -->
+            Контент здесь
 
         </section>
         <!-- /.content -->
