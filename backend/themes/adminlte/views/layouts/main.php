@@ -1,3 +1,18 @@
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use backend\assets\AdminLTEAsset;
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use common\widgets\Alert;
+
+AdminLTEAsset::register($this);
+$this->beginPage();
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -10,6 +25,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>AdminLTE 2 | Starter</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <?php /*
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="adminlte/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -23,6 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           apply the skin class to the body tag so the changes take effect.
     -->
     <link rel="stylesheet" href="adminlte/dist/css/skins/skin-blue.min.css">
+    */ ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
