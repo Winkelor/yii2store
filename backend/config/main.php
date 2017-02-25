@@ -37,9 +37,9 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
-        'assetManager' => [
+        /*'assetManager' => [
             'linkAssets' => true,
-        ],
+        ],*/
         'view' => [
             'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
                 'basePath' => '@app/themes/adminlte',

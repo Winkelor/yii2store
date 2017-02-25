@@ -7,10 +7,14 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use yii\helpers\Url;
+use yii\helpers\VarDumper;
 
-//AppAsset::register($this);
+use backend\components\AdminLTE\Widgets\SidebarWidget;
+
+
 $assets = AdminlteAsset::register($this);
-//var_dump($assets->baseUrl); base url before img url
+# VarDumper::dump($assets);
 
 $this->beginPage();
 ?>
@@ -249,6 +253,7 @@ desired effect
             </div>
 
             <!-- search form (Optional) -->
+            <!--
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
                     <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -258,14 +263,19 @@ desired effect
               </span>
                 </div>
             </form>
+            -->
             <!-- /.search form -->
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
-                <li class="header">HEADER</li>
+                <?php /* SidebarWidget::begin(); */ ?>
+                <li><a><span><?=SidebarWidget::widget()?> </span></a></li>
+                <?php /* SidebarWidget::end(); */ ?>
+                <li class="header">Admin</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-                <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                <li class="active"><a href="<?= Url::to(['/admin/default/index']) ?>"><i class="fa fa-link"></i> <span>Admin</span></a></li>
+                <li><a href="<?= Url::to(['/rbac/default/index']) ?>"><i class="fa fa-link"></i> <span>RBAC GUI</span></a></li>
+                <li><a href="<?= Url::to(['/admin/rbac']) ?>"><i class="fa fa-link"></i> <span>RBAC</span></a></li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
                         <span class="pull-right-container">
