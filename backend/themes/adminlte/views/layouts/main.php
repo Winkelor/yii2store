@@ -1,11 +1,14 @@
 <?php
 use backend\assets\AdminlteAsset;
+use backend\assets\AppAsset;
+
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 
+AppAsset::register($this);
 AdminlteAsset::register($this);
 $this->beginPage();
 ?>
@@ -296,7 +299,7 @@ desired effect
         <section class="content">
 
             <!-- Your Page Content Here -->
-            Контент здесь
+            <?= $content ?>
 
         </section>
         <!-- /.content -->
