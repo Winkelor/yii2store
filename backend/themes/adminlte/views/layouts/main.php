@@ -10,7 +10,7 @@ use common\widgets\Alert;
 use yii\helpers\Url;
 use yii\helpers\VarDumper;
 
-use backend\components\AdminLTE\Widgets\SidebarWidget;
+use backend\components\Widgets\AdminLTE\SidebarWidget;
 
 
 $assets = AdminlteAsset::register($this);

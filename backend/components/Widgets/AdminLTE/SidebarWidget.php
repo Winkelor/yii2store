@@ -1,5 +1,5 @@
 <?php
-namespace backend\components\AdminLTE\Widgets;
+namespace backend\components\Widgets\AdminLTE;
 
 use yii\base\Widget;
 use yii\helpers\Html;
