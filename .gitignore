@@ -49,3 +49,4 @@ backend/web/.htaccess
 *.htaccess
 
 /other
+/vendor

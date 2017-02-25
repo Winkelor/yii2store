@@ -7,10 +7,11 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class AdminLTEAsset extends AssetBundle
+class AdminlteAsset extends AssetBundle
 {
     public $basePath = '@webroot/adminlte';
     public $baseUrl = '@web/adminlte';
+
     public $css = [
         /* Bootstrap 3.3.6 */
         'bootstrap/css/bootstrap.min.css',
@@ -24,13 +25,19 @@ class AdminLTEAsset extends AssetBundle
               page. However, you can choose any other skin. Make sure you
               apply the skin class to the body tag so the changes take effect.
         */
-        '/dist/css/skins/skin-blue.min.css',
+        'dist/css/skins/skin-blue.min.css',
     ];
     public $js = [
-
+        /* jQuery 2.2.3 */
+        'plugins/jQuery/jquery-2.2.3.min.js',
+        /* Bootstrap 3.3.6 */
+        'bootstrap/js/bootstrap.min.js',
+        /* AdminLTE App */
+        'dist/js/app.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
 }
