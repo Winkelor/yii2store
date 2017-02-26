@@ -1,7 +1,5 @@
 <?php
 use yii\helpers\Url;
-# use backend\assets\AdminlteAsset;
-# $assets = AdminlteAsset::register($this);
 ?>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">

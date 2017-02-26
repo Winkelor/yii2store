@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+?>
+
 <!-- Main Header -->
 <header class="main-header">
 
