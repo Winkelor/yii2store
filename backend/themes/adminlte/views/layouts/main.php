@@ -10,18 +10,15 @@ $this->beginPage();
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="<?= Yii::$app->charset ?>">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title><?= Html::encode($this->title) ?></title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <?= /* load assets */ Html::csrfMetaTags() ?>
-
     <?php $this->head() ?>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
