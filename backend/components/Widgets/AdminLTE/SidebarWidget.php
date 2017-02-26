@@ -22,3 +22,11 @@ class SidebarWidget extends Widget
         return Html::encode($this->message);
     }
 }
+
+/*
+ EX
+            SidebarWidget::begin();
+            <li><a><span><?=SidebarWidget::widget()?></span></a></li>
+             SidebarWidget::end();
+
+ */
