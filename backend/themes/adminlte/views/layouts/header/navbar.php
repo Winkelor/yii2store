@@ -17,14 +17,14 @@ if (Yii::$app->user->isGuest) {
                 </a>
             </li>";
 } else {
-    $user_bar = "<li>" .
+        $logout_code =
         Html::beginForm(['/site/logout'], 'post')
         . Html::submitButton(
-            'Logout (' . Yii::$app->user->identity->username . ')',
-            ['class' => 'btn btn-block btn-primary btn-lg']
+            'Sign out', /* Yii::$app->user->identity->username */
+            ['class' => 'btn btn-default btn-flat']
         )
-        . Html::endForm()
-        . "</li>";
+        . Html::endForm();
+        // $user_bar =  "<li>" .$logout_code . "</li>";
 }
 ?>
 
@@ -126,17 +126,16 @@ if (Yii::$app->user->isGuest) {
                 </li>
             </ul>
         </li>
+
         <!-- User Account Menu -->
-        <li>
-            <?=$user_bar?>
-        </li>
+        <?php if (!Yii::$app->user->isGuest) { ?>
         <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
                 <img src="<?= $assets->baseUrl ?>/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs"><?= Yii::$app->user->identity->username ?></span>
             </a>
             <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -144,7 +143,7 @@ if (Yii::$app->user->isGuest) {
                     <img src="<?= $assets->baseUrl ?>/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                     <p>
-                        Alexander Pierce - Web Developer
+                        <?= Yii::$app->user->identity->username ?> - Web Developer
                         <small>Member since Nov. 2012</small>
                     </p>
                 </li>
@@ -169,11 +168,18 @@ if (Yii::$app->user->isGuest) {
                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                        <!-- <a href="#" class="btn btn-default btn-flat">Sign out</a> -->
+                        <?=$logout_code?>
                     </div>
                 </li>
             </ul>
         </li>
+        <?php }
+        else {
+            echo $user_bar;
+        }
+        ?>
+
         <!-- Control Sidebar Toggle Button -->
         <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
