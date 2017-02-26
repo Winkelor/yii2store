@@ -250,7 +250,7 @@ desired effect
         <section class="content">
 
             <!-- Your Page Content Here -->
-            base url: <?= $bundle->baseUrl ?>
+            base url: <?= $assets->baseUrl ?>
             <?= $content ?>
 
         </section>
