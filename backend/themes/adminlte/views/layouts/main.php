@@ -1,5 +1,5 @@
 <?php
-use backend\assets\AdminlteAsset;
+use backend\assets\AdminlteAsset as AdminlteAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 $assets = AdminlteAsset::register($this);
