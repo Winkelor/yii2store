@@ -9,11 +9,7 @@ use yii\helpers\Url;
 <li><a href="<?= Url::to(['/gii']) ?>"><i class="fa fa-gg"></i> <span>gii</span></a></li>
 <li><a href="https://almsaeedstudio.com/themes/AdminLTE/"><i class="fa fa-cubes"></i> <span>Admin LTE</span></a></li>
 <li class="treeview">
-    <a href="#"><i class="fa fa-folder"></i> <span>Users</span>
-        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-    </a>
+    <a href="#"><i class="fa fa-folder"></i> <span>Users</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
         <li><a href="#">Account types</a></li>
         <li><a href="#">Admins</a></li>
