@@ -1,7 +1,7 @@
 <?php
 use yii\db\Migration;
 
-class m161204_133629_user_admin extends Migration
+class m170227_134054_user_admin extends Migration
 {
     public function up()
     {
@@ -18,14 +18,17 @@ class m161204_133629_user_admin extends Migration
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
+            'account_type_id' => Schema::TYPE_INTEGER,
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
+
+
         $this->insert('user_admin', [
-            'username' => 'antonbeletskyeu@gmail.com',
+            'username' => 'AntonBeletsky',
             'password_hash' => Yii::$app->security->generatePasswordHash('AntonBeletsky'),
             'auth_key' => Yii::$app->security->generateRandomString(),
             'email' => 'antonbeletskyeu@gmail.com',

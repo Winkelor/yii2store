@@ -1,8 +1,8 @@
 <?php
-# php yii migrate/create user_client
+use yii\db\Schema;
 use yii\db\Migration;
 
-class m160906_112528_user_client extends Migration
+class m170227_134054_user_client extends Migration
 {
     public function up()
     {
@@ -19,16 +19,42 @@ class m160906_112528_user_client extends Migration
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
             'email' => $this->string()->notNull()->unique(),
+            'account_type_id' => Schema::TYPE_INTEGER,
 
-            'is_seller' => $this->smallInteger()->notNull()->defaultValue(0),
+            /*'is_seller' => $this->smallInteger()->notNull()->defaultValue(0), in admin acs */
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->createIndex(
+            'idx_user_client-account_type',
+            '{{%user_client}}',
+            'account_type'
+        );
+
+        $this->addForeignKey(
+            'fk_user_client-account_type',
+            '{{%user_client}}',
+            'account_type_id',
+            'usr_accounts_types',
+            'id',
+            'CASCADE'
+        );
     }
 
     public function down()
     {
+        $this->dropForeignKey(
+            'fk_user_client-account_type',
+            'account_type'
+        );
+
+        $this->dropIndex(
+            'idx_user_client-account_type',
+            'account_type'
+        );
+
         $this->dropTable('{{%user_client}}');
     }
 
