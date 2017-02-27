@@ -2,7 +2,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m170227_134054_user_client extends Migration
+class m170227_134053_user_client extends Migration
 {
     public function up()
     {
