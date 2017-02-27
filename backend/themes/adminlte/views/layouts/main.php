@@ -53,9 +53,9 @@ desired effect
 
 <div class="wrapper">
 
-    <?php echo $this->render('header', ['assets' => $assets, ]); ?>
+    <?php echo $this->render('header/header', ['assets' => $assets, ]); ?>
 
-    <?php echo $this->render('sidebar', ['assets' => $assets, ]); ?>
+    <?php echo $this->render('sidebar/sidebar', ['assets' => $assets, ]); ?>
 
     <?php echo $this->render('contentwrapper', ['assets' => $assets, 'content' => $content, ]); ?>
 

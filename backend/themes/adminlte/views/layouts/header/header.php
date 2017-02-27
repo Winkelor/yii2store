@@ -21,6 +21,6 @@ use yii\bootstrap\NavBar;
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
-        <?php echo $this->render('header/navbar', ['assets' => $assets, ]); ?>
+        <?php echo $this->render('navbar', ['assets' => $assets, ]); ?>
     </nav>
 </header>
