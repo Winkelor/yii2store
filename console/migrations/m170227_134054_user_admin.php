@@ -1,4 +1,5 @@
 <?php
+use yii\db\Schema;
 use yii\db\Migration;
 
 class m170227_134054_user_admin extends Migration
@@ -24,6 +25,21 @@ class m170227_134054_user_admin extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        $this->createIndex(
+            'idx_user_admin_account_type',
+            '{{%user_admin}}',
+            'account_type_id'
+        );
+
+        $this->addForeignKey(
+            'fk_user_admin_account_type',
+            '{{%user_admin}}',
+            'account_type_id',
+            'usr_accounts_types',
+            'id',
+            'CASCADE'
+        );
 
 
 

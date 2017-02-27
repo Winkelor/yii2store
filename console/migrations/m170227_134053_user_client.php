@@ -28,13 +28,13 @@ class m170227_134053_user_client extends Migration
         ], $tableOptions);
 
         $this->createIndex(
-            'idx_user_client-account_type',
+            'idx_user_client_account_type',
             '{{%user_client}}',
-            'account_type'
+            'account_type_id'
         );
 
         $this->addForeignKey(
-            'fk_user_client-account_type',
+            'fk_user_client_account_type',
             '{{%user_client}}',
             'account_type_id',
             'usr_accounts_types',
