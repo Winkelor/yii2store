@@ -55,6 +55,16 @@ class m170227_134054_user_admin extends Migration
 
     public function down()
     {
+        $this->dropForeignKey(
+            'fk_user_admin_account_type',
+            'account_type'
+        );
+
+        $this->dropIndex(
+            'idx_user_admin_account_type',
+            'account_type'
+        );
+
         $this->dropTable('{{%user_admin}}');
     }
 

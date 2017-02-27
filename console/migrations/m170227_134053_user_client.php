@@ -46,12 +46,12 @@ class m170227_134053_user_client extends Migration
     public function down()
     {
         $this->dropForeignKey(
-            'fk_user_client-account_type',
+            'fk_user_client_account_type',
             'account_type'
         );
 
         $this->dropIndex(
-            'idx_user_client-account_type',
+            'idx_user_client_account_type',
             'account_type'
         );
 
