@@ -36,6 +36,7 @@ use yii\helpers\Url;
         <!-- Sidebar Menu -->
 
         <ul class="sidebar-menu">
+            <li class="header">Seller</li>
             <li class="header">Admin</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="<?= Url::to(['/admin/default/index']) ?>"><i class="fa fa-folder"></i> <span>Admin</span></a></li>
