@@ -16,3 +16,4 @@ use yii\helpers\Url;
         <li><a href="#">Clients</a></li>
     </ul>
 </li>
+<li><a href="<?= Url::to(['/admin/shops']) ?>"><i class="fa fa-folder"></i> <span>Shops</span></a></li>
