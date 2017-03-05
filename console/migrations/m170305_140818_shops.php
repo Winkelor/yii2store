@@ -18,7 +18,7 @@ shops
  */
 
 use yii\db\Migration;
-use yii\db\Schema;
+use yii\db\Schema; // http://www.yiiframework.com/doc-2.0/yii-db-schema.html
 
 class m170305_140818_shops extends Migration
 {
@@ -31,10 +31,21 @@ class m170305_140818_shops extends Migration
         }
 
         $this->createTable('{{%shops}}', [
-            'id' => $this->primaryKey(),
+            'id' => Schema::TYPE_BIGPK,
+            'name' => Schema::TYPE_STRING,
+            'short_name' => Schema::TYPE_STRING,
 
-            'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
+            'main_user_id' => Schema::TYPE_INTEGER,
+            'legal_info_id' => Schema::TYPE_INTEGER,
+            'type_id' => Schema::TYPE_INTEGER,
+            'status_id' => Schema::TYPE_INTEGER,
+
+            'shop_config_id' => Schema::TYPE_INTEGER,
+            'shop_seo_config_id' => Schema::TYPE_INTEGER,
+            'shop_commerce_data' => Schema::TYPE_INTEGER,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
         ], $tableOptions);
 
     }
