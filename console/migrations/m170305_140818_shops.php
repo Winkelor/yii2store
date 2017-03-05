@@ -40,9 +40,9 @@ class m170305_140818_shops extends Migration
             'type_id' => Schema::TYPE_INTEGER,
             'status_id' => Schema::TYPE_INTEGER,
 
-            'shop_config_id' => Schema::TYPE_INTEGER,
-            'shop_seo_config_id' => Schema::TYPE_INTEGER,
-            'shop_commerce_data' => Schema::TYPE_INTEGER,
+            'config_id' => Schema::TYPE_INTEGER,
+            'seo_config_id' => Schema::TYPE_INTEGER,
+            'commerce_data' => Schema::TYPE_INTEGER,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
