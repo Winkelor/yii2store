@@ -5,7 +5,7 @@ shops
 -name // ім'я
 -short_name // коротке ім'я
 
--main_user_id // юзер що створив магазин
+-main_user_id // юзер що створив магазин backend user
 -legal_info_id // юридична інформація
 
 -type_id // тип магазину
@@ -16,7 +16,9 @@ shops
 -shop_commerce_data // комерційна інфа магазину
 
  */
+
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_140818_shops extends Migration
 {
