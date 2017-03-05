@@ -41,7 +41,7 @@ class m170305_140818_shops extends Migration
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table
 
             'config_id' => Schema::TYPE_INTEGER, //shops_config_table
-            'seo_config_id' => Schema::TYPE_INTEGER, //shops_seo_table or hust seo table
+            'seo_config_id' => Schema::TYPE_INTEGER, //seo_table data http://ogp.me/
             'commerce_data' => Schema::TYPE_INTEGER,
 
             'created_at' => Schema::TYPE_INTEGER,
