@@ -1,4 +1,5 @@
 <?php
+//ця таблиця описує seo для всіх сторінок
 
 use yii\db\Migration;
 
@@ -6,7 +7,15 @@ class m170305_140901_shops_seo extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGPK,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()

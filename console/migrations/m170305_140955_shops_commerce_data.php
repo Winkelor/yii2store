@@ -1,4 +1,5 @@
 <?php
+//комерційна інформація магазину
 
 use yii\db\Migration;
 
@@ -6,7 +7,15 @@ class m170305_140955_shops_commerce_data extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGPK,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()
