@@ -34,6 +34,9 @@ class m170305_152041_categories extends Migration
             //показувати чи ні
             'is_active' => Schema::TYPE_BOOLEAN,
 
+            //seo на shops_seo
+            'seo_id' => Schema::TYPE_BIGINT,
+
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
         ], $tableOptions);

@@ -13,6 +13,22 @@ class m170305_150040_global_categories extends Migration
         $this->createTable('{{%global_categories}}', [
             'id' => Schema::TYPE_BIGPK,
 
+            'name' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_STRING,
+            'parent_id' => Schema::TYPE_BIGINT,
+            // рівень вкладеності
+            'level_depth' => Schema::TYPE_INTEGER,
+
+            /// img`s path
+            // обложка
+            'cover_img' => Schema::TYPE_STRING,
+            // мініатюра
+            'thumbnail_img' => Schema::TYPE_STRING,
+            // мініатюра меню
+            'thumbnails_img' => Schema::TYPE_STRING,
+
+            //показувати чи ні
+            'is_active' => Schema::TYPE_BOOLEAN,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
