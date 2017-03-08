@@ -17,6 +17,7 @@ class m170305_140955_shops_commerce_data extends Migration
             'name' => Schema::TYPE_STRING,
             'value' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_TEXT,
+            'text' => Schema::TYPE_TEXT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

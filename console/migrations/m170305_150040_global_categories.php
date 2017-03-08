@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//є категорії магазину, а є глобальна, це такі собі шаблони
 class m170305_150040_global_categories extends Migration
 {
     public function up()

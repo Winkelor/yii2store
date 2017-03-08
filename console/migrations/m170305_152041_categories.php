@@ -17,6 +17,22 @@ class m170305_152041_categories extends Migration
             // якщо магазин копіює категорії вінкілор,
             // то його категорія вказує на глобальну
             'global_category_id' => Schema::TYPE_BIGINT,
+            'name' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_STRING,
+            'parent_id' => Schema::TYPE_BIGINT,
+            // рівень вкладеності
+            'level_depth' => Schema::TYPE_INTEGER,
+
+            /// img`s path
+            // обложка
+            'cover_img' => Schema::TYPE_STRING,
+            // мініатюра
+            'thumbnail_img' => Schema::TYPE_STRING,
+            // мініатюра меню
+            'thumbnails_img' => Schema::TYPE_STRING,
+
+            //показувати чи ні
+            'is_active' => Schema::TYPE_BOOLEAN,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
