@@ -1,6 +1,7 @@
 <?php
 //конфігурація магазину
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_140930_shops_config extends Migration
 {
@@ -8,9 +9,13 @@ class m170305_140930_shops_config extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%}}', [
+        $this->createTable('{{%shop_config}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
+
+            'name' => Schema::TYPE_STRING,
+            'value' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_TEXT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

@@ -2,6 +2,7 @@
 //комерційна інформація магазину
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_140955_shops_commerce_data extends Migration
 {
@@ -9,9 +10,13 @@ class m170305_140955_shops_commerce_data extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%}}', [
+        $this->createTable('{{%shops_commerce_data}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
+
+            'name' => Schema::TYPE_STRING,
+            'value' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_TEXT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

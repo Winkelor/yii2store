@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_152112_products extends Migration
 {
@@ -8,7 +9,7 @@ class m170305_152112_products extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%}}', [
+        $this->createTable('{{%products }}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
 

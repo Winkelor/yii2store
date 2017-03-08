@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_152041_categories extends Migration
 {
@@ -8,9 +9,14 @@ class m170305_152041_categories extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%}}', [
+        $this->createTable('{{%categories}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
+
+            // є атегорії вінкілор, а є категорії магазину,
+            // якщо магазин копіює категорії вінкілор,
+            // то його категорія вказує на глобальну
+            'global_category_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
