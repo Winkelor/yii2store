@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//типи атрибутів обробляються движком магазину, тому продавець не може додати їх сам
 class m170305_152144_attributes_types extends Migration
 {
     public function up()
@@ -11,9 +12,13 @@ class m170305_152144_attributes_types extends Migration
 
         $this->createTable('{{%attributes_types}}', [
             'id' => Schema::TYPE_BIGPK,
-//            'shop_id' => Schema::TYPE_BIGPK, // це роблять адміни
             'name' => Schema::TYPE_STRING,
+            'db_type' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
+
+            'parent_id' => Schema::TYPE_BIGINT,
+            // рівень вкладеності
+            'level_depth' => Schema::TYPE_INTEGER,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
