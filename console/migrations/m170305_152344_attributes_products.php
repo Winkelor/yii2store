@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//
 class m170305_152344_attributes_products extends Migration
 {
     public function up()
