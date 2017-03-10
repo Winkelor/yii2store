@@ -18,6 +18,7 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             'product_attribute_id' => Schema::TYPE_BIGPK,
 
             'price' => Schema::TYPE_DECIMAL,
+            'count' => Schema::TYPE_INTEGER,
 
             'is_action' => Schema::TYPE_BOOLEAN,
 
