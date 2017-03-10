@@ -14,7 +14,7 @@ class m170305_152344_attributes_products extends Migration
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
 
-            'category_id' => Schema::TYPE_BIGPK,
+            'product_id' => Schema::TYPE_BIGPK,
             'value' => Schema::TYPE_STRING,
 
             //інформація про товар, кількість кросівок 42 розміру і так далі, може зробити логістичний дескрриптор на товар?

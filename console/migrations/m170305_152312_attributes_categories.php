@@ -15,7 +15,7 @@ class m170305_152312_attributes_categories extends Migration
             'category_id' => Schema::TYPE_BIGPK,
 
             'name' => Schema::TYPE_STRING,
-            //в якому порядку виводяться групи
+            //в якому порядку виводяться атрибути
             'rank' => Schema::TYPE_INTEGER,
 
             'attribute_type_id' => Schema::TYPE_BIGINT, // тип для фільтру ліворуч
