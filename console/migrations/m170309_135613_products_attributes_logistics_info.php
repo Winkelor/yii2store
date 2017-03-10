@@ -10,7 +10,20 @@ class m170309_135613_products_attributes_logistics_info extends Migration
 {
     public function up()
     {
+        $this->createTable('{{%attributes_products}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGPK,
 
+            'product_id' => Schema::TYPE_BIGPK,
+            'product_attribute_id' => Schema::TYPE_BIGPK,
+
+            'price' => Schema::TYPE_DECIMAL,
+
+            'is_action' => Schema::TYPE_BOOLEAN,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()
