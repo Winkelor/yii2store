@@ -20,6 +20,8 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             'price' => Schema::TYPE_DECIMAL,
             'count' => Schema::TYPE_INTEGER,
 
+            // очікується до поставки нп, знятий з продажу і все таке
+            'status_id' =>  Schema::TYPE_INTEGER,
             'is_action' => Schema::TYPE_BOOLEAN,
 
             'created_at' => Schema::TYPE_INTEGER,
