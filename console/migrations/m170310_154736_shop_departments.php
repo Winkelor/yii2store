@@ -3,8 +3,8 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-// це просто вторичні ключі
-class m170310_133403_foreign_keys_for_shops extends Migration
+// відділення магазину, як от велопланета має кілька відділень
+class m170310_154736_shop_departments extends Migration
 {
     public function up()
     {
@@ -13,7 +13,7 @@ class m170310_133403_foreign_keys_for_shops extends Migration
 
     public function down()
     {
-        echo "m170310_133403_foreign_keys_for_shops cannot be reverted.\n";
+        echo "m170310_154736_shop_departments cannot be reverted.\n";
 
         return false;
     }
