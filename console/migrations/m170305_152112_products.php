@@ -31,6 +31,12 @@ class m170305_152112_products extends Migration
             // мініатюра меню
             'thumbnails_img' => Schema::TYPE_STRING,
 
+            //показувати чи ні
+            'is_active' => Schema::TYPE_BOOLEAN,
+
+            //seo на shops_seo
+            'seo_id' => Schema::TYPE_BIGINT,
+
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
         ], $tableOptions);
