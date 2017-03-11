@@ -10,20 +10,6 @@ class m170311_140635_addresses extends Migration
         $this->createTable('{{%addresses}}', [
             'id' => Schema::TYPE_BIGPK,
 
-//            Petrenko Ivan Leonidovych
-//            vul. Shevchenka, bud. 17
-//            m. Bila Tserkva
-//            Kyivs'ka obl.
-//            09117
-//            UKRAINE
-
-//            Name of addressee
-//            Streetname, number, apartment/room
-//            Village/city/town
-//            Raion, Region
-//            Postal code
-//            Country
-
             'name' => Schema::TYPE_STRING,
             'comment' => Schema::TYPE_STRING, // address 2 for reship service
             'phone' => Schema::TYPE_STRING,
@@ -33,7 +19,6 @@ class m170311_140635_addresses extends Migration
             'state' => Schema::TYPE_STRING,
             'index' => Schema::TYPE_STRING,
             'country' => Schema::TYPE_STRING,
-
 
             'description' => Schema::TYPE_STRING, // another info for manegers
 
