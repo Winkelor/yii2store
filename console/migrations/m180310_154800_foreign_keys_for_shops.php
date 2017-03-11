@@ -4,7 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 
 // це просто вторичні ключі
-class m170310_154800_foreign_keys_for_shops extends Migration
+class m180310_154800_foreign_keys_for_shops extends Migration
 {
     public function up()
     {
