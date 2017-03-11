@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+// очікується до поставки нп, знятий з продажу і все таке
 class m170310_222245_product_status extends Migration
 {
     public function up()
