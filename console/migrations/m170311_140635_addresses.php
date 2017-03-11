@@ -10,17 +10,19 @@ class m170311_140635_addresses extends Migration
         $this->createTable('{{%addresses}}', [
             'id' => Schema::TYPE_BIGPK,
 
-            'name' => Schema::TYPE_STRING,
+            'name' => Schema::TYPE_STRING, // Богдан Коваленко
             'comment' => Schema::TYPE_STRING, // address 2 for reship service
-            'phone' => Schema::TYPE_STRING,
-            'street' => Schema::TYPE_STRING,
-            'city' => Schema::TYPE_STRING,
-            'region'  => Schema::TYPE_STRING,
-            'state' => Schema::TYPE_STRING,
-            'post_index' => Schema::TYPE_STRING,
-            'country' => Schema::TYPE_STRING,
+            'phone' => Schema::TYPE_STRING, // 102
+            'street' => Schema::TYPE_STRING, // пр Степана Бандери
+            'build' => Schema::TYPE_STRING, // дім 4A
+            'apartments'  => Schema::TYPE_STRING, // кв 189 (3 під'їзд)
+            'city' => Schema::TYPE_STRING, // Бандероград
+            'region'  => Schema::TYPE_STRING, // Львівська область
+            'state' => Schema::TYPE_STRING, // нема
+            'post_index' => Schema::TYPE_STRING, // 00001
+            'country' => Schema::TYPE_STRING, // Україна
 
-            'description' => Schema::TYPE_STRING, // another info for manegers
+            'description' => Schema::TYPE_STRING, // another info for managers
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
