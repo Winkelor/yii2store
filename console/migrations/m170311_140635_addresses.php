@@ -17,7 +17,7 @@ class m170311_140635_addresses extends Migration
             'city' => Schema::TYPE_STRING,
             'region'  => Schema::TYPE_STRING,
             'state' => Schema::TYPE_STRING,
-            'index' => Schema::TYPE_STRING,
+            'post_index' => Schema::TYPE_STRING,
             'country' => Schema::TYPE_STRING,
 
             'description' => Schema::TYPE_STRING, // another info for manegers
