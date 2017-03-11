@@ -8,7 +8,15 @@ class m170310_154548_product_status extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%product_status}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGPK,
+            'name' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_STRING,
+
+        ], $tableOptions);
     }
 
     public function down()

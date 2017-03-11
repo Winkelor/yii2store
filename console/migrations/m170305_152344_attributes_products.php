@@ -17,6 +17,14 @@ class m170305_152344_attributes_products extends Migration
             'product_id' => Schema::TYPE_BIGPK,
             'value' => Schema::TYPE_STRING,
 
+            /// img`s path для червоних шкарпеток і чоботів 56 розміру
+            // обложка
+            'cover_img' => Schema::TYPE_STRING,
+            // мініатюра
+            'thumbnail_img' => Schema::TYPE_STRING,
+            // мініатюра меню
+            'thumbnails_img' => Schema::TYPE_STRING,
+
             //інформація про товар, кількість кросівок 42 розміру і так далі, може зробити логістичний дескрриптор на товар?
 
             'created_at' => Schema::TYPE_INTEGER,
