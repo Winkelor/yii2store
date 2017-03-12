@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170312_132047_image_info extends Migration
 {
@@ -15,6 +16,7 @@ class m170312_132047_image_info extends Migration
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
 
+            'path' => Schema::TYPE_STRING,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
