@@ -16,6 +16,7 @@ class m170305_152145_attributes_groups extends Migration
             'category_id' => Schema::TYPE_BIGPK,
 
             'name' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_STRING,
             //в якому порядку виводяться групи
             'rank' => Schema::TYPE_INTEGER,
 

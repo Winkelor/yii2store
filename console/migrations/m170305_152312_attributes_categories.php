@@ -15,6 +15,7 @@ class m170305_152312_attributes_categories extends Migration
             'category_id' => Schema::TYPE_BIGPK,
 
             'name' => Schema::TYPE_STRING,
+            'description' => Schema::TYPE_STRING,
             //в якому порядку виводяться атрибути
             'rank' => Schema::TYPE_INTEGER,
 
