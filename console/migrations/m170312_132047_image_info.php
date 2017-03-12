@@ -17,6 +17,7 @@ class m170312_132047_image_info extends Migration
             'description' => Schema::TYPE_STRING,
 
             'path' => Schema::TYPE_STRING,
+            'alternative_path' => Schema::TYPE_STRING, // нп нема пікчі товару, сує якусь стандартну пікчу
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

@@ -18,7 +18,7 @@ class m170312_132021_image_types extends Migration
     {
         $this->createTable('{{%image_types}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
+
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
 

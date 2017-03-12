@@ -19,13 +19,14 @@ class m170305_150040_global_categories extends Migration
             // рівень вкладеності
             'level_depth' => Schema::TYPE_INTEGER,
 
-            /// img`s path
-            // обложка
-            'cover_img' => Schema::TYPE_STRING,
-            // мініатюра
-            'thumbnail_img' => Schema::TYPE_STRING,
-            // мініатюра меню
-            'thumbnails_img' => Schema::TYPE_STRING,
+//            /// img`s path замінити на бюагато-багато з image_info
+//            // обложка
+//            'cover_img' => Schema::TYPE_STRING,
+//            // мініатюра
+//            'thumbnail_img' => Schema::TYPE_STRING,
+//            // мініатюра меню
+//            'thumbnails_img' => Schema::TYPE_STRING,
+
 
             //показувати чи ні
             'is_active' => Schema::TYPE_BOOLEAN,

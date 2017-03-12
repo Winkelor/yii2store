@@ -8,7 +8,7 @@ class m170310_154736_shop_departments extends Migration
 {
     public function up()
     {
-
+        // відділ магазину
     }
 
     public function down()
