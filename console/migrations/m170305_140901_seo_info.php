@@ -4,13 +4,13 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m170305_140901_shops_seo extends Migration
+class m170305_140901_seo_info extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
-        $this->createTable('{{%shops_seo}}', [
+        $this->createTable('{{%seo_info}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
 

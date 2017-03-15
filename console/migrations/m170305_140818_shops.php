@@ -20,8 +20,8 @@ class m170305_140818_shops extends Migration
             'short_name' => Schema::TYPE_STRING,
             'main_user_id' => Schema::TYPE_INTEGER, //backend user
 //            'legal_info_id' => Schema::TYPE_INTEGER, //shops_legal_info table
-//            'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
-//            'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
+            'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
+            'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
 //
 //            'config_id' => Schema::TYPE_INTEGER, //shops_config_table
 //            'seo_config_id' => Schema::TYPE_INTEGER, //seo_table data http://ogp.me/
