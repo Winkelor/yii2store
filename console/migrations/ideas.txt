@@ -1,6 +1,18 @@
 -бонуси за твоари як у спортмастера
 
-- тип магазина (магазин, бизнес, услуга)
++ ListName
++ Name Details
+EX:
 
-+тип магазина
-+статус агазина
++Wishlist
++Wishlist_details
+
++OrderList
++Order_details
+
++Cartlist
++Card_details
+
++Rating_products
+
+
