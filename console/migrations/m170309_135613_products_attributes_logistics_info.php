@@ -12,22 +12,24 @@ class m170309_135613_products_attributes_logistics_info extends Migration
     {
         $this->createTable('{{%products_attributes_logistics_info}}', [
             'id' => Schema::TYPE_BIGPK,
+            // магазин
             'shop_id' => Schema::TYPE_BIGPK,
+            // відділ магазину
             'department_id' => Schema::TYPE_BIGPK, /* optional */
-
+            // товар
             'product_id' => Schema::TYPE_BIGPK,
+            // атрибут товару
             'product_attribute_id' => Schema::TYPE_BIGPK,
-
-            // цена закупки
+            // ціна закупівлі
             'purchase_price' => Schema::TYPE_DECIMAL,
-            // цена продажи кінцева
+            // ціна продажу (кінцева)
             'selling_price'  => Schema::TYPE_DECIMAL,
-
+            // кількість
             'count' => Schema::TYPE_INTEGER,
 
             // очікується до поставки нп, знятий з продажу і все таке
             'status_id' =>  Schema::TYPE_INTEGER,
-
+            //активний чи ні (нашо воно ?)
             'is_action' => Schema::TYPE_BOOLEAN,
 
             'created_at' => Schema::TYPE_INTEGER,
