@@ -13,6 +13,7 @@ class m170309_135613_products_attributes_logistics_info extends Migration
         $this->createTable('{{%products_attributes_logistics_info}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
+            'department_id' => Schema::TYPE_BIGPK, /* optional */
 
             'product_id' => Schema::TYPE_BIGPK,
             'product_attribute_id' => Schema::TYPE_BIGPK,

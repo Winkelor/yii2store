@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+// картинка
 class m170312_132047_image_info extends Migration
 {
     public function up()

@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+// глобальні
 //типи атрибутів обробляються движком магазину, тому продавець не може додати їх сам
 class m170305_152144_attributes_types extends Migration
 {

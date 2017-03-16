@@ -11,7 +11,8 @@ use yii\db\Schema;
 //'thumbnail_img' => Schema::TYPE_STRING,
 //// мініатюра меню
 //'thumbnails_img' => Schema::TYPE_STRING,
-//
+
+// перелік самих типів
 class m170312_132021_image_types extends Migration
 {
     public function up()

@@ -14,6 +14,7 @@ class m170305_140930_shops_config extends Migration
         $this->createTable('{{%shop_config}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
+            'department_id' => Schema::TYPE_BIGPK, /* optional */
 
             'name' => Schema::TYPE_STRING,
             'value' => Schema::TYPE_STRING,

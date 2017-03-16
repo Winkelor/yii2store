@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//контакти
 class m170311_140712_contacts extends Migration
 {
     public function up()
