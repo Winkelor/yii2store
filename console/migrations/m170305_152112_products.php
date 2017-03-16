@@ -26,10 +26,10 @@ class m170305_152112_products extends Migration
 
             // цена %products_attributes_logistics_info, тк на амазаоні різні атрибути - різна ціна
 
-//            // цена закупки
-//            'purchase_price' => Schema::TYPE_DECIMAL,
-//            // цена продажи кінцева
-//            'selling_price'  => Schema::TYPE_DECIMAL,
+            // цена закупки (базова , копіюєтьс в атрибут при створенні)
+            'purchase_price' => Schema::TYPE_DECIMAL,
+            // цена продажи кінцева (базова , копіюєтьс в атрибут при створенні)
+            'selling_price'  => Schema::TYPE_DECIMAL,
 
             // img is many to many
 
