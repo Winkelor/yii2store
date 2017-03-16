@@ -18,7 +18,11 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             'product_id' => Schema::TYPE_BIGPK,
             'product_attribute_id' => Schema::TYPE_BIGPK,
 
-            'price' => Schema::TYPE_DECIMAL,
+            // цена закупки
+            'purchase_price' => Schema::TYPE_DECIMAL,
+            // цена продажи кінцева
+            'selling_price'  => Schema::TYPE_DECIMAL,
+
             'count' => Schema::TYPE_INTEGER,
 
             // очікується до поставки нп, знятий з продажу і все таке

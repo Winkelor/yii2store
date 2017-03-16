@@ -24,10 +24,12 @@ class m170305_152112_products extends Migration
             //великий опис
             'description' => Schema::TYPE_STRING,
 
-            // цена закупки
-            'purchase_price' => Schema::TYPE_DECIMAL,
-            // цена продажи кінцева
-            'selling_price'  => Schema::TYPE_DECIMAL,
+            // цена %products_attributes_logistics_info, тк на амазаоні різні атрибути - різна ціна
+
+//            // цена закупки
+//            'purchase_price' => Schema::TYPE_DECIMAL,
+//            // цена продажи кінцева
+//            'selling_price'  => Schema::TYPE_DECIMAL,
 
             // img is many to many
 
