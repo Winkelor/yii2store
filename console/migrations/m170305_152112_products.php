@@ -23,13 +23,12 @@ class m170305_152112_products extends Migration
             //великий опис
             'description' => Schema::TYPE_STRING,
 
-//            /// img`s path замінити на бюагато-багато з image_info
-//            // обложка
-//            'cover_img' => Schema::TYPE_STRING,
-//            // мініатюра
-//            'thumbnail_img' => Schema::TYPE_STRING,
-//            // мініатюра меню
-//            'thumbnails_img' => Schema::TYPE_STRING,
+            // цена закупки
+            'purchase_price' => Schema::TYPE_DECIMAL,
+            // цена продажи кінцева
+            'selling_price'  => Schema::TYPE_DECIMAL,
+
+            // img is many to many
 
             //показувати чи ні
             'is_active' => Schema::TYPE_BOOLEAN,

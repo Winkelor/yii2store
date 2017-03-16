@@ -17,13 +17,7 @@ class m170305_152344_attributes_products extends Migration
             'product_id' => Schema::TYPE_BIGPK,
             'value' => Schema::TYPE_STRING,
 
-//            /// img`s path замінити на бюагато-багато з image_info
-//            // обложка
-//            'cover_img' => Schema::TYPE_STRING,
-//            // мініатюра
-//            'thumbnail_img' => Schema::TYPE_STRING,
-//            // мініатюра меню
-//            'thumbnails_img' => Schema::TYPE_STRING,
+            // img is many to many
 
             //інформація про товар, кількість кросівок 42 розміру і так далі, може зробити логістичний дескрриптор на товар?
 

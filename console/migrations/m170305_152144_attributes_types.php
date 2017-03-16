@@ -16,9 +16,6 @@ class m170305_152144_attributes_types extends Migration
             'db_type' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
 
-            'parent_id' => Schema::TYPE_BIGINT,
-            // рівень вкладеності
-            'level_depth' => Schema::TYPE_INTEGER,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
