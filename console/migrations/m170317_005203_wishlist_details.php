@@ -1,6 +1,8 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
+
 
 class m170317_005203_wishlist_details extends Migration
 {

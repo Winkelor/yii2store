@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170317_005141_cart extends Migration
 {

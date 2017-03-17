@@ -4,6 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 
 //групи атрибутів ця таблиця потрібна для групування атрибутів, нп ширина і довжинаа екрану в групі екран
+//це групування використовується для виводу інфи
 class m170305_152145_attributes_groups extends Migration
 {
     public function up()
