@@ -22,10 +22,13 @@ class m170305_140818_shops extends Migration
 //            'legal_info_id' => Schema::TYPE_INTEGER, //shops_legal_info table
             'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
-//
-//            'config_id' => Schema::TYPE_INTEGER, //shops_config_table
+
+            // адреса і контакт головні
+            'address_id' => Schema::TYPE_INTEGER,
+            'contact_id' => Schema::TYPE_INTEGER,
+
 //            'seo_config_id' => Schema::TYPE_INTEGER, //seo_table data http://ogp.me/
-//            'commerce_data' => Schema::TYPE_INTEGER,
+
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
         ], $tableOptions);

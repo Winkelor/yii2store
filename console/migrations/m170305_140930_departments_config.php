@@ -1,19 +1,18 @@
 <?php
-//конфігурація магазину
 use yii\db\Migration;
 use yii\db\Schema;
 
-//основна валюта ?
-class m170305_140930_shops_config extends Migration
+//налаштування департаменту
+class m170305_140930_departments_config extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
-        $this->createTable('{{%shop_config}}', [
+        $this->createTable('{{%departments_config}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGPK,
-            //'department_id' => Schema::TYPE_BIGPK, /* optional */ у депртамента окремі налаштування
+            'department_id' => Schema::TYPE_BIGPK,
 
             'name' => Schema::TYPE_STRING,
             'value' => Schema::TYPE_STRING,
@@ -26,7 +25,7 @@ class m170305_140930_shops_config extends Migration
 
     public function down()
     {
-        echo "m170305_140930_shops_config cannot be reverted.\n";
+        echo "m170305_140930_departments_config cannot be reverted.\n";
 
         return false;
     }
