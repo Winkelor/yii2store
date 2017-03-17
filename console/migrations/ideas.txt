@@ -1,18 +1,23 @@
 -бонуси за твоари як у спортмастера
-
-+ ListName
-+ Name Details
-EX:
-
-+Wishlist
-+Wishlist_details
-
-+OrderList
-+Order_details
-
-+Cartlist
-+Card_details
-
 +Rating_products
+
+ 'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
+  товарів є купа атрибутів і замовлення має описувати їх усі.
+  В замовленні товару має буи перелік атрибутів
+  це багато до багато
+
+  +order_details_attributes
+  -id
+  -
+
+
+  !!!!!!!!!!!!
+  цю купу атрибутів може закинуть в лоігстику?
+
+  розыбратись
+  -атрибути
+  -групи
+  -логістика
+  -замовлення
 
 

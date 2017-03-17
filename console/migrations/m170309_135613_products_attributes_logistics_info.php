@@ -19,7 +19,7 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             // товар
             'product_id' => Schema::TYPE_BIGPK,
             // атрибут товару
-            'product_attribute_id' => Schema::TYPE_BIGPK,
+            'product_attribute_id' => Schema::TYPE_BIGPK, // замінити на групу
             // ціна закупівлі
             'purchase_price' => Schema::TYPE_DECIMAL,
             // ціна продажу (кінцева)
