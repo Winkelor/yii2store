@@ -18,6 +18,8 @@ class m170317_005212_orders_details extends Migration
             'product_id' => Schema::TYPE_BIGPK,
             // атрибут товару (логістики)
             'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
+            //група атрибутів
+            'attributes_products_group' => Schema::TYPE_BIGPK,
             // ціна для покупця
             'price' => Schema::TYPE_DECIMAL,
             // кількість
