@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170317_130207_order_statuses extends Migration
 {
