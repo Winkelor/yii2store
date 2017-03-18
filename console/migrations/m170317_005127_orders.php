@@ -7,7 +7,35 @@ class m170317_005127_orders extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%orders}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGPK,
+            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            // сума цін товарів замовлення
+            'total_price' => Schema::TYPE_DECIMAL,
+            'currency_id' => Schema::TYPE_BIGPK, /* валюта закріплюється, що  б при зміні валюти не було збою*/
+
+            // коментар до замовлення
+            'comment' =>Schema::TYPE_STRING,
+            //покупець
+            'user_client_id' => Schema::TYPE_BIGPK,
+
+            //shipping info
+            //address
+            'address_id' => Schema::TYPE_BIGPK,
+            //contact
+            'contact_id' => Schema::TYPE_BIGPK,
+            //track info
+            'post_tracker' => Schema::TYPE_STRING,
+
+            // статус замовлення
+            'status_id' => Schema::TYPE_BIGPK, /* в работе, доставлен, отменен итд */
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()
