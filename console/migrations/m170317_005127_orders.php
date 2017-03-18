@@ -25,12 +25,7 @@ class m170317_005127_orders extends Migration
             'user_client_id' => Schema::TYPE_BIGPK,
 
 //            //shipping info
-//            //address
-//            'address_id' => Schema::TYPE_BIGPK,
-//            //contact
-//            'contact_id' => Schema::TYPE_BIGPK,
-//            //track info
-//            'post_tracker' => Schema::TYPE_STRING,
+            'shipping_info_id' => Schema::TYPE_BIGINT,
 
             // статус замовлення
             'status_id' => Schema::TYPE_BIGPK, /* в работе, доставлен, отменен итд */

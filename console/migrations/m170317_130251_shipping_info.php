@@ -7,7 +7,26 @@ class m170317_130251_shipping_info extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%shipping_info}}', [
+            'id' => Schema::TYPE_BIGPK,
+            // трекер відслідковування
+            'post_tracker' => Schema::TYPE_STRING,
+            //дата відправлення замовлення
+            'date_start' => Schema::TYPE_DATETIME,
+            // дата приходу до клієнта
+            'date_end' => Schema::TYPE_DATETIME,
+            // статус
+            'status_id' => Schema::TYPE_BIGPK, /* в работе, доставлен, отменен итд */
+            //адрес доставки
+            'address_id' => Schema::TYPE_BIGPK,
+            //контакт доставки
+            'contact_id' => Schema::TYPE_BIGPK,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()
