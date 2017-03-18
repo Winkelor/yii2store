@@ -10,9 +10,9 @@ class m170312_132047_image_info extends Migration
     {
         $this->createTable('{{%image_info}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
             // обложка, мініатюра, мініатюра меню, мобільна, тощо
-            'image_type' => Schema::TYPE_BIGPK,
+            'image_type' => Schema::TYPE_BIGINT,
 
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,

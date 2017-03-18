@@ -12,8 +12,8 @@ class m170305_140901_seo_info extends Migration
 
         $this->createTable('{{%seo_info}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            //'department_id' => Schema::TYPE_BIGPK, /* optional */ сео одне на весь маг
+            'shop_id' => Schema::TYPE_BIGINT,
+            //'department_id' => Schema::TYPE_BIGINT, /* optional */ сео одне на весь маг
 
             'meta_header' => Schema::TYPE_STRING,
             'meta_description' => Schema::TYPE_STRING,

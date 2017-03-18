@@ -18,11 +18,11 @@ class m170317_130251_shipping_info extends Migration
             // дата приходу до клієнта
             'date_end' => Schema::TYPE_DATETIME,
             // статус
-            'status_id' => Schema::TYPE_BIGPK, /* в работе, доставлен, отменен итд */
+            'status_id' => Schema::TYPE_BIGINT, /* в работе, доставлен, отменен итд */
             //адрес доставки
-            'address_id' => Schema::TYPE_BIGPK,
+            'address_id' => Schema::TYPE_BIGINT,
             //контакт доставки
-            'contact_id' => Schema::TYPE_BIGPK,
+            'contact_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

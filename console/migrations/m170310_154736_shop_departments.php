@@ -16,7 +16,7 @@ class m170310_154736_shop_departments extends Migration
 
         $this->createTable('{{%shops_departments}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
             'name' => Schema::TYPE_STRING,
             'short_name' => Schema::TYPE_STRING,
             'main_user_id' => Schema::TYPE_INTEGER, //backend user

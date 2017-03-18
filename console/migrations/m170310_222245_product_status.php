@@ -10,9 +10,9 @@ class m170310_222245_product_status extends Migration
     {
         $this->createTable('{{%product_status}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
-            'product_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
+            'product_id' => Schema::TYPE_BIGINT,
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
 

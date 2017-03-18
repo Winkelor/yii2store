@@ -10,17 +10,17 @@ class m170317_005223_cart_details extends Migration
         $this->createTable('{{%cart_details}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
             // відділ магазину
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
             // товар
-            'product_id' => Schema::TYPE_BIGPK,
+            'product_id' => Schema::TYPE_BIGINT,
             // атрибут товару (логістики)
-            'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
+            'products_attributes_logistics_info' => Schema::TYPE_BIGINT,
             //група атрибутів
-            'attributes_products_group' => Schema::TYPE_BIGPK,
+            'attributes_products_group' => Schema::TYPE_BIGINT,
 
-            'cart_id'=> Schema::TYPE_BIGPK,
+            'cart_id'=> Schema::TYPE_BIGINT,
             // кількість
             'count' => Schema::TYPE_INTEGER,
             //статус

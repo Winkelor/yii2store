@@ -9,9 +9,9 @@ class m170312_142952_image_info_global_categories extends Migration
     {
         $this->createTable('{{%image_info_global_categories}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'image_info_id' => Schema::TYPE_BIGPK,
-            'global_categories_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
+            'image_info_id' => Schema::TYPE_BIGINT,
+            'global_categories_id' => Schema::TYPE_BIGINT,
 
 
             'created_at' => Schema::TYPE_INTEGER,

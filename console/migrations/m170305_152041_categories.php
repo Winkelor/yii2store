@@ -11,7 +11,7 @@ class m170305_152041_categories extends Migration
 
         $this->createTable('{{%categories}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
 
             // є атегорії вінкілор, а є категорії магазину,
             // якщо магазин копіює категорії вінкілор,

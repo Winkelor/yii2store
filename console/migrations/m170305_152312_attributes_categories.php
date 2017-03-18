@@ -11,8 +11,8 @@ class m170305_152312_attributes_categories extends Migration
 
         $this->createTable('{{%attributes_categories}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'category_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
+            'category_id' => Schema::TYPE_BIGINT,
 
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,

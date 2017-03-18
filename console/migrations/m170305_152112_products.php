@@ -11,8 +11,8 @@ class m170305_152112_products extends Migration
 
         $this->createTable('{{%products }}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'shop_id' => Schema::TYPE_BIGINT,
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
 
             'category_id' => Schema::TYPE_STRING,
 

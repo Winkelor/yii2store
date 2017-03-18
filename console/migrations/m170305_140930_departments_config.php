@@ -11,8 +11,8 @@ class m170305_140930_departments_config extends Migration
 
         $this->createTable('{{%departments_config}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'department_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
+            'department_id' => Schema::TYPE_BIGINT,
 
             'name' => Schema::TYPE_STRING,
             'value' => Schema::TYPE_STRING,

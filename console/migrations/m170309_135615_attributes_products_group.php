@@ -12,15 +12,15 @@ class m170309_135615_attributes_products_group extends Migration
 
         $this->createTable('{{%attributes_products_group}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'shop_id' => Schema::TYPE_BIGINT,
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
 
-            'product_id' => Schema::TYPE_BIGPK, //ex 1
-            'products_attributes_logistics_inf_id' => Schema::TYPE_BIGPK, //ex 1  1 1
-            'attributes_products_id' => Schema::TYPE_BIGPK, //ex 1 2 3
+            'product_id' => Schema::TYPE_BIGINT, //ex 1
+            'products_attributes_logistics_inf_id' => Schema::TYPE_BIGINT, //ex 1  1 1
+            'attributes_products_id' => Schema::TYPE_BIGINT, //ex 1 2 3
 
             // додаткова інфа
-            'attributes_categories_id' => Schema::TYPE_BIGPK,
+            'attributes_categories_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

@@ -12,10 +12,10 @@ class m170305_152344_attributes_products extends Migration
 
         $this->createTable('{{%attributes_products}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'shop_id' => Schema::TYPE_BIGINT,
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
 
-            'product_id' => Schema::TYPE_BIGPK,
+            'product_id' => Schema::TYPE_BIGINT,
             'value' => Schema::TYPE_STRING,
 
             // img is many to many

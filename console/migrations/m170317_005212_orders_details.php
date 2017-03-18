@@ -11,21 +11,21 @@ class m170317_005212_orders_details extends Migration
         $this->createTable('{{%orders_details}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
             // відділ магазину
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
             // товар
-            'product_id' => Schema::TYPE_BIGPK,
+            'product_id' => Schema::TYPE_BIGINT,
             // атрибут товару (логістики)
-            'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
+            'products_attributes_logistics_info' => Schema::TYPE_BIGINT,
             //група атрибутів
-            'attributes_products_group' => Schema::TYPE_BIGPK,
+            'attributes_products_group' => Schema::TYPE_BIGINT,
 
-            'order_id'=> Schema::TYPE_BIGPK,
+            'order_id'=> Schema::TYPE_BIGINT,
 
             // ціна для покупця (закріплен)
             'price' => Schema::TYPE_DECIMAL,
-            'currency_id' => Schema::TYPE_BIGPK, /* валюта закріплюється, що  б при зміні валюти не було збою*/
+            'currency_id' => Schema::TYPE_BIGINT, /* валюта закріплюється, що  б при зміні валюти не було збою*/
             // кількість
             'count' => Schema::TYPE_INTEGER,
             //статус

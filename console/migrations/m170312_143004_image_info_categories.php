@@ -9,9 +9,9 @@ class m170312_143004_image_info_categories extends Migration
     {
         $this->createTable('{{%image_info_categories}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
-            'image_info_id' => Schema::TYPE_BIGPK,
-            'categories_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
+            'image_info_id' => Schema::TYPE_BIGINT,
+            'categories_id' => Schema::TYPE_BIGINT,
 
 
             'created_at' => Schema::TYPE_INTEGER,

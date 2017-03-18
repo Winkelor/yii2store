@@ -13,9 +13,9 @@ class m170305_140955_shops_commerce_data extends Migration
 
         $this->createTable('{{%shops_commerce_data}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGPK,
+            'shop_id' => Schema::TYPE_BIGINT,
             // буває так шо кожен департамент - окрема юр особа
-            'department_id' => Schema::TYPE_BIGPK, /* optional */
+            'department_id' => Schema::TYPE_BIGINT, /* optional */
 
             'name' => Schema::TYPE_STRING,
             'value' => Schema::TYPE_STRING,
