@@ -8,7 +8,7 @@ class m170317_005203_wishlist_details extends Migration
 {
     public function up()
     {
-        $this->createTable('{{%_details}}', [
+        $this->createTable('{{%wishlist_details}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин
             'shop_id' => Schema::TYPE_BIGPK,
@@ -20,12 +20,11 @@ class m170317_005203_wishlist_details extends Migration
             'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
             //група атрибутів
             'attributes_products_group' => Schema::TYPE_BIGPK,
-            // ціна для покупця
-            'price' => Schema::TYPE_DECIMAL,
+
+            'wishlist_id'=> Schema::TYPE_BIGPK,
+
             // кількість
             'count' => Schema::TYPE_INTEGER,
-            //статус
-            'status_id' =>  Schema::TYPE_INTEGER,
 
             //покупець
             'user_client_id' => Schema::TYPE_INTEGER,

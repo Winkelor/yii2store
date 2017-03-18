@@ -7,7 +7,7 @@ class m170317_005223_cart_details extends Migration
 {
     public function up()
     {
-        $this->createTable('{{%_details}}', [
+        $this->createTable('{{%cart_details}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин
             'shop_id' => Schema::TYPE_BIGPK,
@@ -19,8 +19,8 @@ class m170317_005223_cart_details extends Migration
             'products_attributes_logistics_info' => Schema::TYPE_BIGPK,
             //група атрибутів
             'attributes_products_group' => Schema::TYPE_BIGPK,
-            // ціна для покупця
-            'price' => Schema::TYPE_DECIMAL,
+
+            'cart_id'=> Schema::TYPE_BIGPK,
             // кількість
             'count' => Schema::TYPE_INTEGER,
             //статус
