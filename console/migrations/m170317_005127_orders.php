@@ -11,6 +11,8 @@ class m170317_005127_orders extends Migration
 
         $this->createTable('{{%orders}}', [
             'id' => Schema::TYPE_BIGPK,
+            //ід користувача ORDER # 305-9848180-5927520
+            'order_user_id' => Schema::TYPE_STRING,
             'shop_id' => Schema::TYPE_BIGPK,
             'department_id' => Schema::TYPE_BIGPK, /* optional */
             // сума цін товарів замовлення
@@ -18,17 +20,17 @@ class m170317_005127_orders extends Migration
             'currency_id' => Schema::TYPE_BIGPK, /* валюта закріплюється, що  б при зміні валюти не було збою*/
 
             // коментар до замовлення
-            'comment' =>Schema::TYPE_STRING,
+            'comment' => Schema::TYPE_STRING,
             //покупець
             'user_client_id' => Schema::TYPE_BIGPK,
 
-            //shipping info
-            //address
-            'address_id' => Schema::TYPE_BIGPK,
-            //contact
-            'contact_id' => Schema::TYPE_BIGPK,
-            //track info
-            'post_tracker' => Schema::TYPE_STRING,
+//            //shipping info
+//            //address
+//            'address_id' => Schema::TYPE_BIGPK,
+//            //contact
+//            'contact_id' => Schema::TYPE_BIGPK,
+//            //track info
+//            'post_tracker' => Schema::TYPE_STRING,
 
             // статус замовлення
             'status_id' => Schema::TYPE_BIGPK, /* в работе, доставлен, отменен итд */
