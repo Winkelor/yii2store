@@ -18,7 +18,6 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             'department_id' => Schema::TYPE_BIGINT, /* optional */
             // товар
             'product_id' => Schema::TYPE_BIGINT,
-
             //атрибути в багато багато attributes_products_group}
 
             // ціна закупівлі
