@@ -6,4 +6,5 @@
 -id
 -products_attributes_logistics_info
 -attributes_products
-
+===
+langs
