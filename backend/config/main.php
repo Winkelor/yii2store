@@ -39,26 +39,26 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                '*' => [
+                '*' => [ // * за все відповідає
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/messages',
                     'sourceLanguage' => 'en-US',
-                    'fileMap' => [
-                        'user' => 'user.php',
-                        //'app' => 'app.php',
-                        //'app/error' => 'error.php',
+                    'fileMap' => [ // дивно
+//                        'app' => 'app.php',
+//                        'app/error' => 'error.php',
+//                        'user' => 'user.php',
                       ],
                 ],
-                'user' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@app/messages',
-                    'sourceLanguage' => 'en-US',
-                    'fileMap' => [
-                        'user' => 'user.php',
-                        //'app' => 'app.php',
-                        //'app/error' => 'error.php',
-                    ],
-                ],
+//                'user' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@app/messages',
+//                    'sourceLanguage' => 'en-US',
+//                    'fileMap' => [
+//                        'user' => 'user.php',
+//                        //'app' => 'app.php',
+//                        //'app/error' => 'error.php',
+//                    ],
+//                ],
             ],
         ],
         /*'assetManager' => [
