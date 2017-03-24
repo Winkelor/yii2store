@@ -1,6 +1,6 @@
 <?php
 /**
- * Translation map for en-US
+ * Translation map for ru-RU
  */
 return [
     'welcome' => 'welcome',
