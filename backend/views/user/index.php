@@ -6,7 +6,10 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+echo  'lang: ' .  \Yii::$app->language = 'ru-RU';
+
 $this->title = Yii::t('user', 'Users');
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">

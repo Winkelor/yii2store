@@ -39,13 +39,24 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                'user*' => [
+                '*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => 'backend/messages',
+                    'basePath' => '@app/messages',
                     'sourceLanguage' => 'en-US',
                     'fileMap' => [
-                        'app' => 'app.php',
-                        'app/error' => 'error.php',
+                        'user' => 'user.php',
+                        //'app' => 'app.php',
+                        //'app/error' => 'error.php',
+                      ],
+                ],
+                'user' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'user' => 'user.php',
+                        //'app' => 'app.php',
+                        //'app/error' => 'error.php',
                     ],
                 ],
             ],
