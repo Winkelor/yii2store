@@ -37,6 +37,19 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => 'backend/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
         /*'assetManager' => [
             'linkAssets' => true,
         ],*/
