@@ -39,7 +39,7 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                'app*' => [
+                'user*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => 'backend/messages',
                     'sourceLanguage' => 'en-US',
