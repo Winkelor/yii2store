@@ -1,10 +1,6 @@
 -бонуси за твоари як у спортмастера
 +Rating_products
 
-//для опису повного товару
-+attributes_products_group
--id
--products_attributes_logistics_info
--attributes_products
-===
 langs
+
+
