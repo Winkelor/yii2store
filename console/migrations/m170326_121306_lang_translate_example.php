@@ -12,7 +12,7 @@ use yii\db\Schema;
 -поле_продукту3
  */
 
-
+// https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html
 //замість example може бути будь яка таблиця
 
 class m170326_121306_lang_translate_example extends Migration

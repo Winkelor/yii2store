@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 // https://msdn.microsoft.com/ru-ru/library/ee825488(v=cs.20).aspx
+//https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html
 // (cultures)
 class m170326_121012_languages extends Migration
 {
