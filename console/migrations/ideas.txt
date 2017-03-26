@@ -2,5 +2,40 @@
 +Rating_products
 
 langs
+http://www.nationsonline.org/oneworld/country_code_list.htm
+http://www.infoplease.com/countries.html
+http://kirste.userpage.fu-berlin.de/diverse/doc/ISO_3166.html
+
+https://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx
+
+
+Table of Language Culture Names, Codes, and ISO Values Method [C++]
+https://technet.microsoft.com/it-it/sysinternals/ee825488
+
+php yii migrate/create countries (for langs and shop (в какой стране работает магазин))  http://www.nationsonline.org/oneworld/country_code_list.htm
+-id
+-name
+-iso
+
+php yii migrate/create languages  https://msdn.microsoft.com/en-us/library/ms533052(v=vs.85).aspx
+-id
+-name
+-iso
+
+php yii migrate/create lang_translate_<table_name>
+-id
+-<tablename> (наверное надо сделать разные тьаблици все таки)
+-name
+-value
+-lang_id
+-country_id
+-shop_id
+
+
+php yii migrate/create lang_translate_product
+php yii migrate/create lang_translate_categories
+
+
+
 
 
