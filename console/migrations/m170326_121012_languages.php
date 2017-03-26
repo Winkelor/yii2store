@@ -17,7 +17,7 @@ class m170326_121012_languages extends Migration
             //'country_id' => Schema::TYPE_STRING, // якщот реба різні країни, то це сама мова або en_us або en_uk
 
             'name' => Schema::TYPE_STRING,
-            'iso_639' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
+            'iso_639_code' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
