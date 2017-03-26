@@ -12,6 +12,10 @@ class m170326_121012_languages extends Migration
 
         $this->createTable('{{%languages}}', [
             'id' => Schema::TYPE_BIGPK,
+
+            //сам код мови буде відповідати за одну мову в різних країнах en-US en-UK
+            //'country_id' => Schema::TYPE_STRING, // якщот реба різні країни, то це сама мова або en_us або en_uk
+
             'name' => Schema::TYPE_STRING,
             'iso_639' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
 
