@@ -8,6 +8,17 @@ class m170326_121012_languages extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
+        $this->createTable('{{%languages}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'name' => Schema::TYPE_STRING,
+            'iso_639' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
+
 
     }
 

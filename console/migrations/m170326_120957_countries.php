@@ -3,6 +3,7 @@
 // https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 // 3166 http://kirste.userpage.fu-berlin.de/diverse/doc/ISO_3166.html
 // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
+// https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html
 
 
 use yii\db\Migration;

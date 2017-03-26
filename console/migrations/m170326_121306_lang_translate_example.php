@@ -12,10 +12,28 @@ use yii\db\Schema;
 -поле_продукту3
  */
 
+
+//замість example може бути будь яка таблиця
+
 class m170326_121306_lang_translate_example extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
+        $this->createTable('{{%lang_translate_example}}', [
+            'id' => Schema::TYPE_BIGPK,
+
+            'language_id' => Schema::TYPE_STRING,
+            'country_id' => Schema::TYPE_STRING,
+
+            'column_mame1' => Schema::TYPE_STRING,
+            'column_mame2' => Schema::TYPE_STRING,
+            'column_mame3' => Schema::TYPE_STRING,
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
 
     }
 
