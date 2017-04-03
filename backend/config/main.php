@@ -100,8 +100,12 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             /*'baseUrl' => '/backend/web',*/
-            'rules' => $urlrules,
+            'rules' => [
+                // your rules go here
+
+            ],
         ],
+
         # моя поведінка
         'MyBehavior' => [
             'class' => 'backend\components\behaviors\MyBehavior',
