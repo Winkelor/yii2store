@@ -105,13 +105,13 @@ return [
                 // Yii2 by Examples, p65
                 [
                     // Lang rule
-                    'name' => 'lang',
-                    'pattern' => '<lang:\w+>/<controller>/<action>',
+                    'name' => 'culture',
+                    'pattern' => '<culture:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                 ],
                 [
                     // Culture
-                    'name' => 'culture',
+                    'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                 ],
