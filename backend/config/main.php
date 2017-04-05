@@ -109,6 +109,8 @@ return [
                     'name' => 'culture',
                     'pattern' => '<culture:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
+                    'defaults' => ['culture' => 'en-US'],
+                    //'suffix' => '.html',
                 ],
                 [
                     // Culture
@@ -116,6 +118,8 @@ return [
                     'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
+                    'defaults' => ['lang' => 'en', 'country' => 'US'],
+                    //'suffix' => '.html',
                 ],
 //                [
 //                    'name' => 'JAR',
