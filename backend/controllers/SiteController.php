@@ -74,13 +74,13 @@ class SiteController extends Controller
         //$lang = Yii::$app->request->get('lang', 'en');
         //Yii::$app->language = $lang;
 
-        $fuck = Yii::$app->request->get('fuck', 'fuck');
-        $fuckfuck = Yii::$app->request->get('fuckfuck', '1');
+        $fuck = Yii::$app->request->get('lang', 'fuck');
+        $fuckfuck = Yii::$app->request->get('country', '1');
 
 
         return $this->render('index', [
-            'fuck' => $fuck,
-            'fuckfuck' => $fuckfuck
+            'lang' => $fuck,
+            'country' => $fuckfuck
         ]);
     }
 

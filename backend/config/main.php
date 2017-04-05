@@ -110,11 +110,16 @@ return [
                     'route' => '<controller>/<action>',
                 ],
                 [
-                    // fuckrule rule
-                    'name' => 'omg',
-                    'pattern' => '<fuck:\w+>/<fuckfuck:\d+>/<controller>/<action>',
+                    // Culture
+                    'name' => 'culture',
+                    'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                 ],
+//                [
+//                    'name' => 'JAR',
+//                    'pattern' => '<lang:\w+>-JAROSLAW_Z_POLSKI-<country:\w+>/<controller>/<action>',
+//                    'route' => '<controller>/<action>',
+//                ],
             ],
         ],
 
