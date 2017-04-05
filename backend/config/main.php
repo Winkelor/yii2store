@@ -102,7 +102,19 @@ return [
             /*'baseUrl' => '/backend/web',*/
             'rules' => [
                 // your rules go here
-
+                // Yii2 by Examples, p65
+                [
+                    // Lang rule
+                    'name' => 'lang',
+                    'pattern' => '<lang:\w+>/<controller>/<action>',
+                    'route' => '<controller>/<action>',
+                ],
+                [
+                    // fuckrule rule
+                    'name' => 'omg',
+                    'pattern' => '<fuck:\w+>/<fuckfuck:\d+>/<controller>/<action>',
+                    'route' => '<controller>/<action>',
+                ],
             ],
         ],
 
