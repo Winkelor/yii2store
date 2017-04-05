@@ -8,7 +8,7 @@ $this->title = 'My Yii Application';
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
-        <h1>Lang: <?php /*echo Yii::$app->language */ ?></h1>
+        <h1>Lang_app: <?php echo Yii::$app->language ?></h1>
         <h1>lang: <?php echo $lang; ?></h1>
         <h1>country: <?php echo $country; ?></h1>
 

@@ -70,17 +70,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        // if missing, value will be 'en'
-        //$lang = Yii::$app->request->get('lang', 'en');
-        //Yii::$app->language = $lang;
+        $lang = Yii::$app->request->get('lang', 'en');
+        $country = Yii::$app->request->get('country', 'US');
 
-        $fuck = Yii::$app->request->get('lang', 'fuck');
-        $fuckfuck = Yii::$app->request->get('country', '1');
+        // if missing, value will be 'en'
+        Yii::$app->language = $lang;
 
 
         return $this->render('index', [
-            'lang' => $fuck,
-            'country' => $fuckfuck
+            'lang' => $lang,
+            'country' => $country
         ]);
     }
 
