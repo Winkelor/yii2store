@@ -72,6 +72,7 @@ class SiteController extends Controller
     {
         $lang = Yii::$app->request->get('lang', 'en');
         $country = Yii::$app->request->get('country', 'US');
+        $culture = "{$lang}-{$country}";
 
         // if missing, value will be 'en'
         Yii::$app->language = $lang;

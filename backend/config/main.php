@@ -105,12 +105,14 @@ return [
                 // Yii2 by Examples, p65
                 [
                     // Lang rule
+                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                     'name' => 'culture',
                     'pattern' => '<culture:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                 ],
                 [
                     // Culture
+                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                     'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
