@@ -23,6 +23,6 @@ use yii\helpers\Url;
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Managers</span></a></li>
 <li><a href="<?= Url::base() . '/' . "uk-UA" . '/site/index' ?>"><i class="fa fa-folder"></i> <span>LALAKA</span></a></li>
 <li><a href="<?= Url::toRoute(['/site/index', 'lang' => 'uk', 'country' => 'ua']) ?>"><i class="fa fa-folder"></i> <span>Site</span></a></li>
-<li><a href="<?= Url::toRoute(['/site1/index', 'lang' => 'uk', 'country' => 'ua']) ?>"><i class="fa fa-folder"></i> <span>Site</span></a></li>
+<li><a href="<?= Url::toRoute(['/lolka', 'lang' => 'uk', 'country' => 'ua']) ?>"><i class="fa fa-folder"></i> <span>Site</span></a></li>
 
 
