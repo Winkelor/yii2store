@@ -3,15 +3,6 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-/*
-+переклад_продуктів
--ід
--мова_ід
--поле_продукту1
--поле_продукту2
--поле_продукту3
- */
-
 // https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html
 //замість example може бути будь яка таблиця
 
@@ -24,13 +15,9 @@ class m170326_121306_lang_translate_example extends Migration
         $this->createTable('{{%lang_translate_example}}', [
             'id' => Schema::TYPE_BIGPK,
 
-            'language_id' => Schema::TYPE_STRING, // якщот реба різні країни, то це сама мова або en_us або en_uk
-            'key' => Schema::TYPE_STRING, // замість купи полів
-            'value' => Schema::TYPE_STRING,
-
-//            'column_mame1' => Schema::TYPE_STRING,
-//            'column_mame2' => Schema::TYPE_STRING,
-//            'column_mame3' => Schema::TYPE_STRING,
+            'language_id' => Schema::TYPE_STRING, // ід мови
+            'key' => Schema::TYPE_STRING, // слово на en-US, product
+            'value' => Schema::TYPE_STRING, // місцевий переклад, товар
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
