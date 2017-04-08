@@ -25,10 +25,12 @@ class m170326_121306_lang_translate_example extends Migration
             'id' => Schema::TYPE_BIGPK,
 
             'language_id' => Schema::TYPE_STRING, // якщот реба різні країни, то це сама мова або en_us або en_uk
+            'key' => Schema::TYPE_STRING, // замість купи полів
+            'value' => Schema::TYPE_STRING,
 
-            'column_mame1' => Schema::TYPE_STRING,
-            'column_mame2' => Schema::TYPE_STRING,
-            'column_mame3' => Schema::TYPE_STRING,
+//            'column_mame1' => Schema::TYPE_STRING,
+//            'column_mame2' => Schema::TYPE_STRING,
+//            'column_mame3' => Schema::TYPE_STRING,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
