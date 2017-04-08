@@ -76,6 +76,10 @@ class SiteController extends Controller
 
         Yii::$app->language = $culture;
 
+//        $culture = explode("-", Yii::$app->language);
+//        $lang = $culture[0];
+//        $country = $culture[1];
+
         return $this->render('index', [
             'lang' => $lang,
             'country' => $country
