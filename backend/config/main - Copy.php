@@ -14,24 +14,24 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-      // admin panel for Winkelor
-      'admin' => [
+        // admin panel for Winkelor
+        'admin' => [
             'class' => 'backend\modules\admin\Admin',
         ],
         # RBAC GUI
-      'rbac' => [
+        'rbac' => [
             'class' => 'githubjeka\rbac\Module',
             'as access' => [ // if you need to set access
-            'class' => 'yii\filters\AccessControl',
-            'rules' => [
-               [
-                   'allow' => true,
-                   'roles' => ['@'] // all auth users
-               ],
-             ]
+                'class' => 'yii\filters\AccessControl',
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'] // all auth users
+                    ],
+                ]
             ]
-          ],
-       # RBAC
+        ],
+        # RBAC
     ],
     'components' => [
         'request' => [
@@ -47,7 +47,7 @@ return [
 //                        'app' => 'app.php',
 //                        'app/error' => 'error.php',
 //                        'user' => 'user.php',
-                      ],
+                    ],
                 ],
 //                'user' => [
 //                    'class' => 'yii\i18n\PhpMessageSource',
