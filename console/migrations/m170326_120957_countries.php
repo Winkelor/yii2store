@@ -9,17 +9,26 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+// https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx
+// https://uk.wikipedia.org/wiki/ISO_3166-1
 class m170326_120957_countries extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
+// ISO Code	ISO Short	ISO Long	UN Code
+
         $this->createTable('{{%countries}}', [
             'id' => Schema::TYPE_BIGPK,
             'en_name' => Schema::TYPE_STRING, // Ukraine
             'native_name' => Schema::TYPE_STRING, // Україна
-            'iso_3166-1_code' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
+            'iso_code'    => Schema::TYPE_STRING, // https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx
+            'iso_short'   => Schema::TYPE_STRING, // https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx
+            'iso_long'    => Schema::TYPE_STRING, // https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx
+            'un_code'     => Schema::TYPE_STRING, // https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx
+
+            'iso_3166-1_code' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt https://uk.wikipedia.org/wiki/ISO_3166-1
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

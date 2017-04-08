@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
+// https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
 // using en-US for default
 class m170408_161022_cultures extends Migration
 {
