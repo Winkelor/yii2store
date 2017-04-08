@@ -103,17 +103,17 @@ return [
             'rules' => [
                 // your rules go here
                 // Yii2 by Examples, p65
+//                [
+//                    // Culture
+//                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
+//                    'name' => 'culture',
+//                    'pattern' => '<culture:\w+>/<controller>/<action>',
+//                    'route' => '<controller>/<action>',
+//                    'defaults' => ['culture' => 'en-US'],
+//                    //'suffix' => '.html',
+//                ],
                 [
                     // Lang rule
-                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
-                    'name' => 'culture',
-                    'pattern' => '<culture:\w+>/<controller>/<action>',
-                    'route' => '<controller>/<action>',
-                    'defaults' => ['culture' => 'en-US'],
-                    //'suffix' => '.html',
-                ],
-                [
-                    // Culture
                     // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                     'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
@@ -121,11 +121,6 @@ return [
                     'defaults' => ['lang' => 'en', 'country' => 'US'],
                     //'suffix' => '.html',
                 ],
-//                [
-//                    'name' => 'JAR',
-//                    'pattern' => '<lang:\w+>-JAROSLAW_Z_POLSKI-<country:\w+>/<controller>/<action>',
-//                    'route' => '<controller>/<action>',
-//                ],
             ],
         ],
 
