@@ -1,12 +1,29 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
+//https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
+// using en-US for default
 class m170408_161022_cultures extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
 
+        $this->createTable('{{%cultures}}', [
+            'id' => Schema::TYPE_BIGPK,
+            'language_culture_name' => Schema::TYPE_STRING, // en-CA
+            'display_ame' => Schema::TYPE_STRING,           // English - Canada
+            'culture_code' => Schema::TYPE_STRING,          // 0x1009
+            'ISO_639x_value' => Schema::TYPE_STRING,        // ENC
+
+            'language_is' => Schema::TYPE_STRING,           // ???
+            'country_id' => Schema::TYPE_STRING,            // ???
+
+            'created_at' => Schema::TYPE_INTEGER,
+            'updated_at' => Schema::TYPE_INTEGER,
+        ], $tableOptions);
     }
 
     public function down()

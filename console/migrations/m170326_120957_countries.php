@@ -17,7 +17,8 @@ class m170326_120957_countries extends Migration
 
         $this->createTable('{{%countries}}', [
             'id' => Schema::TYPE_BIGPK,
-            'name' => Schema::TYPE_STRING,
+            'en_name' => Schema::TYPE_STRING, // Ukraine
+            'native_name' => Schema::TYPE_STRING, // Україна
             'iso_3166-1_code' => Schema::TYPE_STRING, // ftp://ftp.fu-berlin.de/doc/iso/iso3166-countrycodes.txt
 
             'created_at' => Schema::TYPE_INTEGER,
