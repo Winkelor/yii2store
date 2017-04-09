@@ -3,6 +3,10 @@ use backend\assets\AdminlteAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+$lang = Yii::$app->request->get('lang');
+$country = Yii::$app->request->get('country');
+
+Yii::$app->language = "{$lang}-{$country}";
 
 $assets = AdminlteAsset::register($this);
 $this->beginPage();

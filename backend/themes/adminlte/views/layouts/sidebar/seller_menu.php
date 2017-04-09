@@ -1,7 +1,5 @@
 <?php
 use yii\helpers\Url;
-$lang = Yii::$app->request->get('lang');
-$country = Yii::$app->request->get('country');
 
 ?>
 <li class="header">Seller</li>
@@ -25,6 +23,10 @@ $country = Yii::$app->request->get('country');
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Analytics</span></a></li>
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Managers</span></a></li>
 <?php /*  срань: <li><a href="<?= Url::base() . '/' . "uk-UA" . '/site/index' ?>"><i class="fa fa-folder"></i> <span>LALAKA</span></a></li> */ ?>
-<li><a href="<?= Url::toRoute(['/site/index', 'lang' => $lang, 'country' => $country]) ?>"><i class="fa fa-folder"></i> <span>Site <?= Yii::$app->language ?></span></a></li>
+<li><a href="<?= Url::toRoute([
+        '/site/index',
+        'lang' => Yii::$app->request->get('lang'),
+        'country' => Yii::$app->request->get('country'),
+    ]) ?>"><i class="fa fa-folder"></i> <span>Site <?= Yii::$app->language ?></span></a></li>
 
 
