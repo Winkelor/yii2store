@@ -4,6 +4,7 @@
 use yii\db\Migration;
 use yii\db\Schema; // http://www.yiiframework.com/doc-2.0/yii-db-schema.html
 
+//типи магазинів
 class m170305_140815_shop_types extends Migration
 {
     public function up()

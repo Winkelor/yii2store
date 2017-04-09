@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//основна валюта ?
+// налаштування магазину ,основна валюта ?
 class m170305_140930_shops_config extends Migration
 {
     public function up()

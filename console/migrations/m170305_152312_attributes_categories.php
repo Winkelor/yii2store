@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 use yii\db\Schema;
-
+// атрибути категорії , сокет, колір
 class m170305_152312_attributes_categories extends Migration
 {
     public function up()

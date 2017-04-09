@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 use yii\db\Schema;
-
+// товари , але є і інші таблиці для даних товару
 class m170305_152112_products extends Migration
 {
     public function up()

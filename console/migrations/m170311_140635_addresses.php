@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+// адреси
 class m170311_140635_addresses extends Migration
 {
     public function up()

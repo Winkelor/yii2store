@@ -2,7 +2,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//налаштування департаменту
+//налаштування департаменту (відділу магазину)
 class m170305_140930_departments_config extends Migration
 {
     public function up()

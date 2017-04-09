@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//
+//атрибути товару, 1135-1, червони
 class m170305_152344_attributes_products extends Migration
 {
     public function up()

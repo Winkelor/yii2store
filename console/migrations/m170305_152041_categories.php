@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//категорії товарів
 class m170305_152041_categories extends Migration
 {
     public function up()

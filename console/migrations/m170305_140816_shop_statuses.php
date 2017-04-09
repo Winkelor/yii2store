@@ -4,6 +4,7 @@
 use yii\db\Migration;
 use yii\db\Schema; // http://www.yiiframework.com/doc-2.0/yii-db-schema.html
 
+// статуси магазину
 class m170305_140816_shop_statuses extends Migration
 {
     public function up()

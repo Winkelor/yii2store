@@ -2,6 +2,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
+//таблиця покупця
 class m170227_134053_user_client extends Migration
 {
     public function up()

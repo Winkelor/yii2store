@@ -2,6 +2,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
+// типи акаутів
 class m170227_134052_usr_accounts_types extends Migration
 {
     public function up()

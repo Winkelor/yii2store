@@ -3,7 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-
+//статус товару
 class m170310_222245_product_status extends Migration
 {
     public function up()

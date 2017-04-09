@@ -2,6 +2,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
+// таблиця менеджера
 class m170227_134054_user_admin extends Migration
 {
     public function up()
