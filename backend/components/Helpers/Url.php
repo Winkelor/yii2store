@@ -17,8 +17,8 @@ class Url extends BaseUrl
     // Перевантаження toRoute для мультмовності
     public static function toRoute($route, $scheme = false)
     {
-        $lang = Yii::$app->request->get('lang', 'en');
-        $country = Yii::$app->request->get('country', 'US');
+        $lang = Yii::$app->request->get('lang');
+        $country = Yii::$app->request->get('country');
 
         $route['lang'] = $lang;
         $route['country'] = $country;

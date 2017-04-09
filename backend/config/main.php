@@ -103,14 +103,27 @@ return [
             'rules' => [
                 // your rules go here
                 // Yii2 by Examples, p65
+                // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                 [
                     // Lang rule
-                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
+                    // головне правило
                     'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                     //'defaults' => ['lang' => 'en', 'country' => 'US'], // если стоит это, то потом оно не попадает в ссылки почему-то О_О
                     //'suffix' => '.html',
+                ],
+                [
+                    // якщо є модулі
+                    'name' => 'lang_country_module',
+                    'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
+                    'route' => '<module>/<controller>/<action>',
+                ],
+                [
+                    //якщо вказаний тільки модуль
+                    'name' => 'lang_country_module_only',
+                    'pattern' => '<lang:\w+>-<country:\w+>/<module>',
+                    'route' => '<module>/default/index',
                 ],
 //                [
 //                    // Culture

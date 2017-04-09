@@ -1,5 +1,6 @@
 <?php
-use yii\helpers\Url;
+//use yii\helpers\Url;
+use backend\components\Helpers\Url;
 
 ?>
 <li class="header">Seller</li>
@@ -29,4 +30,6 @@ use yii\helpers\Url;
         'country' => Yii::$app->request->get('country'),
     ]) ?>"><i class="fa fa-folder"></i> <span>Site <?= Yii::$app->language ?></span></a></li>
 
+<li><a href="<?= Url::toRoute(['/site/index'])?>"><i class="fa fa-folder"></i> <span>My Helper Site <?= Yii::$app->language ?></span></a></li>
+<li><a href="<?= Url::toRoute(['/admin/index']) ?>"><i class="fa fa-folder"></i> <span>Kurwa </span></a></li>
 

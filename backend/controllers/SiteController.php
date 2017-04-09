@@ -70,18 +70,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $lang = Yii::$app->request->get('lang');
-        $country = Yii::$app->request->get('country');
-        $culture = "{$lang}-{$country}";
-        Yii::$app->language = $culture;
+//        $lang = Yii::$app->request->get('lang');
+//        $country = Yii::$app->request->get('country');
+//        $culture = "{$lang}-{$country}";
+//        Yii::$app->language = $culture;
 
 //        $culture = explode("-", Yii::$app->language);
 //        $lang = $culture[0];
 //        $country = $culture[1];
 
         return $this->render('index', [
-            'lang' => $lang,
-            'country' => $country,
+//            'lang' => $lang,
+//            'country' => $country,
         ]);
     }
 
