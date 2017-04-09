@@ -31,5 +31,5 @@ use backend\components\Helpers\Url;
     ]) ?>"><i class="fa fa-folder"></i> <span>Site <?= Yii::$app->language ?></span></a></li>
 
 <li><a href="<?= Url::toRoute(['/site/index'])?>"><i class="fa fa-folder"></i> <span>My Helper Site <?= Yii::$app->language ?></span></a></li>
-<li><a href="<?= Url::toRoute(['/admin/index']) ?>"><i class="fa fa-folder"></i> <span>Kurwa </span></a></li>
+<li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Kurwa </span></a></li>
 
