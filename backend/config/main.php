@@ -123,7 +123,7 @@ return [
                     //якщо вказаний тільки модуль
                     'name' => 'lang_country_module_only',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>',
-                    'route' => '<module>/default/index',
+                    'route' => '<module>',
                 ],
 //                [
 //                    // Culture
