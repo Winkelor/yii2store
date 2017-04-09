@@ -82,7 +82,7 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'lang' => $lang,
-            'country' => $country . 1,
+            'country' => $country,
         ]);
     }
 
