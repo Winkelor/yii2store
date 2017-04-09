@@ -1,8 +1,8 @@
 <?php
 use yii\helpers\Url;
-$culture = explode("-", Yii::$app->language);
-$lang = $culture[0];
-$country = $culture[1];
+$lang = Yii::$app->request->get('lang');
+$country = Yii::$app->request->get('country');
+
 ?>
 <li class="header">Seller</li>
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Orders</span></a></li>
@@ -25,6 +25,6 @@ $country = $culture[1];
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Analytics</span></a></li>
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Managers</span></a></li>
 <?php /*  срань: <li><a href="<?= Url::base() . '/' . "uk-UA" . '/site/index' ?>"><i class="fa fa-folder"></i> <span>LALAKA</span></a></li> */ ?>
-<li><a href="<?= Url::toRoute(['/site/index', 'lang' => $lang, 'country' => $country]) ?>"><i class="fa fa-folder"></i> <span>Site UK UA </span></a></li>
+<li><a href="<?= Url::toRoute(['/site/index', 'lang' => $lang, 'country' => $country]) ?>"><i class="fa fa-folder"></i> <span>Site <?= Yii::$app->language ?></span></a></li>
 
 

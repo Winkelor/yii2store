@@ -70,10 +70,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $lang = Yii::$app->request->get('lang', 'en');
-        $country = Yii::$app->request->get('country', 'US');
+        $lang = Yii::$app->request->get('lang');
+        $country = Yii::$app->request->get('country');
         $culture = "{$lang}-{$country}";
-
         Yii::$app->language = $culture;
 
 //        $culture = explode("-", Yii::$app->language);
