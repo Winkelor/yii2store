@@ -18,7 +18,7 @@ class m170305_140818_shops extends Migration
             'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING,
             'short_name' => Schema::TYPE_STRING,
-            'main_user_id' => Schema::TYPE_INTEGER, //backend user
+            'main_user_id' => Schema::TYPE_INTEGER, //backend user admin user
 //            'legal_info_id' => Schema::TYPE_INTEGER, //shops_legal_info table
             'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
