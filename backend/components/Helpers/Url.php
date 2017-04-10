@@ -20,8 +20,14 @@ class Url extends BaseUrl
         $lang = Yii::$app->request->get('lang');
         $country = Yii::$app->request->get('country');
 
+        $lang = ($lang) ? $lang : 'en';
+        $country = ($country) ? $country : 'us';
+        $culture = "{$lang}-{$country}";
+
         $route['lang'] = $lang;
         $route['country'] = $country;
+
+        Yii::$app->language = $culture;
 
         return parent::toRoute($route, $scheme);
     }
