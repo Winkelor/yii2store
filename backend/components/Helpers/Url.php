@@ -22,8 +22,8 @@ class Url extends BaseUrl
         $lang = Yii::$app->request->get('lang');
         $country = Yii::$app->request->get('country');
 
-        $lang = ($lang) ? $lang : 'en';
-        $country = ($country) ? $country : 'us';
+        $lang = ($lang) ? $lang : 'en'; // грузить з конфігу першу мову країни
+        $country = ($country) ? $country : 'us'; // грузить з конфігу країну іп по дефолту
         $culture = "{$lang}-{$country}";
 
         $route['lang'] = $lang;
