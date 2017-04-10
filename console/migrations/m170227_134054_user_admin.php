@@ -22,25 +22,25 @@ class m170227_134054_user_admin extends Migration
             'email' => $this->string()->notNull()->unique(),
             'account_type_id' => Schema::TYPE_INTEGER,
 
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'status' => $this->smallInteger()->notNull()->defaultValue(10), // не чипать це самого її2
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        $this->createIndex(
-            'idx_user_admin_account_type',
-            '{{%user_admin}}',
-            'account_type_id'
-        );
-
-        $this->addForeignKey(
-            'fk_user_admin_account_type',
-            '{{%user_admin}}',
-            'account_type_id',
-            'usr_accounts_types',
-            'id',
-            'CASCADE'
-        );
+//        $this->createIndex(
+//            'idx_user_admin_account_type',
+//            '{{%user_admin}}',
+//            'account_type_id'
+//        );
+//
+//        $this->addForeignKey(
+//            'fk_user_admin_account_type',
+//            '{{%user_admin}}',
+//            'account_type_id',
+//            'usr_accounts_types',
+//            'id',
+//            'CASCADE'
+//        );
 
 
 
@@ -56,15 +56,15 @@ class m170227_134054_user_admin extends Migration
 
     public function down()
     {
-        $this->dropForeignKey(
-            'fk_user_admin_account_type',
-            'account_type'
-        );
-
-        $this->dropIndex(
-            'idx_user_admin_account_type',
-            'account_type'
-        );
+//        $this->dropForeignKey(
+//            'fk_user_admin_account_type',
+//            'account_type'
+//        );
+//
+//        $this->dropIndex(
+//            'idx_user_admin_account_type',
+//            'account_type'
+//        );
 
         $this->dropTable('{{%user_admin}}');
     }

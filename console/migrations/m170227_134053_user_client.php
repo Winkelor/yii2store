@@ -23,38 +23,38 @@ class m170227_134053_user_client extends Migration
             'account_type_id' => Schema::TYPE_INTEGER,
 
             /*'is_seller' => $this->smallInteger()->notNull()->defaultValue(0), in admin acs */
-            'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'status' => $this->smallInteger()->notNull()->defaultValue(10), // не чипать це самого її2
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        $this->createIndex(
-            'idx_user_client_account_type',
-            '{{%user_client}}',
-            'account_type_id'
-        );
-
-        $this->addForeignKey(
-            'fk_user_client_account_type',
-            '{{%user_client}}',
-            'account_type_id',
-            'usr_accounts_types',
-            'id',
-            'CASCADE'
-        );
+//        $this->createIndex(
+//            'idx_user_client_account_type',
+//            '{{%user_client}}',
+//            'account_type_id'
+//        );
+//
+//        $this->addForeignKey(
+//            'fk_user_client_account_type',
+//            '{{%user_client}}',
+//            'account_type_id',
+//            'usr_accounts_types',
+//            'id',
+//            'CASCADE'
+//        );
     }
 
     public function down()
     {
-        $this->dropForeignKey(
-            'fk_user_client_account_type',
-            'account_type'
-        );
-
-        $this->dropIndex(
-            'idx_user_client_account_type',
-            'account_type'
-        );
+//        $this->dropForeignKey(
+//            'fk_user_client_account_type',
+//            'account_type'
+//        );
+//
+//        $this->dropIndex(
+//            'idx_user_client_account_type',
+//            'account_type'
+//        );
 
         $this->dropTable('{{%user_client}}');
     }
