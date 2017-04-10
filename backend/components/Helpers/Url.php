@@ -15,6 +15,8 @@ class Url extends BaseUrl
 {
     // Url::toRoute(['/site/index', 'lang' => $lang, 'country' => $country])
     // Перевантаження toRoute для мультмовності
+
+    //замість en-us ставить мову по дефолту
     public static function toRoute($route, $scheme = false)
     {
         $lang = Yii::$app->request->get('lang');
