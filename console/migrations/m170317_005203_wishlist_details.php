@@ -21,7 +21,7 @@ class m170317_005203_wishlist_details extends Migration
             //група атрибутів
             'attributes_products_group' => Schema::TYPE_BIGINT,
 
-            'wishlist_id'=> Schema::TYPE_BIGINT,
+            'wishlist_id'=> Schema::TYPE_BIGINT, // m170317_005102_wishlist
 
             // кількість
             'count' => Schema::TYPE_INTEGER,

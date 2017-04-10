@@ -3,21 +3,21 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m170317_005102_wishlist extends Migration
+//це коментарі менеджера до замовлення
+class m170410_123909_order_comments extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
-        $this->createTable('{{%wishlist}}', [
+        $this->createTable('{{%order_comments}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */
 
-            // коментар до замовлення
-            'name' => Schema::TYPE_STRING, // подарки маме
-            //покупець
-            'user_client_id' => Schema::TYPE_BIGINT,
+            'order_id' => Schema::TYPE_BIGINT, /* for order, but not order details */
+            'manager_id' =>  Schema::TYPE_BIGINT, // user_admin
+            'comment' => Schema::TYPE_STRING, // заказ застрял в жопе бегемота
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
@@ -26,7 +26,7 @@ class m170317_005102_wishlist extends Migration
 
     public function down()
     {
-        echo "m170317_005102_wishlist cannot be reverted.\n";
+        echo "m170410_123909_order_comments cannot be reverted.\n";
 
         return false;
     }
