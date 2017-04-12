@@ -47,7 +47,7 @@ class m170305_152112_products extends Migration
     public function down()
     {
         echo "m170305_152112_products cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

@@ -29,7 +29,7 @@ class m170408_161022_cultures extends Migration
     public function down()
     {
         echo "m170408_161022_cultures cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

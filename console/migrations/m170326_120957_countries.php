@@ -38,7 +38,7 @@ class m170326_120957_countries extends Migration
     public function down()
     {
         echo "m170326_120957_countries cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

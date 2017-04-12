@@ -36,7 +36,7 @@ class m170310_154736_shop_departments extends Migration
     public function down()
     {
         echo "m170310_154736_shop_departments cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

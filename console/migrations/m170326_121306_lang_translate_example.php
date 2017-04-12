@@ -28,7 +28,7 @@ class m170326_121306_lang_translate_example extends Migration
     public function down()
     {
         echo "m170326_121306_lang_translate_example cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

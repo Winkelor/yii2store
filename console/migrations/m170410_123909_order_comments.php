@@ -27,7 +27,7 @@ class m170410_123909_order_comments extends Migration
     public function down()
     {
         echo "m170410_123909_order_comments cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

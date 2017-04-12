@@ -28,7 +28,7 @@ class m170305_140901_seo_info extends Migration
     public function down()
     {
         echo "m170305_140901_shops_seo cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

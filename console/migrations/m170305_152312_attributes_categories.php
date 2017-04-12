@@ -33,7 +33,7 @@ class m170305_152312_attributes_categories extends Migration
     public function down()
     {
         echo "m170305_152312_attributes_categories cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

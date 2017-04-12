@@ -30,7 +30,7 @@ class m170305_152344_attributes_products extends Migration
     public function down()
     {
         echo "m170305_152344_attributes_products cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

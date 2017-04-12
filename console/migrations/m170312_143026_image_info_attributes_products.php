@@ -21,7 +21,7 @@ class m170312_143026_image_info_attributes_products extends Migration
     public function down()
     {
         echo "m170312_143026_image_info_attributes_products cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 

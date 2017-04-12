@@ -7,7 +7,7 @@ class m170227_134052_usr_accounts_types extends Migration
 {
     public function up()
     {
-        $this->createTable('usr_accounts_types', [
+        $this->createTable('{{%usr_accounts_types}}', [
             'id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING . ' NOT NULL',
             'description' => Schema::TYPE_TEXT,
@@ -50,7 +50,7 @@ class m170227_134052_usr_accounts_types extends Migration
 
     public function down()
     {
-        $this->dropTable('usr_accounts_types');
+        $this->dropTable('{{%usr_accounts_types}}');
 
         echo "m170227_134052_usr_accounts_types cannot be reverted.\n";
 

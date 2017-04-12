@@ -27,7 +27,7 @@ class m170317_005102_wishlist extends Migration
     public function down()
     {
         echo "m170317_005102_wishlist cannot be reverted.\n";
-
+        $this->dropTable('{{%}}');
         return false;
     }
 
