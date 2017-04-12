@@ -32,7 +32,7 @@ class m170305_150040_global_categories extends Migration
     public function down()
     {
         echo "m170308_004740_global_categories cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%global_categories}}');
         return false;
     }
 

@@ -34,7 +34,7 @@ class m170311_140635_addresses extends Migration
     public function down()
     {
         echo "m170311_140635_addresses cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%addresses}}');
         return false;
     }
 

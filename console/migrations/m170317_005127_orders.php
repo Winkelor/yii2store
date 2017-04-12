@@ -38,7 +38,7 @@ class m170317_005127_orders extends Migration
     public function down()
     {
         echo "m170317_005127_orders cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%orders}}');
         return false;
     }
 

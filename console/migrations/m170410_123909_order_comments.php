@@ -10,7 +10,7 @@ class m170410_123909_order_comments extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%order_comments}}', [
+            $this->createTable('{{%order_comments}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */
@@ -27,7 +27,7 @@ class m170410_123909_order_comments extends Migration
     public function down()
     {
         echo "m170410_123909_order_comments cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%order_comments}}');
         return false;
     }
 

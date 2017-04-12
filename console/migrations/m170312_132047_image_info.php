@@ -28,7 +28,7 @@ class m170312_132047_image_info extends Migration
     public function down()
     {
         echo "m170312_132047_image_info cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%image_info}}');
         return false;
     }
 

@@ -26,7 +26,7 @@ class m170311_140712_contacts extends Migration
     public function down()
     {
         echo "m170311_140712_contacts cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%contacts}}');
         return false;
     }
 

@@ -32,7 +32,7 @@ class m170317_130251_shipping_info extends Migration
     public function down()
     {
         echo "m170317_130251_shipping_info cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%shipping_info}}');
         return false;
     }
 

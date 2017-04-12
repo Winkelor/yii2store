@@ -40,7 +40,7 @@ class m170305_152041_categories extends Migration
     public function down()
     {
         echo "m170305_152041_categories cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%categories}}');
         return false;
     }
 

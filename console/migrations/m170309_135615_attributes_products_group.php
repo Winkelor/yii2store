@@ -30,7 +30,7 @@ class m170309_135615_attributes_products_group extends Migration
     public function down()
     {
         echo "m170317_105954_attributes_products_group cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%attributes_products_group}}');
         return false;
     }
 

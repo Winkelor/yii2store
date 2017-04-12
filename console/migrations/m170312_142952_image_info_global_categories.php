@@ -22,7 +22,7 @@ class m170312_142952_image_info_global_categories extends Migration
     public function down()
     {
         echo "m170312_142952_image_info_global_categories cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%image_info_global_categories}}');
         return false;
     }
 

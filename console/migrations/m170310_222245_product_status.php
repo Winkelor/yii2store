@@ -26,7 +26,7 @@ class m170310_222245_product_status extends Migration
     public function down()
     {
         echo "m170310_222245_product_status cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%product_status}}');
         return false;
     }
 

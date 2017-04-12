@@ -29,7 +29,7 @@ class m170326_121012_languages extends Migration
     public function down()
     {
         echo "m170326_121012_languages cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%languages}}');
         return false;
     }
 

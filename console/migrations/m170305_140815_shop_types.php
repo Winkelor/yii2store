@@ -30,7 +30,7 @@ class m170305_140815_shop_types extends Migration
     public function down()
     {
         echo "m170305_140818_shops cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%shop_types}}');
         return false;
     }
 

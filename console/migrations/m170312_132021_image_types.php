@@ -33,7 +33,7 @@ class m170312_132021_image_types extends Migration
     public function down()
     {
         echo "m170312_132021_image_types cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%image_types}}');
         return false;
     }
 

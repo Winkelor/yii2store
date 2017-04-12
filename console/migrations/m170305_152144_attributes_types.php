@@ -26,7 +26,7 @@ class m170305_152144_attributes_types extends Migration
     public function down()
     {
         echo "m170305_152144_attributes_types cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%attributes_types}}');
         return false;
     }
 

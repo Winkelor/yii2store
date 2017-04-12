@@ -37,7 +37,7 @@ class m170317_005223_cart_details extends Migration
     public function down()
     {
         echo "m170317_005223_cart_details cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%cart_details}}');
         return false;
     }
 

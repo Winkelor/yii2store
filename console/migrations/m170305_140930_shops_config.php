@@ -27,7 +27,7 @@ class m170305_140930_shops_config extends Migration
     public function down()
     {
         echo "m170305_140930_shops_config cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%shop_config}}');
         return false;
     }
 

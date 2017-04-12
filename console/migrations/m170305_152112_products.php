@@ -9,7 +9,7 @@ class m170305_152112_products extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%products }}', [
+        $this->createTable('{{%products}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */
@@ -47,7 +47,7 @@ class m170305_152112_products extends Migration
     public function down()
     {
         echo "m170305_152112_products cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%products}}');
         return false;
     }
 

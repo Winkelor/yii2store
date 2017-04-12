@@ -40,7 +40,7 @@ class m170309_135613_products_attributes_logistics_info extends Migration
     public function down()
     {
         echo "m170309_135613_products_atributes_logistics_info cannot be reverted.\n";
-        $this->dropTable('{{%}}');
+        $this->dropTable('{{%products_attributes_logistics_info}}');
         return false;
     }
 
