@@ -8,6 +8,8 @@ class m170312_132047_image_info extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%image_info}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,

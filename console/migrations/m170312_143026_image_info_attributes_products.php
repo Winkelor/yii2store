@@ -7,6 +7,8 @@ class m170312_143026_image_info_attributes_products extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%image_info_attributes_products}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,

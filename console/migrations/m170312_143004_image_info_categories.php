@@ -7,6 +7,8 @@ class m170312_143004_image_info_categories extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%image_info_categories}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,

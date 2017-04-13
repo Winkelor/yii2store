@@ -24,6 +24,7 @@ class m170305_140818_shops extends Migration
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
 
             // адреса і контакт головні
+            // додлать сюди країну!!!
             'address_id' => Schema::TYPE_INTEGER,
             'contact_id' => Schema::TYPE_INTEGER,
 

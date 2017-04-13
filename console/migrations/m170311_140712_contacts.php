@@ -8,6 +8,8 @@ class m170311_140712_contacts extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%contacts}}', [
             'id' => Schema::TYPE_BIGPK,
 

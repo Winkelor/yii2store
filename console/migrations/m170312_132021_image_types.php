@@ -17,6 +17,8 @@ class m170312_132021_image_types extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%image_types}}', [
             'id' => Schema::TYPE_BIGPK,
 

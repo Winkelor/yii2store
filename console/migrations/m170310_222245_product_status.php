@@ -8,6 +8,8 @@ class m170310_222245_product_status extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%product_status}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,

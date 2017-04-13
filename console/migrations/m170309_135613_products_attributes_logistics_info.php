@@ -10,6 +10,8 @@ class m170309_135613_products_attributes_logistics_info extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%products_attributes_logistics_info}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин

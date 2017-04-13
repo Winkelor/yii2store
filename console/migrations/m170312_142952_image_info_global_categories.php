@@ -7,6 +7,8 @@ class m170312_142952_image_info_global_categories extends Migration
 {
     public function up()
     {
+        $tableOptions = null;
+
         $this->createTable('{{%image_info_global_categories}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
