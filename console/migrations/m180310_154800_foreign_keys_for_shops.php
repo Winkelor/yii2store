@@ -14,11 +14,13 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 
         $Indexes = [
             // USERS
+            //account_type_id
             [
                 'idx_user_client_account_type', // index name // m170227_134053_user_client
                 '{{%user_client}}', // table name
                 'account_type_id', // column name
             ],
+            //account_type_id
             [
                 'idx_user_admin_account_type', //see m170227_134054_user_admin
                 '{{%user_admin}}',
@@ -26,26 +28,31 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             ],
 
             // SHOPS
+            //main_user_id
             [
                 'idx_shops_main_user',
                 '{{%shops}}',
                 'main_user_id',
             ],
+            //type_id
             [
                 'idx_shops_type',
                 '{{%shops}}',
                 'type_id',
             ],
+            //status_id
             [
                 'idx_shops_status',
                 '{{%shops}}',
                 'status_id',
             ],
+            //address_id
             [
                 'idx_shops_address',
                 '{{%shops}}',
                 'address_id',
             ],
+            //contact_id
             [
                 'idx_shops_contact',
                 '{{%shops}}',
@@ -54,22 +61,53 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 
             // SEO INFO
             //shop_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
 
             // DEPARTMENTS CONFIG
             //shop_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
             //department_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
 
             // SHOP CONFIG
             //shop_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
 
             // SHOP COMMERCE DATA
             //shop_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
             //department_id
+            [
+                'idx_',
+                '{{%}}',
+                '_id',
+            ],
 
         ];
 
         $Foreign_keys = [
             // USERS
+            //account_type_id
             [
                 'fk_user_client_account_type', // fk name
                 '{{%user_client}}', // table
@@ -78,6 +116,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id', // key on other table
                 'CASCADE', // method
             ],
+            //account_type_id
             [
                 'fk_user_admin_account_type',
                 '{{%user_admin}}',
@@ -88,6 +127,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             ],
 
             // SHOPS
+            //main_user_id
             [
                 'fk_shops_main_user',
                 '{{%shops}}',
@@ -96,6 +136,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+            //type_id
             [
                 'fk_shops_type',
                 '{{%shops}}',
@@ -104,6 +145,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+            //status_id
             [
                 'fk_shops_status',
                 '{{%shops}}',
@@ -112,6 +154,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+            //address_id
             [
                 'fk_shops_address',
                 '{{%shops}}',
@@ -120,6 +163,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+            //contact_id
             [
                 'fk_shops_contact',
                 '{{%shops}}',
