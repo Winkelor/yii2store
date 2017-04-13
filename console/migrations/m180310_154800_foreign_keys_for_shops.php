@@ -24,6 +24,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 '{{%user_admin}}',
                 'account_type_id',
             ],
+
             // SHOPS
             [
                 'idx_shops_main_user',
@@ -50,6 +51,21 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 '{{%shops}}',
                 'contact_id',
             ],
+
+            // SEO INFO
+            //shop_id
+
+            // DEPARTMENTS CONFIG
+            //shop_id
+            //department_id
+
+            // SHOP CONFIG
+            //shop_id
+
+            // SHOP COMMERCE DATA
+            //shop_id
+            //department_id
+
         ];
 
         $Foreign_keys = [
@@ -70,6 +86,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+
             // SHOPS
             [
                 'fk_shops_main_user',
@@ -111,6 +128,20 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'id',
                 'CASCADE',
             ],
+
+            // SEO INFO
+            //shop_id
+
+            // DEPARTMENTS CONFIG
+            //shop_id
+            //department_id
+
+            // SHOP CONFIG
+            //shop_id
+
+            // SHOP COMMERCE DATA
+            //shop_id
+            //department_id
 
         ];
 
