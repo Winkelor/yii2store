@@ -241,7 +241,7 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             $this->createIndex(
                 $index['index_name'],
                 $index['table_name'],
-                $index['account_type_id']
+                $index['column_name']
             );
 
         foreach ($Foreign_keys as $k => $foreign_key)
