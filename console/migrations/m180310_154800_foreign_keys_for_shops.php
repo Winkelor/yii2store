@@ -237,6 +237,23 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 
         ];
 
+        foreach ($Indexes as $k => $index)
+            $this->createIndex(
+                $index['index_name'],
+                $index['table_name'],
+                $index['account_type_id']
+            );
+
+        foreach ($Foreign_keys as $k => $foreign_key)
+            $this->addForeignKey(
+                $foreign_key['foreign_key_name'],
+                $foreign_key['table_name'],
+                $foreign_key['column_name'],
+                $foreign_key['other_table_name'],
+                $foreign_key['other_table_key'],
+                $foreign_key['method']
+            );
+
 //        $this->createIndex(
 //            'index_name' => 'idx_user_client_account_type',
 //            'table_name' => '{{%user_client}}',
