@@ -108,7 +108,7 @@ return [
                     // Lang rule
                     // головне правило
                     'name' => 'lang_country',
-                    'pattern' => '<lang:\w+>-<country:\w+>.<controller>/<action>',
+                    'pattern' => '<lang:\w+>-<country:\w+>.<controller>/<action>', // . - domains // / - subdirectories
                     'route' => '<controller>/<action>',
                     //'defaults' => ['lang' => 'en', 'country' => 'US'], // если стоит это, то потом оно не попадает в ссылки почему-то О_О
                     //'suffix' => '.html',
