@@ -113,14 +113,28 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // seo_id
 
             // PRODUCTS
-
-            // ATTRIBUTES TYPES
+            // shop_id
+            // department_id
+            // category_id
+            // seo_id
 
             // ATTRIBUTES GROUPS
+            // shop_id
+            // category_id
 
             // ATTRIBUTES CATEGORIES
+            // shop_id
+            // category_id
+            // attribute_type_id
+            // attribute_group_id
 
             // ATTRIBUTES PRODUCTS
+            // shop_id
+            // department_id
+            // product_id
+
+
+
 
 
 
