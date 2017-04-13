@@ -109,130 +109,130 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // USERS
             //account_type_id
             [
-                'fk_user_client_account_type', // fk name
+                'foreign_key_name' => 'fk_user_client_account_type', // fk name
                 'table_name' => '{{%user_client}}', // table
                 'account_type_id', // column
                 'other_table_name' => '{{%usr_accounts_types}', // other table
-                'id', // key on other table
-                'CASCADE', // method
+                'other_table_key' => 'id', // key on other table
+                'method' => 'CASCADE', // method
             ],
             //account_type_id
             [
-                'fk_user_admin_account_type',
+                'foreign_key_name' => 'fk_user_admin_account_type',
                 'table_name' => '{{%user_admin}}',
                 'column_name' => 'account_type_id',
                 'other_table_name' => '{{%usr_accounts_types}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
             // SHOPS
             //main_user_id
             [
-                'fk_shops_main_user',
+                'foreign_key_name' => 'fk_shops_main_user',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'main_user_id',
                 'other_table_name' => '{{%user_admin}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //type_id
             [
-                'fk_shops_type',
+                'foreign_key_name' => 'fk_shops_type',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'type_id',
                 'other_table_name' => '{{%shop_types}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //status_id
             [
-                'fk_shops_status',
+                'foreign_key_name' => 'fk_shops_status',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'status_id',
                 'other_table_name' => '{{%shop_statuses}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //address_id
             [
-                'fk_shops_address',
+                'foreign_key_name' => 'fk_shops_address',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'address_id',
                 'other_table_name' => '{{%addresses}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //contact_id
             [
-                'fk_shops_contact',
+                'foreign_key_name' => 'fk_shops_contact',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'contact_id',
                 'other_table_name' => '{{%contacts}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
             // SEO INFO
             //shop_id
             [
-                'fk_seo_info',
+                'foreign_key_name' => 'fk_seo_info',
                 'table_name' => '{{%seo_info}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
             // DEPARTMENTS CONFIG
             //shop_id
             [
-                'fk_departments_config_shop',
+                'foreign_key_name' => 'fk_departments_config_shop',
                 'table_name' => '{{%departments_config}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //department_id
             [
-                'fk_departments_config_department',
+                'foreign_key_name' => 'fk_departments_config_department',
                 'table_name' => '{{%departments_config}}',
                 'column_name' => 'department_id',
                 'other_table_name' => '{{%shops_departments}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
             // SHOP CONFIG
             //shop_id
             [
-                'fk_shop_config_shop',
+                'foreign_key_name' => 'fk_shop_config_shop',
                 'table_name' => '{{%shop_config}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
             // SHOP COMMERCE DATA
             //shop_id
             [
-                'fk_shops_commerce_data_shop',
+                'foreign_key_name' => 'fk_shops_commerce_data_shop',
                 'table_name' => '{{%shops_commerce_data}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
             //department_id
             [
-                'fk_shops_commerce_data_department',
+                'foreign_key_name' => 'fk_shops_commerce_data_department',
                 'table_name' => '{{%shops_commerce_data}}',
                 'column_name' => 'department_id',
                 'other_table_name' => '{{%shops_departments}',
-                'id',
-                'CASCADE',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
             ],
 
         ];
@@ -244,11 +244,11 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 //        );
 //
 //        $this->addForeignKey(
-//            'fk_user_client_account_type',
+//            'foreign_key_name' => 'fk_user_client_account_type',
 //            'table_name' => '{{%user_client}}',
 //            'account_type_id',
 //            'usr_accounts_types',
-//            'id',
+//            'other_table_key' => 'id',
 //            'CASCADE'
 //        );
 
