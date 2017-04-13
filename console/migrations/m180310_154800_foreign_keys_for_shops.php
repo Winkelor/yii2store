@@ -103,6 +103,30 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'column_name' => 'department_id',
             ],
 
+            // GLOBAL CATEGORIES
+            // parent_id
+
+            // CATEGORIES
+            // shop_id
+            // global_category_id
+            // parent_id
+            // seo_id
+
+            // PRODUCTS
+
+            // ATTRIBUTES TYPES
+
+            // ATTRIBUTES GROUPS
+
+            // ATTRIBUTES CATEGORIES
+
+            // ATTRIBUTES PRODUCTS
+
+
+
+
+
+
         ];
 
         $Foreign_keys = [
