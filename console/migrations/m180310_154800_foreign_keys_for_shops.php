@@ -62,45 +62,45 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // SEO INFO
             //shop_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_seo_info',
+                '{{%seo_info}}',
+                'shop_id',
             ],
 
             // DEPARTMENTS CONFIG
             //shop_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_departments_config_shop',
+                '{{%departments_config}}',
+                'shop_id',
             ],
             //department_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_departments_config_department',
+                '{{%departments_config}}',
+                'department_id',
             ],
 
             // SHOP CONFIG
             //shop_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_shop_config_shop',
+                '{{%shop_config}}',
+                'shop_id',
             ],
 
             // SHOP COMMERCE DATA
             //shop_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_shops_commerce_data_shop',
+                '{{%shops_commerce_data}}',
+                'shop_id',
             ],
             //department_id
             [
-                'idx_',
-                '{{%}}',
-                '_id',
+                'idx_shops_commerce_data_department',
+                '{{%shops_commerce_data}}',
+                'department_id',
             ],
 
         ];
