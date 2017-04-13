@@ -108,7 +108,7 @@ return [
                     // Lang rule
                     // головне правило
                     'name' => 'lang_country',
-                    'pattern' => '<lang:\w+>-<country:\w+>.<controller>/<action>', // . - domains // / - subdirectories
+                    'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>', // . - domains // / - subdirectories
                     'route' => '<controller>/<action>',
                     //'defaults' => ['lang' => 'en', 'country' => 'US'], // если стоит это, то потом оно не попадает в ссылки почему-то О_О
                     //'suffix' => '.html',
@@ -116,13 +116,13 @@ return [
                 [
                     // якщо є модулі
                     'name' => 'lang_country_module',
-                    'pattern' => '<lang:\w+>-<country:\w+>.<module>/<controller>/<action>',
+                    'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
                 [
                     //якщо вказаний тільки модуль
                     'name' => 'lang_country_module_only',
-                    'pattern' => '<lang:\w+>-<country:\w+>.<module>',
+                    'pattern' => '<lang:\w+>-<country:\w+>/<module>',
                     'route' => '<module>',
                 ],
 //                [
