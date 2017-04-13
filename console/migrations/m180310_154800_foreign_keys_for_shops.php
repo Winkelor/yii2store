@@ -16,91 +16,91 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // USERS
             //account_type_id
             [
-                'idx_user_client_account_type', // index name // m170227_134053_user_client
-                '{{%user_client}}', // table name
-                'account_type_id', // column name
+                'index_name' => 'idx_user_client_account_type', // index name // m170227_134053_user_client
+                'table_name' => '{{%user_client}}', // table name
+                'column_name' => 'account_type_id', // column name
             ],
             //account_type_id
             [
-                'idx_user_admin_account_type', //see m170227_134054_user_admin
-                '{{%user_admin}}',
-                'account_type_id',
+                'index_name' => 'idx_user_admin_account_type', //see m170227_134054_user_admin
+                'table_name' => '{{%user_admin}}',
+                'column_name' => 'account_type_id',
             ],
 
             // SHOPS
             //main_user_id
             [
-                'idx_shops_main_user',
-                '{{%shops}}',
-                'main_user_id',
+                'index_name' => 'idx_shops_main_user',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'main_user_id',
             ],
             //type_id
             [
-                'idx_shops_type',
-                '{{%shops}}',
-                'type_id',
+                'index_name' => 'idx_shops_type',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'type_id',
             ],
             //status_id
             [
-                'idx_shops_status',
-                '{{%shops}}',
-                'status_id',
+                'index_name' => 'idx_shops_status',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'status_id',
             ],
             //address_id
             [
-                'idx_shops_address',
-                '{{%shops}}',
-                'address_id',
+                'index_name' => 'idx_shops_address',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'address_id',
             ],
             //contact_id
             [
-                'idx_shops_contact',
-                '{{%shops}}',
-                'contact_id',
+                'index_name' => 'idx_shops_contact',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'contact_id',
             ],
 
             // SEO INFO
             //shop_id
             [
-                'idx_seo_info',
-                '{{%seo_info}}',
-                'shop_id',
+                'index_name' => 'idx_seo_info',
+                'table_name' => '{{%seo_info}}',
+                'column_name' => 'shop_id',
             ],
 
             // DEPARTMENTS CONFIG
             //shop_id
             [
-                'idx_departments_config_shop',
-                '{{%departments_config}}',
-                'shop_id',
+                'index_name' => 'idx_departments_config_shop',
+                'table_name' => '{{%departments_config}}',
+                'column_name' => 'shop_id',
             ],
             //department_id
             [
-                'idx_departments_config_department',
-                '{{%departments_config}}',
-                'department_id',
+                'index_name' => 'idx_departments_config_department',
+                'table_name' => '{{%departments_config}}',
+                'column_name' => 'department_id',
             ],
 
             // SHOP CONFIG
             //shop_id
             [
-                'idx_shop_config_shop',
-                '{{%shop_config}}',
-                'shop_id',
+                'index_name' => 'idx_shop_config_shop',
+                'table_name' => '{{%shop_config}}',
+                'column_name' => 'shop_id',
             ],
 
             // SHOP COMMERCE DATA
             //shop_id
             [
-                'idx_shops_commerce_data_shop',
-                '{{%shops_commerce_data}}',
-                'shop_id',
+                'index_name' => 'idx_shops_commerce_data_shop',
+                'table_name' => '{{%shops_commerce_data}}',
+                'column_name' => 'shop_id',
             ],
             //department_id
             [
-                'idx_shops_commerce_data_department',
-                '{{%shops_commerce_data}}',
-                'department_id',
+                'index_name' => 'idx_shops_commerce_data_department',
+                'table_name' => '{{%shops_commerce_data}}',
+                'column_name' => 'department_id',
             ],
 
         ];
@@ -110,18 +110,18 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             //account_type_id
             [
                 'fk_user_client_account_type', // fk name
-                '{{%user_client}}', // table
+                'table_name' => '{{%user_client}}', // table
                 'account_type_id', // column
-                'usr_accounts_types', // other table
+                'other_table_name' => '{{%usr_accounts_types}', // other table
                 'id', // key on other table
                 'CASCADE', // method
             ],
             //account_type_id
             [
                 'fk_user_admin_account_type',
-                '{{%user_admin}}',
-                'account_type_id',
-                'usr_accounts_types',
+                'table_name' => '{{%user_admin}}',
+                'column_name' => 'account_type_id',
+                'other_table_name' => '{{%usr_accounts_types}',
                 'id',
                 'CASCADE',
             ],
@@ -130,79 +130,129 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             //main_user_id
             [
                 'fk_shops_main_user',
-                '{{%shops}}',
-                'main_user_id',
-                'user_admin',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'main_user_id',
+                'other_table_name' => '{{%user_admin}',
                 'id',
                 'CASCADE',
             ],
             //type_id
             [
                 'fk_shops_type',
-                '{{%shops}}',
-                'type_id',
-                'shop_types',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'type_id',
+                'other_table_name' => '{{%shop_types}',
                 'id',
                 'CASCADE',
             ],
             //status_id
             [
                 'fk_shops_status',
-                '{{%shops}}',
-                'status_id',
-                'shop_statuses',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%shop_statuses}',
                 'id',
                 'CASCADE',
             ],
             //address_id
             [
                 'fk_shops_address',
-                '{{%shops}}',
-                'address_id',
-                'addresses',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'address_id',
+                'other_table_name' => '{{%addresses}',
                 'id',
                 'CASCADE',
             ],
             //contact_id
             [
                 'fk_shops_contact',
-                '{{%shops}}',
-                'contact_id',
-                'contacts',
+                'table_name' => '{{%shops}}',
+                'column_name' => 'contact_id',
+                'other_table_name' => '{{%contacts}',
                 'id',
                 'CASCADE',
             ],
 
             // SEO INFO
             //shop_id
+            [
+                'fk_seo_info',
+                'table_name' => '{{%seo_info}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}',
+                'id',
+                'CASCADE',
+            ],
 
             // DEPARTMENTS CONFIG
             //shop_id
+            [
+                'fk_departments_config_shop',
+                'table_name' => '{{%departments_config}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}',
+                'id',
+                'CASCADE',
+            ],
             //department_id
+            [
+                'fk_departments_config_department',
+                'table_name' => '{{%departments_config}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}',
+                'id',
+                'CASCADE',
+            ],
 
             // SHOP CONFIG
             //shop_id
+            [
+                'fk_shop_config_shop',
+                'table_name' => '{{%shop_config}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}',
+                'id',
+                'CASCADE',
+            ],
 
             // SHOP COMMERCE DATA
             //shop_id
+            [
+                'fk_shops_commerce_data_shop',
+                'table_name' => '{{%shops_commerce_data}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}',
+                'id',
+                'CASCADE',
+            ],
             //department_id
+            [
+                'fk_shops_commerce_data_department',
+                'table_name' => '{{%shops_commerce_data}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}',
+                'id',
+                'CASCADE',
+            ],
 
         ];
 
 //        $this->createIndex(
-//            'idx_user_client_account_type',
-//            '{{%user_client}}',
+//            'index_name' => 'idx_user_client_account_type',
+//            'table_name' => '{{%user_client}}',
 //            'account_type_id'
 //        );
 //
 //        $this->addForeignKey(
 //            'fk_user_client_account_type',
-//            '{{%user_client}}',
+//            'table_name' => '{{%user_client}}',
 //            'account_type_id',
 //            'usr_accounts_types',
 //            'id',
 //            'CASCADE'
 //        );
+
+//        foreach ()
     }
 
     public function down()
