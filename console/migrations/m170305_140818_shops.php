@@ -25,8 +25,8 @@ class m170305_140818_shops extends Migration
 
             // адреса і контакт головні
             // додлать сюди країну!!! в багато - багато напевно, ні просто сюди кантрі_ід
-            'address_id' => Schema::TYPE_INTEGER,
-            'contact_id' => Schema::TYPE_INTEGER,
+            'address_id' => Schema::TYPE_BIGPK,
+            'contact_id' => Schema::TYPE_BIGPK,
 
 //            'seo_config_id' => Schema::TYPE_INTEGER, //seo_table data http://ogp.me/
 
