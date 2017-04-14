@@ -192,15 +192,15 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // attribute_type_id
             [
-                'index_name' => 'idx_attributes_categories_type_id',
+                'index_name' => 'idx_attributes_categories_type',
                 'table_name' => '{{%attributes_categories}}',
-                'column_name' => 'type_id',
+                'column_name' => 'attribute_type_id',
             ],
             // attribute_group_id
             [
                 'index_name' => 'idx_attributes_categories_group',
                 'table_name' => '{{%attributes_categories}}',
-                'column_name' => 'group_id',
+                'column_name' => 'attribute_group_id',
             ],
 
             // ATTRIBUTES PRODUCTS
@@ -222,15 +222,6 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%attributes_products}}',
                 'column_name' => 'product_id',
             ],
-
-
-
-
-
-
-
-
-
 
 
         ];
