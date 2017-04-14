@@ -206,21 +206,21 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // ATTRIBUTES PRODUCTS
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_products_shop',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'shop_id',
             ],
             // department_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_products_department',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'department_id',
             ],
             // product_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_products_product',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'product_id',
             ],
 
 
