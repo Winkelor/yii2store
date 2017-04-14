@@ -257,42 +257,42 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
-            //type_id
-            [
-                'foreign_key_name' => 'fk_shops_types',
-                'table_name' => '{{%shops}}',
-                'column_name' => 'type_id',
-                'other_table_name' => '{{%shop_types}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
-            //status_id
-            [
-                'foreign_key_name' => 'fk_shops_status',
-                'table_name' => '{{%shops}}',
-                'column_name' => 'status_id',
-                'other_table_name' => '{{%shop_statuses}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
-            //address_id
-            [
-                'foreign_key_name' => 'fk_shops_address',
-                'table_name' => '{{%shops}}',
-                'column_name' => 'address_id',
-                'other_table_name' => '{{%addresses}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
+//            //type_id
+//            [
+//                'foreign_key_name' => 'fk_shops_types',
+//                'table_name' => '{{%shops}}',
+//                'column_name' => 'type_id',
+//                'other_table_name' => '{{%shop_types}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
+//            //status_id
+//            [
+//                'foreign_key_name' => 'fk_shops_status',
+//                'table_name' => '{{%shops}}',
+//                'column_name' => 'status_id',
+//                'other_table_name' => '{{%shop_statuses}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
+//            //address_id
+//            [
+//                'foreign_key_name' => 'fk_shops_address',
+//                'table_name' => '{{%shops}}',
+//                'column_name' => 'address_id',
+//                'other_table_name' => '{{%addresses}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
             //contact_id
-            [
-                'foreign_key_name' => 'fk_shops_contact',
-                'table_name' => '{{%shops}}',
-                'column_name' => 'contact_id',
-                'other_table_name' => '{{%contacts}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
+//            [
+//                'foreign_key_name' => 'fk_shops_contact',
+//                'table_name' => '{{%shops}}',
+//                'column_name' => 'contact_id',
+//                'other_table_name' => '{{%contacts}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
 
             // SEO INFO
             //shop_id
@@ -424,15 +424,15 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
-            // category_id
-            [
-                'foreign_key_name' => 'fk_products_category',
-                'table_name' => '{{%products}}',
-                'column_name' => 'category_id',
-                'other_table_name' => '{{%categories}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
+//            // category_id
+//            [
+//                'foreign_key_name' => 'fk_products_category',
+//                'table_name' => '{{%products}}',
+//                'column_name' => 'category_id',
+//                'other_table_name' => '{{%categories}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
             // seo_id
             [
                 'foreign_key_name' => 'fk_products_seo',
@@ -453,15 +453,15 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
-            // category_id
-            [
-                'foreign_key_name' => 'fk_attributes_groups_category',
-                'table_name' => '{{%attributes_groups}}',
-                'column_name' => 'category_id',
-                'other_table_name' => '{{%categories}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
+//            // category_id
+//            [
+//                'foreign_key_name' => 'fk_attributes_groups_category',
+//                'table_name' => '{{%attributes_groups}}',
+//                'column_name' => 'category_id',
+//                'other_table_name' => '{{%categories}}',
+//                'other_table_key' => 'id',
+//                'method' => 'CASCADE',
+//            ],
 
             // ATTRIBUTES CATEGORIES
             // shop_id
@@ -484,9 +484,9 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // attribute_type_id
             [
-                'foreign_key_name' => 'fk_attributes_categories_type_id',
+                'foreign_key_name' => 'fk_attributes_categories_type',
                 'table_name' => '{{%attributes_categories}}',
-                'column_name' => 'type_id',
+                'column_name' => 'attribute_type_id',
                 'other_table_name' => '{{%attributes_types}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
@@ -495,7 +495,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             [
                 'foreign_key_name' => 'fk_attributes_categories_group',
                 'table_name' => '{{%attributes_categories}}',
-                'column_name' => 'group_id',
+                'column_name' => 'attribute_group_id',
                 'other_table_name' => '{{%attributes_groups}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
