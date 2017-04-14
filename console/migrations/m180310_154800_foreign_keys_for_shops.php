@@ -105,33 +105,123 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 
             // GLOBAL CATEGORIES
             // parent_id
+            [
+                'index_name' => 'idx_global_categories_parent',
+                'table_name' => '{{%global_categories}}',
+                'column_name' => 'parent_id',
+            ],
 
             // CATEGORIES
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // global_category_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // parent_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // seo_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
 
             // PRODUCTS
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // department_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // category_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // seo_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
 
             // ATTRIBUTES GROUPS
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // category_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
 
             // ATTRIBUTES CATEGORIES
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // category_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // attribute_type_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // attribute_group_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
 
             // ATTRIBUTES PRODUCTS
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // department_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
             // product_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '',
+            ],
 
 
 
