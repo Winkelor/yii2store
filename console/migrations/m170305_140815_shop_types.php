@@ -16,7 +16,7 @@ class m170305_140815_shop_types extends Migration
         }
 
         $this->createTable('{{%shop_types}}', [
-            'id' => Schema::TYPE_INTEGER,
+            'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING,
 
             'is_active' => Schema::TYPE_BOOLEAN,

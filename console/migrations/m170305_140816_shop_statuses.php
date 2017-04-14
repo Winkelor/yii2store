@@ -16,7 +16,7 @@ class m170305_140816_shop_statuses extends Migration
         }
 
         $this->createTable('{{%shop_statuses}}', [
-            'id' => Schema::TYPE_INTEGER,
+            'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING,
 
             'is_active' => Schema::TYPE_BOOLEAN,

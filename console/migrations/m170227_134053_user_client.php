@@ -14,7 +14,7 @@ class m170227_134053_user_client extends Migration
         }
 
         $this->createTable('{{%user_client}}', [
-            'id' => $this->primaryKey(),
+            'id' => Schema::TYPE_BIGPK,
             'username' => $this->string()->notNull()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull(),
