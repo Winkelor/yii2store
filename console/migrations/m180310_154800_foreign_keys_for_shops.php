@@ -231,6 +231,8 @@ class m180310_154800_foreign_keys_for_shops extends Migration
 
 
 
+
+
         ];
 
         $Foreign_keys = [
@@ -359,6 +361,180 @@ class m180310_154800_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%shops_commerce_data}}',
                 'column_name' => 'department_id',
                 'other_table_name' => '{{%shops_departments}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // GLOBAL CATEGORIES
+            // parent_id
+            [
+                'index_name' => 'idx_global_categories_parent',
+                'table_name' => '{{%global_categories}}',
+                'column_name' => 'parent_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // CATEGORIES
+            // shop_id
+            [
+                'index_name' => 'idx_categories_shop',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // global_category_id
+            [
+                'index_name' => 'idx_categories_global_category',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'global_category_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // parent_id
+            [
+                'index_name' => 'idx_categories_parent',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'parent_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // seo_id
+            [
+                'index_name' => 'idx_categories_seo',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'seo_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // PRODUCTS
+            // shop_id
+            [
+                'index_name' => 'idx_products_shop',
+                'table_name' => '{{%products}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // department_id
+            [
+                'index_name' => 'idx_products_department',
+                'table_name' => '{{%products}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // category_id
+            [
+                'index_name' => 'idx_products_category',
+                'table_name' => '{{%products}}',
+                'column_name' => 'category_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // seo_id
+            [
+                'index_name' => 'idx_products_seo',
+                'table_name' => '{{%products}}',
+                'column_name' => 'seo_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ATTRIBUTES GROUPS
+            // shop_id
+            [
+                'index_name' => 'idx_attributes_groups_shop',
+                'table_name' => '{{%attributes_groups}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // category_id
+            [
+                'index_name' => 'idx_attributes_groups_category',
+                'table_name' => '{{%attributes_groups}}',
+                'column_name' => 'category_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ATTRIBUTES CATEGORIES
+            // shop_id
+            [
+                'index_name' => 'idx_attributes_categories_shop',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // category_id
+            [
+                'index_name' => 'idx_attributes_categories_category',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'category_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // attribute_type_id
+            [
+                'index_name' => 'idx_attributes_categories_type_id',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'type_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // attribute_group_id
+            [
+                'index_name' => 'idx_attributes_categories_group',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'group_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ATTRIBUTES PRODUCTS
+            // shop_id
+            [
+                'index_name' => 'idx_attributes_products_shop',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // department_id
+            [
+                'index_name' => 'idx_attributes_products_department',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // product_id
+            [
+                'index_name' => 'idx_attributes_products_product',
+                'table_name' => '{{%attributes_products}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
