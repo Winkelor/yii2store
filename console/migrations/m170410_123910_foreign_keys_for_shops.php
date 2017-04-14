@@ -232,7 +232,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             [
                 'foreign_key_name' => 'fk_user_client_account_type', // fk name
                 'table_name' => '{{%user_client}}', // table
-                'account_type_id', // column
+                'column_name' => 'account_type_id', // column
                 'other_table_name' => '{{%usr_accounts_types}}', // other table
                 'other_table_key' => 'id', // key on other table
                 'method' => 'CASCADE', // method
@@ -259,7 +259,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             //type_id
             [
-                'foreign_key_name' => 'fk_shops_type',
+                'foreign_key_name' => 'fk_shops_types',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'type_id',
                 'other_table_name' => '{{%shop_types}}',
