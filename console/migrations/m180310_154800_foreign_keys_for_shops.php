@@ -114,93 +114,93 @@ class m180310_154800_foreign_keys_for_shops extends Migration
             // CATEGORIES
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_categories_shop',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'shop_id',
             ],
             // global_category_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_categories_global_category',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'global_category_id',
             ],
             // parent_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_categories_parent',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'parent_id',
             ],
             // seo_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_categories_seo',
+                'table_name' => '{{%categories}}',
+                'column_name' => 'seo_id',
             ],
 
             // PRODUCTS
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_products_shop',
+                'table_name' => '{{%products}}',
+                'column_name' => 'shop_id',
             ],
             // department_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_products_department',
+                'table_name' => '{{%products}}',
+                'column_name' => 'department_id',
             ],
             // category_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_products_category',
+                'table_name' => '{{%products}}',
+                'column_name' => 'category_id',
             ],
             // seo_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_products_seo',
+                'table_name' => '{{%products}}',
+                'column_name' => 'seo_id',
             ],
 
             // ATTRIBUTES GROUPS
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_groups_shop',
+                'table_name' => '{{%attributes_groups}}',
+                'column_name' => 'shop_id',
             ],
             // category_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_groups_category',
+                'table_name' => '{{%attributes_groups}}',
+                'column_name' => 'category_id',
             ],
 
             // ATTRIBUTES CATEGORIES
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_categories_shop',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'shop_id',
             ],
             // category_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_categories_category',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'category_id',
             ],
             // attribute_type_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_categories_type_id',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'type_id',
             ],
             // attribute_group_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '',
+                'index_name' => 'idx_attributes_categories_group',
+                'table_name' => '{{%attributes_categories}}',
+                'column_name' => 'group_id',
             ],
 
             // ATTRIBUTES PRODUCTS
