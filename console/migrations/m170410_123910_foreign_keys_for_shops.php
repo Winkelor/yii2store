@@ -359,7 +359,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // GLOBAL CATEGORIES
             // parent_id
             [
-                'index_name' => 'fk_global_categories_parent',
+                'foreign_key_name' => 'fk_global_categories_parent',
                 'table_name' => '{{%global_categories}}',
                 'column_name' => 'parent_id',
                 'other_table_name' => '{{%global_categories}}',
@@ -370,7 +370,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // CATEGORIES
             // shop_id
             [
-                'index_name' => 'fk_categories_shop',
+                'foreign_key_name' => 'fk_categories_shop',
                 'table_name' => '{{%categories}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
@@ -379,7 +379,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // global_category_id
             [
-                'index_name' => 'fk_categories_global_category',
+                'foreign_key_name' => 'fk_categories_global_category',
                 'table_name' => '{{%categories}}',
                 'column_name' => 'global_category_id',
                 'other_table_name' => '{{%categories}}',
@@ -388,7 +388,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // parent_id
             [
-                'index_name' => 'fk_categories_parent',
+                'foreign_key_name' => 'fk_categories_parent',
                 'table_name' => '{{%categories}}',
                 'column_name' => 'parent_id',
                 'other_table_name' => '{{%categories}}',
@@ -397,7 +397,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // seo_id
             [
-                'index_name' => 'fk_categories_seo',
+                'foreign_key_name' => 'fk_categories_seo',
                 'table_name' => '{{%categories}}',
                 'column_name' => 'seo_id',
                 'other_table_name' => '{{%seo_info}}',
@@ -408,7 +408,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // PRODUCTS
             // shop_id
             [
-                'index_name' => 'fk_products_shop',
+                'foreign_key_name' => 'fk_products_shop',
                 'table_name' => '{{%products}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
@@ -417,7 +417,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // department_id
             [
-                'index_name' => 'fk_products_department',
+                'foreign_key_name' => 'fk_products_department',
                 'table_name' => '{{%products}}',
                 'column_name' => 'department_id',
                 'other_table_name' => '{{%shops_departments}}',
@@ -426,7 +426,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // category_id
             [
-                'index_name' => 'fk_products_category',
+                'foreign_key_name' => 'fk_products_category',
                 'table_name' => '{{%products}}',
                 'column_name' => 'category_id',
                 'other_table_name' => '{{%categories}}',
@@ -435,7 +435,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // seo_id
             [
-                'index_name' => 'fk_products_seo',
+                'foreign_key_name' => 'fk_products_seo',
                 'table_name' => '{{%products}}',
                 'column_name' => 'seo_id',
                 'other_table_name' => '{{%seo_info}}',
@@ -446,7 +446,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // ATTRIBUTES GROUPS
             // shop_id
             [
-                'index_name' => 'fk_attributes_groups_shop',
+                'foreign_key_name' => 'fk_attributes_groups_shop',
                 'table_name' => '{{%attributes_groups}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
@@ -455,7 +455,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // category_id
             [
-                'index_name' => 'fk_attributes_groups_category',
+                'foreign_key_name' => 'fk_attributes_groups_category',
                 'table_name' => '{{%attributes_groups}}',
                 'column_name' => 'category_id',
                 'other_table_name' => '{{%categories}}',
@@ -466,7 +466,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // ATTRIBUTES CATEGORIES
             // shop_id
             [
-                'index_name' => 'fk_attributes_categories_shop',
+                'foreign_key_name' => 'fk_attributes_categories_shop',
                 'table_name' => '{{%attributes_categories}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
@@ -475,7 +475,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // category_id
             [
-                'index_name' => 'fk_attributes_categories_category',
+                'foreign_key_name' => 'fk_attributes_categories_category',
                 'table_name' => '{{%attributes_categories}}',
                 'column_name' => 'category_id',
                 'other_table_name' => '{{%categories}}',
@@ -484,7 +484,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // attribute_type_id
             [
-                'index_name' => 'fk_attributes_categories_type_id',
+                'foreign_key_name' => 'fk_attributes_categories_type_id',
                 'table_name' => '{{%attributes_categories}}',
                 'column_name' => 'type_id',
                 'other_table_name' => '{{%attributes_types}}',
@@ -493,7 +493,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // attribute_group_id
             [
-                'index_name' => 'fk_attributes_categories_group',
+                'foreign_key_name' => 'fk_attributes_categories_group',
                 'table_name' => '{{%attributes_categories}}',
                 'column_name' => 'group_id',
                 'other_table_name' => '{{%attributes_groups}}',
@@ -504,7 +504,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // ATTRIBUTES PRODUCTS
             // shop_id
             [
-                'index_name' => 'fk_attributes_products_shop',
+                'foreign_key_name' => 'fk_attributes_products_shop',
                 'table_name' => '{{%attributes_products}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
@@ -513,7 +513,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // department_id
             [
-                'index_name' => 'fk_attributes_products_department',
+                'foreign_key_name' => 'fk_attributes_products_department',
                 'table_name' => '{{%attributes_products}}',
                 'column_name' => 'department_id',
                 'other_table_name' => '{{%shops_departments}}',
@@ -522,7 +522,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             // product_id
             [
-                'index_name' => 'fk_attributes_products_product',
+                'foreign_key_name' => 'fk_attributes_products_product',
                 'table_name' => '{{%attributes_products}}',
                 'column_name' => 'product_id',
                 'other_table_name' => '{{%products}}',
