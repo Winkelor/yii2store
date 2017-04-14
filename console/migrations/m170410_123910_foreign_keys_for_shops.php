@@ -36,7 +36,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             //type_id
             [
-                'index_name' => 'idx_shops_type',
+                'index_name' => 'idx_shops_types',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'type_id',
             ],
