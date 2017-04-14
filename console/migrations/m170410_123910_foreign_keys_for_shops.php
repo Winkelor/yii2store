@@ -549,6 +549,15 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 $foreign_key['method']
             );
 
+//        $this->addForeignKey(
+//'fk_shops_types',
+//'{{%shops}}',
+//'type_id',
+//'{{%shop_types}}',
+//'id',
+//'CASCADE'
+//        );
+
 //        $this->createIndex(
 //            'index_name' => 'idx_user_client_account_type',
 //            'table_name' => '{{%user_client}}',
