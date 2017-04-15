@@ -263,6 +263,8 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // shop_id
             // image_info_id
             // categories_id
+
+
         ];
 
         $Foreign_keys = [
