@@ -223,7 +223,46 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'column_name' => 'product_id',
             ],
 
+            // PRODUCTS ATTRIBUTES LOGISTICS INFO
+            // shop_id
+            // department_id
+            // product_id
+            // status_id
 
+            // ATTRIBUTES PRODUCTS GROUP
+            // shop_id
+            // department_id
+            // product_id
+            // products_attributes_logistics_inf_id
+            // attributes_products_id
+            // attributes_categories_id
+
+            // SHOPS_DEPARTMENTS
+            // shop_id
+            // main_user_id
+            // type_id
+            // status_id
+            // address_id
+            // contact_id
+
+            // PRODUCT_STATUS
+            // shop_id
+            // department_id
+            // product_id
+
+            // IMAGE_INFO
+            // shop_id
+            // image_type_id
+
+            // IMAGE_INFO_GLOBAL_CATEGORIES
+            // shop_id
+            // image_info_id
+            // global_categories_id
+
+            // IMAGE_INFO_CATEGORIES
+            // shop_id
+            // image_info_id
+            // categories_id
         ];
 
         $Foreign_keys = [

@@ -14,7 +14,7 @@ class m170312_132047_image_info extends Migration
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
             // обложка, мініатюра, мініатюра меню, мобільна, тощо
-            'image_type' => Schema::TYPE_BIGINT,
+            'image_type_id' => Schema::TYPE_BIGINT, // зробить це як ід?
 
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,

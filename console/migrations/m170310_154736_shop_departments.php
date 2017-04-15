@@ -25,8 +25,8 @@ class m170310_154736_shop_departments extends Migration
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
 
             // адреса і контакт департаменту
-            'address_id' => Schema::TYPE_INTEGER,
-            'contact_id' => Schema::TYPE_INTEGER,
+            'address_id' => Schema::TYPE_BIGINT,
+            'contact_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

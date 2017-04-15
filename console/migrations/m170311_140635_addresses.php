@@ -29,7 +29,7 @@ class m170311_140635_addresses extends Migration
             'post_index' => Schema::TYPE_STRING, // 00001
             'country' => Schema::TYPE_STRING, // Україна
 
-            'security_access_code' => Schema::TYPE_STRING,
+            'security_access_code' => Schema::TYPE_STRING, // домофон
             'description' => Schema::TYPE_STRING, // another info for managers
 
             'created_at' => Schema::TYPE_INTEGER,
