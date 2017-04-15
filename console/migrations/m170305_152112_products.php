@@ -14,7 +14,7 @@ class m170305_152112_products extends Migration
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */
 
-            'category_id' => Schema::TYPE_STRING,
+            'category_id' => Schema::TYPE_BIGINT,
 
             // артикул
             'vendor_code' => Schema::TYPE_STRING,

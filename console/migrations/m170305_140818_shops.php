@@ -18,15 +18,15 @@ class m170305_140818_shops extends Migration
             'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING,
             'short_name' => Schema::TYPE_STRING,
-            'main_user_id' => Schema::TYPE_INTEGER, //backend user admin user
+            'main_user_id' => Schema::TYPE_BIGINT, //backend user admin user
 //            'legal_info_id' => Schema::TYPE_INTEGER, //shops_legal_info table
             'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд
 
             // адреса і контакт головні
             // додлать сюди країну!!! в багато - багато напевно, ні просто сюди кантрі_ід
-            'address_id' => Schema::TYPE_BIGPK,
-            'contact_id' => Schema::TYPE_BIGPK,
+            'address_id' => Schema::TYPE_BIGINT,
+            'contact_id' => Schema::TYPE_BIGINT,
 
 //            'seo_config_id' => Schema::TYPE_INTEGER, //seo_table data http://ogp.me/
 
