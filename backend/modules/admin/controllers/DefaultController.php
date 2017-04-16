@@ -15,7 +15,6 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return "Jar deploy";
         return $this->render('index');
     }
 }
