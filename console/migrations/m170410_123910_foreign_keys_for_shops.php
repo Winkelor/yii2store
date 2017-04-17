@@ -223,19 +223,70 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'column_name' => 'product_id',
             ],
 
+            //+++++++++++
             // PRODUCTS ATTRIBUTES LOGISTICS INFO
             // shop_id
+            [
+                'index_name' => 'idx_products_attributes_logistics_info_shop',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'shop_id',
+            ],
             // department_id
+            [
+                'index_name' => 'idx_products_attributes_logistics_info_department',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'department_id',
+            ],
             // product_id
+            [
+                'index_name' => 'idx_products_attributes_logistics_info_product',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'product_id',
+            ],
             // status_id
+            [
+                'index_name' => 'idx_products_attributes_logistics_info_status',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'status_id',
+            ],
 
             // ATTRIBUTES PRODUCTS GROUP
             // shop_id
+            [
+                'index_name' => 'idx_attributes_products_group_shop',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'shop_id',
+            ],
             // department_id
+            [
+                'index_name' => 'idx_attributes_products_group_department',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'department_id',
+            ],
             // product_id
+            [
+                'index_name' => 'idx_attributes_products_group_product',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'product_id',
+            ],
             // products_attributes_logistics_inf_id
+            [
+                'index_name' => 'idx_attributes_products_group_products_attributes_logistics_inf',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'products_attributes_logistics_inf_id',
+            ],
             // attributes_products_id
+            [
+                'index_name' => 'idx_attributes_products_group_attributes_products',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'attributes_products_id',
+            ],
             // attributes_categories_id
+            [
+                'index_name' => 'idx_attributes_products_group_attributes_categories',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'attributes_categories_id',
+            ],
 
             // SHOPS_DEPARTMENTS
             // shop_id
