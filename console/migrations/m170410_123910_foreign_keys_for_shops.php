@@ -290,35 +290,135 @@ class m170410_123910_foreign_keys_for_shops extends Migration
 
             // SHOPS_DEPARTMENTS
             // shop_id
+            [
+                'index_name' => 'idx_shops_departments_shop',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'shop_id',
+            ],
             // main_user_id
+            [
+                'index_name' => 'idx_shops_departments_main_user',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'main_user_id',
+            ],
             // type_id
+            [
+                'index_name' => 'idx_shops_departments_type',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'type_id',
+            ],
             // status_id
+            [
+                'index_name' => 'idx_shops_departments_status',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'status_id',
+            ],
             // address_id
+            [
+                'index_name' => 'idx_shops_departments_address',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'address_id',
+            ],
             // contact_id
+            [
+                'index_name' => 'idx_shops_departments_contact',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'contact_id',
+            ],
 
             // PRODUCT_STATUS
             // shop_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // department_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // product_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
             // IMAGE_INFO
             // shop_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // image_type_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
             // IMAGE_INFO_GLOBAL_CATEGORIES
             // shop_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // image_info_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // global_categories_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
             // IMAGE_INFO_CATEGORIES
             // shop_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // image_info_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // categories_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
             // IMAGE_INFO_PRODUCTS
             // shop_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // image_info_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // products_id
+            [
+                'index_name' => '',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
         ];
 
