@@ -223,7 +223,6 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'column_name' => 'product_id',
             ],
 
-            //+++++++++++
             // PRODUCTS ATTRIBUTES LOGISTICS INFO
             // shop_id
             [
@@ -722,6 +721,292 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%attributes_products}}',
                 'column_name' => 'product_id',
                 'other_table_name' => '{{%products}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // PRODUCTS ATTRIBUTES LOGISTICS INFO
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_products_attributes_logistics_info_shop',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // department_id
+            [
+                'foreign_key_name' => 'fk_products_attributes_logistics_info_department',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // product_id
+            [
+                'foreign_key_name' => 'fk_products_attributes_logistics_info_product',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // status_id
+            [
+                'foreign_key_name' => 'fk_products_attributes_logistics_info_status',
+                'table_name' => '{{%products_attributes_logistics_info}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ATTRIBUTES PRODUCTS GROUP
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_shop',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // department_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_department',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // product_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_product',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // products_attributes_logistics_inf_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_products_attributes_logistics_inf',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'products_attributes_logistics_inf_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // attribute_product_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_attribute_product',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'attribute_product_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // attribute_category_id
+            [
+                'foreign_key_name' => 'fk_attributes_products_group_attribute_category',
+                'table_name' => '{{%attributes_products_group}}',
+                'column_name' => 'attributes_categories_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // SHOPS_DEPARTMENTS
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_shop',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // main_user_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_main_user',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'main_user_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // type_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_type',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'type_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // status_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_status',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // address_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_address',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'address_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // contact_id
+            [
+                'foreign_key_name' => 'fk_shops_departments_contact',
+                'table_name' => '{{%shops_departments}}',
+                'column_name' => 'contact_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // PRODUCT_STATUS
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_product_status_shop',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // department_id
+            [
+                'foreign_key_name' => 'fk_product_status_department',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // product_id
+            [
+                'foreign_key_name' => 'fk_product_status_product',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // IMAGE_INFO
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_image_info_shop',
+                'table_name' => '{{%image_info}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // image_type_id
+            [
+                'foreign_key_name' => 'fk_image_info_image_type',
+                'table_name' => '{{%image_info}}',
+                'column_name' => 'image_type_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // IMAGE_INFO_GLOBAL_CATEGORIES
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_image_info_global_categories_shop',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // image_info_id
+            [
+                'foreign_key_name' => 'fk_image_info_global_categories_image_info',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'image_info_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // global_category_id
+            [
+                'foreign_key_name' => 'fk_image_info_global_categories_global_category',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'global_category_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // IMAGE_INFO_CATEGORIES
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_image_info_categories_shop',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // image_info_id
+            [
+                'foreign_key_name' => 'fk_image_info_categories_image_info',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'image_info_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // category_id
+            [
+                'foreign_key_name' => 'fk_image_info_categories_category',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'category_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // IMAGE_INFO_PRODUCTS
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_image_info_products_shop',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // image_info_id
+            [
+                'foreign_key_name' => 'fk_image_info_products_image_info',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'image_info_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // product_id
+            [
+                'foreign_key_name' => 'fk_image_info_products_product',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
