@@ -329,93 +329,93 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             // PRODUCT_STATUS
             // shop_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_product_status_shop',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'shop_id',
             ],
             // department_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_product_status_department',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'department_id',
             ],
             // product_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_product_status_product',
+                'table_name' => '{{%product_status}}',
+                'column_name' => 'product_id',
             ],
 
             // IMAGE_INFO
             // shop_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_shop',
+                'table_name' => '{{%image_info}}',
+                'column_name' => 'shop_id',
             ],
             // image_type_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_image_type',
+                'table_name' => '{{%image_info}}',
+                'column_name' => 'image_type_id',
             ],
 
             // IMAGE_INFO_GLOBAL_CATEGORIES
             // shop_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_global_categories_shop',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'shop_id',
             ],
             // image_info_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_global_categories_image_info',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'image_info_id',
             ],
             // global_categories_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_global_categories_global_categories',
+                'table_name' => '{{%image_info_global_categories}}',
+                'column_name' => 'global_categories_id',
             ],
 
             // IMAGE_INFO_CATEGORIES
             // shop_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_categories_shop',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'shop_id',
             ],
             // image_info_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_categories_image_info',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'image_info_id',
             ],
             // categories_id
             [
-                'index_name' => '',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_categories_categories',
+                'table_name' => '{{%image_info_categories}}',
+                'column_name' => 'categories_id',
             ],
 
             // IMAGE_INFO_PRODUCTS
             // shop_id
             [
-                'index_name' => '',
+                'index_name' => 'idx_',
                 'table_name' => '{{%}}',
                 'column_name' => '_id',
             ],
             // image_info_id
             [
-                'index_name' => '',
+                'index_name' => 'idx_',
                 'table_name' => '{{%}}',
                 'column_name' => '_id',
             ],
             // products_id
             [
-                'index_name' => '',
+                'index_name' => 'idx_',
                 'table_name' => '{{%}}',
                 'column_name' => '_id',
             ],
