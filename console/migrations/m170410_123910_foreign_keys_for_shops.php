@@ -36,7 +36,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             //type_id
             [
-                'index_name' => 'idx_shops_types',
+                'index_name' => 'idx_shops_type',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'type_id',
             ],
@@ -275,15 +275,15 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%attributes_products_group}}',
                 'column_name' => 'products_attributes_logistics_inf_id',
             ],
-            // attributes_products_id
+            // attribute_product_id
             [
-                'index_name' => 'idx_attributes_products_group_attributes_products',
+                'index_name' => 'idx_attributes_products_group_attribute_product',
                 'table_name' => '{{%attributes_products_group}}',
-                'column_name' => 'attributes_products_id',
+                'column_name' => 'attribute_product_id',
             ],
-            // attributes_categories_id
+            // attribute_category_id
             [
-                'index_name' => 'idx_attributes_products_group_attributes_categories',
+                'index_name' => 'idx_attributes_products_group_attribute_category',
                 'table_name' => '{{%attributes_products_group}}',
                 'column_name' => 'attributes_categories_id',
             ],
@@ -373,11 +373,11 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%image_info_global_categories}}',
                 'column_name' => 'image_info_id',
             ],
-            // global_categories_id
+            // global_category_id
             [
-                'index_name' => 'idx_image_info_global_categories_global_categories',
+                'index_name' => 'idx_image_info_global_categories_global_category',
                 'table_name' => '{{%image_info_global_categories}}',
-                'column_name' => 'global_categories_id',
+                'column_name' => 'global_category_id',
             ],
 
             // IMAGE_INFO_CATEGORIES
@@ -393,31 +393,31 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%image_info_categories}}',
                 'column_name' => 'image_info_id',
             ],
-            // categories_id
+            // category_id
             [
-                'index_name' => 'idx_image_info_categories_categories',
+                'index_name' => 'idx_image_info_categories_category',
                 'table_name' => '{{%image_info_categories}}',
-                'column_name' => 'categories_id',
+                'column_name' => 'category_id',
             ],
 
             // IMAGE_INFO_PRODUCTS
             // shop_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_products_shop',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'shop_id',
             ],
             // image_info_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_products_image_info)',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'image_info_id',
             ],
-            // products_id
+            // product_id
             [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'index_name' => 'idx_image_info_products_product',
+                'table_name' => '{{%image_info_products}}',
+                'column_name' => 'product_id',
             ],
 
         ];
@@ -455,7 +455,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             ],
             //type_id
             [
-                'foreign_key_name' => 'fk_shops_types',
+                'foreign_key_name' => 'fk_shops_type',
                 'table_name' => '{{%shops}}',
                 'column_name' => 'type_id',
                 'other_table_name' => '{{%shop_types}}',

@@ -17,10 +17,10 @@ class m170309_135615_attributes_products_group extends Migration
 
             'product_id' => Schema::TYPE_BIGINT, //ex 1
             'products_attributes_logistics_inf_id' => Schema::TYPE_BIGINT, //ex 1  1 1
-            'attributes_products_id' => Schema::TYPE_BIGINT, //ex 1 2 3
+            'attribute_product_id' => Schema::TYPE_BIGINT, //ex 1 2 3
 
             // додаткова інфа
-            'attributes_categories_id' => Schema::TYPE_BIGINT,
+            'attribute_category_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

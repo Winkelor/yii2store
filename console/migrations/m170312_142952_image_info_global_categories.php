@@ -13,7 +13,7 @@ class m170312_142952_image_info_global_categories extends Migration
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
             'image_info_id' => Schema::TYPE_BIGINT,
-            'global_categories_id' => Schema::TYPE_BIGINT,
+            'global_category_id' => Schema::TYPE_BIGINT,
 
 
             'created_at' => Schema::TYPE_INTEGER,
