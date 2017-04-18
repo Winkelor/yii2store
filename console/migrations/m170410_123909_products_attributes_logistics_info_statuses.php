@@ -3,19 +3,17 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//картинка для категорії
-class m170312_143004_image_info_categories extends Migration
+// очікується до поставки нп, знятий з продажу і все таке, має бути встановлене вінкелор
+class m170410123909_products_attributes_logistics_info_statuses extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
-        $this->createTable('{{%image_info_categories}}', [
+        $this->createTable('{{%products_attributes_logistics_info_statuses}}', [
             'id' => Schema::TYPE_BIGPK,
-            'shop_id' => Schema::TYPE_BIGINT,
-            'image_info_id' => Schema::TYPE_BIGINT,
-            'category_id' => Schema::TYPE_BIGINT,
-
+            'name' => Schema::TYPE_STRING,
+            'comment' => Schema::TYPE_STRING,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
@@ -24,8 +22,8 @@ class m170312_143004_image_info_categories extends Migration
 
     public function down()
     {
-        echo "m170312_143004_image_info_categories cannot be reverted.\n";
-        $this->dropTable('{{%image_info_categories}}');
+        echo "m170418_215601_products_attributes_logistics_info_statuses cannot be reverted.\n";
+
         return false;
     }
 
