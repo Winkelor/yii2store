@@ -6,13 +6,16 @@ use yii\db\Schema;
 // це просто вторичні ключі
 class m170410_123910_foreign_keys_for_shops extends Migration
 {
+    public $Indexes = [];
+    public $Foreign_keys = [];
+
     public function up()
     {
         // name idx fk
         // table
         //column
 
-        $Indexes = [
+        $this->Indexes = [
             // USERS
             //account_type_id
             [
@@ -421,7 +424,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
 
         ];
 
-        $Foreign_keys = [
+        $this->Foreign_keys = [
             // USERS
             //account_type_id
             [
@@ -577,7 +580,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'foreign_key_name' => 'fk_categories_global_category',
                 'table_name' => '{{%categories}}',
                 'column_name' => 'global_category_id',
-                'other_table_name' => '{{%categories}}',
+                'other_table_name' => '{{%global_categories}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
@@ -1013,14 +1016,14 @@ class m170410_123910_foreign_keys_for_shops extends Migration
 
         ];
 
-        foreach ($Indexes as $k => $index)
+        foreach ($this->Indexes as $k => $index)
             $this->createIndex(
                 $index['index_name'],
                 $index['table_name'],
                 $index['column_name']
             );
 
-        foreach ($Foreign_keys as $k => $foreign_key)
+        foreach ($this->Foreign_keys as $k => $foreign_key)
             $this->addForeignKey(
                 $foreign_key['foreign_key_name'],
                 $foreign_key['table_name'],
@@ -1060,6 +1063,18 @@ class m170410_123910_foreign_keys_for_shops extends Migration
     public function down()
     {
         echo "m170310_133403_foreign_keys_for_shops cannot be reverted.\n";
+
+        foreach ($this->Foreign_keys as $k => $foreign_key)
+            $this->dropForeignKey(
+                $foreign_key['foreign_key_name'],
+                $foreign_key['table_name']
+            );
+
+        foreach ($this->Indexes as $k => $index)
+            $this->dropIndex(
+                $index['index_name'],
+                $index['table_name']
+            );
 
         $this->dropForeignKey(
             'fk_user_client_account_type',
