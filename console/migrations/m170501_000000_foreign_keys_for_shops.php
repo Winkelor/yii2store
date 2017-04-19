@@ -4,7 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 // http://www.yiiframework.com/doc-2.0/yii-db-migration.html
 // це просто вторичні ключі
-class m170410_123910_foreign_keys_for_shops extends Migration
+class m170501_000000_foreign_keys_for_shops extends Migration
 {
     public $Indexes = [];
     public $Foreign_keys = [];
@@ -846,7 +846,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'foreign_key_name' => 'fk_shops_departments_type',
                 'table_name' => '{{%shops_departments}}',
                 'column_name' => 'type_id',
-                'other_table_name' => '{{%}}', // !!!!!!!!
+                'other_table_name' => '{{%shops_departments_types}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
@@ -855,7 +855,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
                 'foreign_key_name' => 'fk_shops_departments_status',
                 'table_name' => '{{%shops_departments}}',
                 'column_name' => 'status_id',
-                'other_table_name' => '{{%}}', // !!!!!!!!
+                'other_table_name' => '{{%shops_departments_statuses}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
