@@ -284,7 +284,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             [
                 'index_name' => 'idx_attributes_products_group_attribute_category',
                 'table_name' => '{{%attributes_products_group}}',
-                'column_name' => 'attributes_categories_id',
+                'column_name' => 'attribute_category_id',
             ],
 
             // SHOPS_DEPARTMENTS
@@ -813,7 +813,7 @@ class m170410_123910_foreign_keys_for_shops extends Migration
             [
                 'foreign_key_name' => 'fk_attributes_products_group_attribute_category',
                 'table_name' => '{{%attributes_products_group}}',
-                'column_name' => 'attributes_categories_id',
+                'column_name' => 'attribute_category_id',
                 'other_table_name' => '{{%attributes_categories}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',

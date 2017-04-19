@@ -4,7 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 
 // очікується до поставки нп, знятий з продажу і все таке, має бути встановлене вінкелор
-class m170410123909_products_attributes_logistics_info_statuses extends Migration
+class m170410_123909_products_attributes_logistics_info_statuses extends Migration
 {
     public function up()
     {

@@ -4,7 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 
 // відділення магазину, як от велопланета має кілька відділень
-class m170310_154736_shop_departments extends Migration
+class m170305_140818_shop_departments extends Migration
 {
     public function up()
     {
@@ -19,7 +19,7 @@ class m170310_154736_shop_departments extends Migration
             'shop_id' => Schema::TYPE_BIGINT,
             'name' => Schema::TYPE_STRING,
             'short_name' => Schema::TYPE_STRING,
-            'main_user_id' => Schema::TYPE_INTEGER, //backend user
+            'main_user_id' => Schema::TYPE_BIGINT, //backend user
 
             'type_id' => Schema::TYPE_INTEGER, //shops_types table, магазин, услуга, любой бизнесс короч
             'status_id' => Schema::TYPE_INTEGER, //shops_statuses table открыт закрыт итд

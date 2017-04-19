@@ -29,8 +29,8 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             // кількість
             'count' => Schema::TYPE_INTEGER,
 
-            // очікується до поставки нп, знятий з продажу і все таке
-            'status_id' =>  Schema::TYPE_INTEGER,
+            // статус logistics_info
+            'status_id' =>  Schema::TYPE_BIGINT,
             //активний чи ні (нашо воно ?)
             'is_action' => Schema::TYPE_BOOLEAN,
 
