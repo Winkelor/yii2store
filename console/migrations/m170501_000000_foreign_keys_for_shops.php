@@ -424,9 +424,10 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
             // IMAGE_INFO_ATTRIBUTES_PRODUCTS
             // shop_id
-            // image_info_id
-            // attributes_products_id
 
+            // image_info_id
+
+            // attributes_products_id
 
         ];
 
