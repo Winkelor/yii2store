@@ -424,10 +424,23 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
             // IMAGE_INFO_ATTRIBUTES_PRODUCTS
             // shop_id
-
+            [
+                'index_name' => 'idx_image_info_attributes_products_shop',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'shop_id',
+            ],
             // image_info_id
-
-            // attributes_products_id
+            [
+                'index_name' => 'idx_image_info_attributes_products_image_info',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'image_info_id',
+            ],
+            // attribute_product_id
+            [
+                'index_name' => 'idx_image_info_attributes_products_attribute_product',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'attribute_product_id',
+            ],
 
         ];
 
@@ -1017,6 +1030,35 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%image_info_products}}',
                 'column_name' => 'product_id',
                 'other_table_name' => '{{%products}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // IMAGE_INFO_ATTRIBUTES_PRODUCTS
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_image_info_attributes_products_shop',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // image_info_id
+            [
+                'foreign_key_name' => 'fk_image_info_attributes_products_image_info',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'image_info_id',
+                'other_table_name' => '{{%image_info}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // attribute_product_id
+            [
+                'foreign_key_name' => 'fk_image_info_attributes_products_attribute_product',
+                'table_name' => '{{%image_info_attributes_products}}',
+                'column_name' => 'attribute_product_id',
+                'other_table_name' => '{{%attributes_products}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
