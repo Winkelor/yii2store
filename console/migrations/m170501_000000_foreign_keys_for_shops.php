@@ -6,8 +6,8 @@ use yii\db\Schema;
 // це просто вторичні ключі
 class m170501_000000_foreign_keys_for_shops extends Migration
 {
-    public $Indexes = [];
-    public $Foreign_keys = [];
+    public $indexes = [];
+    public $foreign_keys = [];
 
     public function up()
     {
@@ -15,7 +15,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
         // table
         //column
 
-        $this->Indexes = [
+        $this->indexes = [
             // USERS
             //account_type_id
             [
@@ -442,6 +442,12 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'attribute_product_id',
             ],
 
+            // WISHLIST
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
 
 
 
@@ -1068,7 +1074,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
         ];
 
-        foreach ($this->Indexes as $k => $index)
+        foreach ($this->indexes as $k => $index)
             $this->createIndex(
                 $index['index_name'],
                 $index['table_name'],
@@ -1097,7 +1103,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 $foreign_key['table_name']
             );
 
-        foreach ($this->Indexes as $k => $index)
+        foreach ($this->indexes as $k => $index)
             $this->dropIndex(
                 $index['index_name'],
                 $index['table_name']
