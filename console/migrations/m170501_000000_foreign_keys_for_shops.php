@@ -443,6 +443,8 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
 
+
+
         ];
 
         $this->Foreign_keys = [
