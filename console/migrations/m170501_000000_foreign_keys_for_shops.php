@@ -442,6 +442,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'attribute_product_id',
             ],
 
+
         ];
 
         $this->Foreign_keys = [
