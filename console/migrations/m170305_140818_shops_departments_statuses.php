@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m170305_140818_shops_departments_statuses extends Migration
 {
