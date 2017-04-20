@@ -422,6 +422,12 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'product_id',
             ],
 
+            // IMAGE_INFO_ATTRIBUTES_PRODUCTS
+            // shop_id
+            // image_info_id
+            // attributes_products_id
+
+
         ];
 
         $this->Foreign_keys = [
@@ -1033,31 +1039,6 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 $foreign_key['method']
             );
 
-//        $this->addForeignKey(
-//'fk_shops_types',
-//'{{%shops}}',
-//'type_id',
-//'{{%shop_types}}',
-//'id',
-//'CASCADE'
-//        );
-
-//        $this->createIndex(
-//            'index_name' => 'idx_user_client_account_type',
-//            'table_name' => '{{%user_client}}',
-//            'account_type_id'
-//        );
-//
-//        $this->addForeignKey(
-//            'foreign_key_name' => 'fk_user_client_account_type',
-//            'table_name' => '{{%user_client}}',
-//            'account_type_id',
-//            'usr_accounts_types',
-//            'other_table_key' => 'id',
-//            'CASCADE'
-//        );
-
-//        foreach ()
     }
 
     public function down()
@@ -1076,25 +1057,25 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 $index['table_name']
             );
 
-        $this->dropForeignKey(
-            'fk_user_client_account_type',
-            'account_type'
-        );
-
-        $this->dropIndex(
-            'idx_user_client_account_type',
-            'account_type'
-        );
-
-        $this->dropForeignKey(
-            'fk_user_admin_account_type',
-            'account_type'
-        );
-
-        $this->dropIndex(
-            'idx_user_admin_account_type',
-            'account_type'
-        );
+//        $this->dropForeignKey(
+//            'fk_user_client_account_type',
+//            'account_type'
+//        );
+//
+//        $this->dropIndex(
+//            'idx_user_client_account_type',
+//            'account_type'
+//        );
+//
+//        $this->dropForeignKey(
+//            'fk_user_admin_account_type',
+//            'account_type'
+//        );
+//
+//        $this->dropIndex(
+//            'idx_user_admin_account_type',
+//            'account_type'
+//        );
 
         return false;
     }
