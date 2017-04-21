@@ -8,6 +8,8 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 {
     public $indexes = [];
     public $foreign_keys = [];
+    public $separator = "__";
+
 
     public function up()
     {
@@ -443,17 +445,17 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // WISHLIST
-            [
-                'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
-            ],
+//            [
+//                'index_name' => 'idx_',
+//                'table_name' => '{{%}}',
+//                'column_name' => '_id',
+//            ],
 
 
 
         ];
 
-        $this->Foreign_keys = [
+        $this->foreign_keys = [
             // USERS
             //account_type_id
             [
@@ -1074,14 +1076,26 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
         ];
 
-        foreach ($this->indexes as $k => $index)
+        foreach ($this->indexes as $k => $index) {
+            $column = str_replace("_id", "", $index['column_name']);
+            $temp_table_name = str_replace("{{%", "", $index['table_name']);
+            $temp_table_name = str_replace("}}", "", $temp_table_name);
+            $index['index_name'] = "idx_{$temp_table_name}{$separator}{$column}";
+
             $this->createIndex(
                 $index['index_name'],
                 $index['table_name'],
                 $index['column_name']
             );
+        }
 
-        foreach ($this->Foreign_keys as $k => $foreign_key)
+        foreach ($this->foreign_keys as $k => $foreign_key)
+        {
+            $column = str_replace("_id", "", $foreign_key['column_name']);
+            $temp_table_name = str_replace("{{%", "", $foreign_key['table_name']);
+            $temp_table_name = str_replace("}}", "", $temp_table_name);
+            $foreign_key['foreign_key_name'] = "fk_{$temp_table_name}{$separator}{$column}";
+
             $this->addForeignKey(
                 $foreign_key['foreign_key_name'],
                 $foreign_key['table_name'],
@@ -1090,7 +1104,9 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 $foreign_key['other_table_key'],
                 $foreign_key['method']
             );
+        }
 
+        return false;
     }
 
     public function down()
