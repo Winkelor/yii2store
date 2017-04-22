@@ -12,10 +12,13 @@ class m170317_005102_wishlist extends Migration
         $this->createTable('{{%wishlist}}', [
             'id' => Schema::TYPE_BIGPK,
             'shop_id' => Schema::TYPE_BIGINT,
-            'department_id' => Schema::TYPE_BIGINT, /* optional */
+//            'department_id' => Schema::TYPE_BIGINT, /* optional */
 
             // коментар до замовлення
             'name' => Schema::TYPE_STRING, // подарки маме
+            'description' => Schema::TYPE_STRING,
+            'public' => Schema::TYPE_BOOLEAN, // public or private
+
             //покупець
             'user_client_id' => Schema::TYPE_BIGINT,
 
