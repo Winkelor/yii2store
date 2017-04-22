@@ -3,24 +3,18 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
-//статус замовлення глобальні
-// додатеово є коменти m170410_123909_order_comments
-class m170317_130207_order_statuses extends Migration
+class m170422_220742_cart_details_status extends Migration
 {
     public function up()
     {
         $tableOptions = null;
 
-        $this->createTable('{{%order_statuses}}', [
+        $this->createTable('{{%cart_details_status}}', [
             'id' => Schema::TYPE_BIGPK,
-//            'shop_id' => Schema::TYPE_BIGINT,
-//            'department_id' => Schema::TYPE_BIGINT, /* optional */
-
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,
 
             'is_active' => Schema::TYPE_BOOLEAN,
-
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
         ], $tableOptions);
@@ -28,8 +22,8 @@ class m170317_130207_order_statuses extends Migration
 
     public function down()
     {
-        echo "m170317_130207_order_statuses cannot be reverted.\n";
-        $this->dropTable('{{%order_statuses}}');
+        echo "m170422_220742_cart_details_status cannot be reverted.\n";
+
         return false;
     }
 

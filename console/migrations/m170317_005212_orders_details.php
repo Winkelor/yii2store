@@ -29,7 +29,7 @@ class m170317_005212_orders_details extends Migration
             // кількість
             'count' => Schema::TYPE_INTEGER,
             //статус
-            'status_id' =>  Schema::TYPE_INTEGER,
+            'status_id' =>  Schema::TYPE_BIGINT,
 
             //покупець
             'user_client_id' => Schema::TYPE_INTEGER,
