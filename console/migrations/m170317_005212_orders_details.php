@@ -17,9 +17,9 @@ class m170317_005212_orders_details extends Migration
             // товар
             'product_id' => Schema::TYPE_BIGINT,
             // атрибут товару (логістики)
-            'products_attributes_logistics_info' => Schema::TYPE_BIGINT,
+            'products_attributes_logistics_info_id' => Schema::TYPE_BIGINT,
             //група атрибутів
-            'attributes_products_group' => Schema::TYPE_BIGINT,
+            'attributes_products_group_id' => Schema::TYPE_BIGINT,
 
             'order_id'=> Schema::TYPE_BIGINT,
 

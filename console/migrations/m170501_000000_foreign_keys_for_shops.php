@@ -450,8 +450,45 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 //                'table_name' => '{{%}}',
 //                'column_name' => '_id',
 //            ],
+            // user_client_id
 
+            // ORDERS
+            // order_user_id
+            // shop_id
+            //'department_id
+            //'currency_id
+            //'user_client_id
+            //'shipping_info_id
+            //'status_id
 
+            // CART
+            // 'user_client_id'
+
+            // WISHLIST_DETAILS
+            //'shop_id'
+
+            //'department_id'
+
+            //'product_id'
+
+            //'products_attributes_logistics_info_id'
+
+            //'attributes_products_group_id'
+
+            //'wishlist_id'
+
+            //'user_client_id'
+
+            //ORDERS_DETAILS
+            //'shop_id'
+            //'department_id'
+            //'product_id'
+            //'products_attributes_logistics_info_id'
+            //'attributes_products_group_id'
+            //'order_id'
+            //'currency_id'
+            //'status_id'
+            //'user_client_id'
 
         ];
 
@@ -1126,23 +1163,23 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             );
 
 //        $this->dropForeignKey(
-//            'fk_user_client_account_type',
-//            'account_type'
+            //'fk_user_client_account_type',
+            //'account_type'
 //        );
 //
 //        $this->dropIndex(
-//            'idx_user_client_account_type',
-//            'account_type'
+            //'idx_user_client_account_type',
+            //'account_type'
 //        );
 //
 //        $this->dropForeignKey(
-//            'fk_user_admin_account_type',
-//            'account_type'
+            //'fk_user_admin_account_type',
+            //'account_type'
 //        );
 //
 //        $this->dropIndex(
-//            'idx_user_admin_account_type',
-//            'account_type'
+            //'idx_user_admin_account_type',
+            //'account_type'
 //        );
 
         return false;
