@@ -466,20 +466,15 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
             // WISHLIST_DETAILS
             //'shop_id'
-
             //'department_id'
-
             //'product_id'
-
             //'products_attributes_logistics_info_id'
-
             //'attributes_products_group_id'
-
             //'wishlist_id'
 
             //'user_client_id'
 
-            //ORDERS_DETAILS
+            // ORDERS_DETAILS
             //'shop_id'
             //'department_id'
             //'product_id'
@@ -487,8 +482,29 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             //'attributes_products_group_id'
             //'order_id'
             //'currency_id'
-            //'status_id'
+            //'status_id' // створить міграцію
             //'user_client_id'
+
+            // CART_DETAILS
+            //'shop_id'
+            //'department_id'
+            //'product_id'
+            //'products_attributes_logistics_info_id'
+            //'attributes_products_group_id'
+            //'cart_id'
+            //'status_id' // створить міграцію
+            //'user_client_id' 
+
+            // SHIPPING_INFO
+            //'status_id' // створить міграцію
+            //'address_id'
+            //'contact_id'
+
+
+
+
+
+
 
         ];
 
