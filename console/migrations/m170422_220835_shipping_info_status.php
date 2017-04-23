@@ -9,7 +9,7 @@ class m170422_220835_shipping_info_status extends Migration
     {
         $tableOptions = null;
 
-        $this->createTable('{{%orders_details_status}}', [
+        $this->createTable('{{%shipping_info_status}}', [
             'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING,
             'description' => Schema::TYPE_STRING,

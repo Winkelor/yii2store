@@ -453,12 +453,12 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // ORDERS
-            // order_user_id
-            [
-                'index_name' => 'idx_',
-                'table_name' => '{{%orders}}',
-                'column_name' => 'order_user_id',
-            ],
+//            // order_user_id // це текстовий ключ лол
+//            [
+//                'index_name' => 'idx_',
+//                'table_name' => '{{%orders}}',
+//                'column_name' => 'order_user_id',
+//            ],
             // shop_id
             [
                 'index_name' => 'idx_',
@@ -539,7 +539,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             [
                 'index_name' => 'idx_',
                 'table_name' => '{{%wishlist_details}}',
-                'column_name' => 'wishlist_id\'',
+                'column_name' => 'wishlist_id',
             ],
             //'user_client_id'
             [
@@ -559,7 +559,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             [
                 'index_name' => 'idx_',
                 'table_name' => '{{%orders_details}}',
-                'column_name' => '',
+                'column_name' => 'department_id',
             ],
             //'product_id'
             [
@@ -1306,17 +1306,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'method' => 'CASCADE',
             ],
 
-            'other_table_name' => '{{%}}',
             // ORDERS
-            // order_user_id
-            [
-                'foreign_key_name' => 'fk_',
-                'table_name' => '{{%orders}}',
-                'column_name' => 'order_user_id',
-                'other_table_name' => '{{%user_client}}',
-                'other_table_key' => 'id',
-                'method' => 'CASCADE',
-            ],
             // shop_id
             [
                 'foreign_key_name' => 'fk_',
@@ -1640,7 +1630,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             $column = str_replace("_id", "", $index['column_name']);
             $temp_table_name = str_replace("{{%", "", $index['table_name']);
             $temp_table_name = str_replace("}}", "", $temp_table_name);
-            $index['index_name'] = "idx_{$temp_table_name}{$separator}{$column}";
+            $index['index_name'] = "idx_{$temp_table_name}__{$column}";
 
             $this->createIndex(
                 $index['index_name'],
@@ -1654,7 +1644,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             $column = str_replace("_id", "", $foreign_key['column_name']);
             $temp_table_name = str_replace("{{%", "", $foreign_key['table_name']);
             $temp_table_name = str_replace("}}", "", $temp_table_name);
-            $foreign_key['foreign_key_name'] = "fk_{$temp_table_name}{$separator}{$column}";
+            $foreign_key['foreign_key_name'] = "fk_{$temp_table_name}__{$column}";
 
             $this->addForeignKey(
                 $foreign_key['foreign_key_name'],

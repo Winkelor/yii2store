@@ -23,7 +23,6 @@ class m170317_005127_orders extends Migration
             'comment' => Schema::TYPE_STRING,
             //покупець
             'user_client_id' => Schema::TYPE_BIGINT,
-
 //            //shipping info
             'shipping_info_id' => Schema::TYPE_BIGINT,
 
