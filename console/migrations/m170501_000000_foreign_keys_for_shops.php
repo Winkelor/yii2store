@@ -445,45 +445,164 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // WISHLIST
-//            [
-//                'index_name' => 'idx_',
-//                'table_name' => '{{%}}',
-//                'column_name' => '_id',
-//            ],
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%}}',
+                'column_name' => '_id',
+            ],
             // user_client_id
 
             // ORDERS
             // order_user_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'order_user_id',
+            ],
             // shop_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'shop_id',
+            ],
             //'department_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'department_id',
+            ],
             //'currency_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'currency_id',
+            ],
             //'user_client_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'user_client_id',
+            ],
             //'shipping_info_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'shipping_info_id',
+            ],
             //'status_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'status_id',
+            ],
 
             // CART
             // 'user_client_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart}}',
+                'column_name' => 'user_client_id',
+            ],
 
             // WISHLIST_DETAILS
             //'shop_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'shop_id',
+            ],
             //'department_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'department_id',
+            ],
             //'product_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'product_id',
+            ],
             //'products_attributes_logistics_info_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+            ],
             //'attributes_products_group_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'attributes_products_group_id',
+            ],
             //'wishlist_id'
-
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'wishlist_id\'',
+            ],
             //'user_client_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'user_client_id',
+            ],
 
             // ORDERS_DETAILS
             //'shop_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'shop_id',
+            ],
             //'department_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => '',
+            ],
             //'product_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'product_id',
+            ],
             //'products_attributes_logistics_info_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+            ],
             //'attributes_products_group_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'attributes_products_group_id',
+            ],
             //'order_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'order_id',
+            ],
             //'currency_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'currency_id',
+            ],
             //'status_id' // створить міграцію
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'status_id',
+            ],
             //'user_client_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'user_client_id',
+            ],
 
             // CART_DETAILS
             //'shop_id'
