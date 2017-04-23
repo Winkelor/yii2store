@@ -606,24 +606,73 @@ class m170501_000000_foreign_keys_for_shops extends Migration
 
             // CART_DETAILS
             //'shop_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'shop_id',
+            ],
             //'department_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'department_id',
+            ],
             //'product_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'product_id',
+            ],
             //'products_attributes_logistics_info_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+            ],
             //'attributes_products_group_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'attributes_products_group_id',
+            ],
             //'cart_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'cart_id',
+            ],
             //'status_id' // створить міграцію
-            //'user_client_id' 
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'status_id',
+            ],
+            //'user_client_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'user_client_id',
+            ],
 
             // SHIPPING_INFO
             //'status_id' // створить міграцію
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'status_id',
+            ],
             //'address_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'address_id',
+            ],
             //'contact_id'
-
-
-
-
-
-
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'contact_id',
+            ],
 
         ];
 
