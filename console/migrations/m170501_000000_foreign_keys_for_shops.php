@@ -445,12 +445,12 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // WISHLIST
+            // user_client_id
             [
                 'index_name' => 'idx_',
-                'table_name' => '{{%}}',
-                'column_name' => '_id',
+                'table_name' => '{{%wishlist}}',
+                'column_name' => 'user_client_id',
             ],
-            // user_client_id
 
             // ORDERS
             // order_user_id
@@ -1291,6 +1291,345 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%image_info_attributes_products}}',
                 'column_name' => 'attribute_product_id',
                 'other_table_name' => '{{%attributes_products}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // WISHLIST
+            // user_client_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            'other_table_name' => '{{%}}',
+            // ORDERS
+            // order_user_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'order_user_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            // shop_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'department_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'currency_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'currency_id',
+                'other_table_name' => '{{%currencies}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'user_client_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'shipping_info_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'shipping_info_id',
+                'other_table_name' => '{{%shipping_info}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'status_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%order_statuses}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // CART
+            // 'user_client_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // WISHLIST_DETAILS
+            //'shop_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'department_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'product_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%products}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'products_attributes_logistics_info_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+                'other_table_name' => '{{%products_attributes_logistics_info}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'attributes_products_group_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'attributes_products_group_id',
+                'other_table_name' => '{{%attributes_products_group}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'wishlist_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'wishlist_id',
+                'other_table_name' => '{{%wishlist}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'user_client_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%wishlist_details}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ORDERS_DETAILS
+            //'shop_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'department_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => '',
+                'other_table_name' => '{{%shops_departments}}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'product_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%products}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'products_attributes_logistics_info_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+                'other_table_name' => '{{%products_attributes_logistics_info}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'attributes_products_group_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'attributes_products_group_id',
+                'other_table_name' => '{{%attributes_products_group}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'order_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'order_id',
+                'other_table_name' => '{{%orders_details}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'currency_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'currency_id',
+                'other_table_name' => '{{%currencies}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'status_id' // створить міграцію
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%orders_details_status}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'user_client_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%orders_details}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // CART_DETAILS
+            //'shop_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'department_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'product_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'product_id',
+                'other_table_name' => '{{%product}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'products_attributes_logistics_info_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'products_attributes_logistics_info_id',
+                'other_table_name' => '{{%products_attributes_logistics_info}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'attributes_products_group_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'attributes_products_group_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'cart_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'cart_id',
+                'other_table_name' => '{{%attributes_products_group}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'status_id' // створить міграцію
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%cart_details_status}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'user_client_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cart_details}}',
+                'column_name' => 'user_client_id',
+                'other_table_name' => '{{%}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // SHIPPING_INFO
+            //'status_id' // створить міграцію
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'status_id',
+                'other_table_name' => '{{%user_client}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'address_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'address_id',
+                'other_table_name' => '{{%addresses}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'contact_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%shipping_info}}',
+                'column_name' => 'contact_id',
+                'other_table_name' => '{{%contacts}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
