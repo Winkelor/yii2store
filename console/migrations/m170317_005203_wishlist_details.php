@@ -27,7 +27,7 @@ class m170317_005203_wishlist_details extends Migration
             'count' => Schema::TYPE_INTEGER,
 
             //покупець
-            'user_client_id' => Schema::TYPE_INTEGER,
+            'user_client_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

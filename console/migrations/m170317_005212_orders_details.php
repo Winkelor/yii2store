@@ -32,7 +32,7 @@ class m170317_005212_orders_details extends Migration
             'status_id' =>  Schema::TYPE_BIGINT,
 
             //покупець
-            'user_client_id' => Schema::TYPE_INTEGER,
+            'user_client_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
