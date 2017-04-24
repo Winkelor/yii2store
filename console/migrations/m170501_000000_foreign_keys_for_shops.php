@@ -717,6 +717,25 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'manager_id',
             ],
 
+            // SHOPS_CULTURES
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%shops_cultures}}',
+                'column_name' => 'shop_id',
+            ],
+
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%shops_cultures}}',
+                'column_name' => 'culture_id',
+            ],
+
+
+
+
+
+
+
         ];
 
         $this->foreign_keys = [
@@ -1644,7 +1663,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'foreign_key_name' => 'fk_',
                 'table_name' => '{{%shipping_info}}',
                 'column_name' => 'status_id',
-                'other_table_name' => '{{%user_client}}',
+                'other_table_name' => '{{%shipping_info_status}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
@@ -1732,6 +1751,25 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'table_name' => '{{%order_comments}}',
                 'column_name' => 'manager_id',
                 'other_table_name' => '{{%user_admin}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // SHOPS_CULTURES
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%shops_cultures}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%shops_cultures}}',
+                'column_name' => 'culture_id',
+                'other_table_name' => '{{%cultures}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],
