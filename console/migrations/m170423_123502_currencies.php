@@ -17,6 +17,8 @@ class m170423_123502_currencies extends Migration
             'is_main' => Schema::TYPE_BOOLEAN, // головна (одна)
             'rate' => Schema::TYPE_DECIMAL, // курс до головної
 
+            'shop_id' => Schema::TYPE_BIGINT,
+
             'is_active' => Schema::TYPE_BOOLEAN, // активна
 
             'created_at' => Schema::TYPE_INTEGER,

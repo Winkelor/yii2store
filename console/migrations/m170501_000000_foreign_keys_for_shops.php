@@ -674,6 +674,13 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'contact_id',
             ],
 
+            // currencies
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%currencies}}',
+                'column_name' => 'shop_id',
+            ],
+
         ];
 
         $this->foreign_keys = [
@@ -1624,6 +1631,16 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'method' => 'CASCADE',
             ],
 
+            //CURRENCIES
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%currencies}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
         ];
 
         foreach ($this->indexes as $k => $index) {
@@ -1656,7 +1673,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             );
         }
 
-        return false;
+
     }
 
     public function down()
