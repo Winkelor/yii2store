@@ -674,7 +674,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'contact_id',
             ],
 
-            // currencies
+            // CURRENCIES
             [
                 'index_name' => 'idx_',
                 'table_name' => '{{%currencies}}',
