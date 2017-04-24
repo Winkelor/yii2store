@@ -20,7 +20,7 @@ class m170326_120957_countries extends Migration
 // ISO Code	ISO Short	ISO Long	UN Code
 
         $this->createTable('{{%countries}}', [
-            'id' => Schema::TYPE_BIGPK,
+            'id' => Schema::TYPE_PK,
             'en_name' => Schema::TYPE_STRING, // Ukraine
             'native_name' => Schema::TYPE_STRING, // Україна
             'iso_code'    => Schema::TYPE_STRING, // https://msdn.microsoft.com/en-us/library/ee799297(v=cs.20).aspx

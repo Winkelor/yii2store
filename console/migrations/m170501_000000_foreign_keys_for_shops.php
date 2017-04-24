@@ -453,12 +453,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // ORDERS
-//            // order_user_id // це текстовий ключ лол
-//            [
-//                'index_name' => 'idx_',
-//                'table_name' => '{{%orders}}',
-//                'column_name' => 'order_user_id',
-//            ],
+
             // shop_id
             [
                 'index_name' => 'idx_',
@@ -674,11 +669,52 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'column_name' => 'contact_id',
             ],
 
+            // CULTURES
+            //language_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cultures}}',
+                'column_name' => 'language_id',
+            ],
+            //country_id
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%cultures}}',
+                'column_name' => 'country_id',
+            ],
+
             // CURRENCIES
+            //language_id
             [
                 'index_name' => 'idx_',
                 'table_name' => '{{%currencies}}',
                 'column_name' => 'shop_id',
+            ],
+
+            // ORDER_COMMENTS
+            //'shop_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'shop_id',
+            ],
+            //'department_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'department_id',
+            ],
+            //'order_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'order_id',
+            ],
+            //'manager_id'
+            [
+                'index_name' => 'idx_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'manager_id',
             ],
 
         ];
@@ -1631,12 +1667,71 @@ class m170501_000000_foreign_keys_for_shops extends Migration
                 'method' => 'CASCADE',
             ],
 
+
             //CURRENCIES
             [
                 'foreign_key_name' => 'fk_',
                 'table_name' => '{{%currencies}}',
                 'column_name' => 'shop_id',
                 'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // CULTURES
+            //language_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cultures}}',
+                'column_name' => 'language_id',
+                'other_table_name' => '{{%languages}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //country_id
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%cultures}}',
+                'column_name' => 'country_id',
+                'other_table_name' => '{{%countries}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+
+            // ORDER_COMMENTS
+            //'shop_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'shop_id',
+                'other_table_name' => '{{%shops}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'department_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'department_id',
+                'other_table_name' => '{{%shops_departments}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'order_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'order_id',
+                'other_table_name' => '{{%orders}}',
+                'other_table_key' => 'id',
+                'method' => 'CASCADE',
+            ],
+            //'manager_id'
+            [
+                'foreign_key_name' => 'fk_',
+                'table_name' => '{{%order_comments}}',
+                'column_name' => 'manager_id',
+                'other_table_name' => '{{%user_admin}}',
                 'other_table_key' => 'id',
                 'method' => 'CASCADE',
             ],

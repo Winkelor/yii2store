@@ -18,8 +18,8 @@ class m170408_161022_cultures extends Migration
             'culture_code' => Schema::TYPE_STRING,          // 0x1009
             'ISO_639x_value' => Schema::TYPE_STRING,        // ENC
 
-            'language_is' => Schema::TYPE_STRING,           // ???
-            'country_id' => Schema::TYPE_STRING,            // ???
+            'language_id' => Schema::TYPE_INTEGER,           // ???
+            'country_id' => Schema::TYPE_INTEGER,            // ???
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

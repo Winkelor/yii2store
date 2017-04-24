@@ -12,7 +12,7 @@ class m170326_121012_languages extends Migration
         $tableOptions = null;
 
         $this->createTable('{{%languages}}', [
-            'id' => Schema::TYPE_BIGPK,
+            'id' => Schema::TYPE_PK,
             'en_name' => Schema::TYPE_STRING, // ukrainian
             'iso639_1' => Schema::TYPE_STRING, //uk
             'native_name' => Schema::TYPE_STRING, //українська
