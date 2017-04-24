@@ -1660,7 +1660,7 @@ class m170501_000000_foreign_keys_for_shops extends Migration
             ],
 
             // SHIPPING_INFO
-            //'status_id' // створить міграцію
+//            'status_id' // створить міграцію
             [
                 'foreign_key_name' => 'fk_',
                 'table_name' => '{{%shipping_info}}',
