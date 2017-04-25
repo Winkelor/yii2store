@@ -62,6 +62,8 @@ class HelloController extends Controller
         $db_name = "winkelor_db";
         $tables = $this->getTables($db_name);
 
+        $tables_columns = [];
+
         foreach ($tables as $k => $t)
         {
             echo "TABLE: " . $table_name = $tables[$k]["Tables_in_winkelor_db"] . "\n". "\n";
@@ -70,9 +72,6 @@ class HelloController extends Controller
             foreach ($columns as $k => $c)
             {
                 $pos = stripos($columns[$k]["Type"], "varchar");
-//                echo $columns[$k]["Type"] . " ";
-//                echo "varchar ";
-//                echo "POS: {$pos} " . "\n";
                 if($pos === (int) 0)
                 {
                     echo $columns[$k]["Field"] . "\n";
@@ -85,6 +84,8 @@ class HelloController extends Controller
                     title:string,body:text
                     "
                     */
+
+                    // в начале создать массив стобоцов привязанный к командам
                     $cmd = "php yii migrate/create dghvfidfd";
                     echo "\n" . "RUN COMMAND:  {$cmd}"."\n";;
 
