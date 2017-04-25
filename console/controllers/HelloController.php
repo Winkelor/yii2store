@@ -77,8 +77,14 @@ class HelloController extends Controller
                 {
                     echo $columns[$k]["Field"] . "\n";
                     // make migration command here!
-                    // yii migrate/create create_post_table --fields="author_id:integer:notNull:foreignKey(user),category_id:integer:defaultValue(1):foreignKey,title:string,body:text"
-
+                    /*
+                    php yii migrate/create create_post_table
+                    --fields="
+                    author_id:integer:notNull:foreignKey(user),
+                    category_id:integer:defaultValue(1):foreignKey,
+                    title:string,body:text
+                    "
+                    */
                     $cmd = "php yii migrate/create dghvfidfd";
                     echo "\n" . "RUN COMMAND:  {$cmd}"."\n";;
 
