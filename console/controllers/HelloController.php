@@ -2,6 +2,7 @@
 
 namespace console\controllers;
 
+use yii;
 use yii\console\Controller;
 
 class HelloController extends Controller
@@ -20,7 +21,12 @@ class HelloController extends Controller
 
     public function actionIndex()
     {
-        echo "LOLOLO";
+        echo "LOLOLO". "\n";
+
+        $sql = "SHOW FULL TABLES FROM winkelor_db;";
+        $query = Yii::$app->db->createCommand($sql)/*->execute()*/;
+        var_dump($query->all());
+
         echo $message . "\n";
     }
 }
