@@ -69,8 +69,16 @@ class HelloController extends Controller
 
             foreach ($columns as $k => $c)
             {
-                if($columns[$k]["Type"] == "varchar(255)")
+                $pos = stripos($columns[$k]["Type"], "varchar");
+//                echo $columns[$k]["Type"] . " ";
+//                echo "varchar ";
+//                echo "POS: {$pos} " . "\n";
+                if($pos === (int) 0)
+                {
                     echo $columns[$k]["Field"] . "\n";
+                    // make migration command here!
+                    // yii migrate/create create_post_table --fields="author_id:integer:notNull:foreignKey(user),category_id:integer:defaultValue(1):foreignKey,title:string,body:text"
+                }
             }
             echo "==========================" . "\n";
             echo "\n";
