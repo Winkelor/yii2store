@@ -78,8 +78,18 @@ class HelloController extends Controller
                     echo $columns[$k]["Field"] . "\n";
                     // make migration command here!
                     // yii migrate/create create_post_table --fields="author_id:integer:notNull:foreignKey(user),category_id:integer:defaultValue(1):foreignKey,title:string,body:text"
-                    $cmd = "";
-                    // echo system("php yii {$cmd}"); // http://php.net/manual/ru/function.popen.php
+
+                    $cmd = "php yii migrate/create dghvfidfd";
+                    echo "\n" . "RUN COMMAND:  {$cmd}"."\n";;
+
+                    //echo system($cmd); // http://php.net/manual/ru/function.popen.php
+                    // run console command
+                    $handle = popen($cmd, 'r');
+                    echo "'$handle'; " . gettype($handle) . "\n";
+                    $read = fread($handle, 2096);
+                    echo $read;
+                    pclose($handle);
+                    // end console command
                 }
             }
             echo "==========================" . "\n";
