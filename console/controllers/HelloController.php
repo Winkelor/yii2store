@@ -4,6 +4,8 @@ namespace console\controllers;
 
 use yii;
 use yii\console\Controller;
+use yii\data\ActiveDataProvider;
+use yii\data\SqlDataProvider;
 
 class HelloController extends Controller
 {
@@ -19,14 +21,60 @@ class HelloController extends Controller
         return ['m' => 'message'];
     }
 
+    public function makeSql($sql)
+    {
+        // http://www.yiiframework.com/doc-2.0/guide-output-data-providers.html
+        $provider = new SqlDataProvider([
+            'sql' => $sql,
+            'totalCount' => false,
+            'pagination' => false,
+        ]);
+        $models = $provider->getModels();
+        return $models;
+    }
+
+    public function getTables($db_name)
+    {
+        return $this->makeSql("SHOW FULL TABLES FROM {$db_name}");
+    }
+
+    public function getColumns($db_name, $table_name)
+    {
+        return $this->makeSql("SHOW FULL COLUMNS FROM {$table_name} FROM {$db_name}");
+    }
+
+    public function getKeys($db_name, $table_name)
+    {
+        return $this->makeSql("
+            SELECT 
+              TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME, REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME
+            FROM
+              INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+            WHERE
+              REFERENCED_TABLE_SCHEMA = '{$db_name}' AND
+              REFERENCED_TABLE_NAME = '{$table_name}'
+        ");
+    }
+
     public function actionIndex()
     {
-        echo "LOLOLO". "\n";
+        echo "All STRING COLUMNS: ". "\n";
+        $db_name = "winkelor_db";
+        $tables = $this->getTables($db_name);
 
-        $sql = "SHOW FULL TABLES FROM winkelor_db;";
-        $query = Yii::$app->db->createCommand($sql)/*->execute()*/;
-        var_dump($query->all());
+        foreach ($tables as $k => $t)
+        {
+            echo "TABLE: " . $table_name = $tables[$k]["Tables_in_winkelor_db"] . "\n". "\n";
+            $columns = $this->getColumns($db_name, $table_name);
 
-        echo $message . "\n";
+            foreach ($columns as $k => $c)
+            {
+                if($columns[$k]["Type"] == "varchar(255)")
+                    echo $columns[$k]["Field"] . "\n";
+            }
+            echo "==========================" . "\n";
+            echo "\n";
+        }
+
     }
 }
