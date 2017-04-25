@@ -4,7 +4,6 @@ namespace console\controllers;
 
 use yii;
 use yii\console\Controller;
-use yii\data\ActiveDataProvider;
 use yii\data\SqlDataProvider;
 
 class HelloController extends Controller
@@ -66,15 +65,17 @@ class HelloController extends Controller
 
         foreach ($tables as $k => $t)
         {
-            echo "TABLE: " . $table_name = $tables[$k]["Tables_in_winkelor_db"] . "\n". "\n";
+            $table_name = $tables[$k]["Tables_in_winkelor_db"];
+//            echo "TABLE: " . $table_name . "\n". "\n";
             $columns = $this->getColumns($db_name, $table_name);
-
             foreach ($columns as $k => $c)
             {
                 $pos = stripos($columns[$k]["Type"], "varchar");
                 if($pos === (int) 0)
                 {
-                    echo $columns[$k]["Field"] . "\n";
+                    $tables_columns[$table_name][$columns[$k]["Field"]] = "string";
+/* bla
+//                    echo $columns[$k]["Field"] . "\n";
                     // make migration command here!
                     /*
                     php yii migrate/create create_post_table
@@ -83,24 +84,35 @@ class HelloController extends Controller
                     category_id:integer:defaultValue(1):foreignKey,
                     title:string,body:text
                     "
-                    */
+                    *+/
 
                     // в начале создать массив стобоцов привязанный к командам
-                    $cmd = "php yii migrate/create dghvfidfd";
-                    echo "\n" . "RUN COMMAND:  {$cmd}"."\n";;
-
-                    //echo system($cmd); // http://php.net/manual/ru/function.popen.php
-                    // run console command
-                    $handle = popen($cmd, 'r');
-                    echo "'$handle'; " . gettype($handle) . "\n";
-                    $read = fread($handle, 2096);
-                    echo $read;
-                    pclose($handle);
+//                    $cmd = "php yii migrate/create dghvfidfd";
+//                    echo "\n" . "RUN COMMAND:  {$cmd}"."\n";;
+//
+//                    //echo system($cmd); // http://php.net/manual/ru/function.popen.php
+//                    // run console command
+//                    $handle = popen($cmd, 'r');
+//                    echo "'$handle'; " . gettype($handle) . "\n";
+//                    $read = fread($handle, 2096);
+//                    echo $read;
+//                    pclose($handle);
                     // end console command
+                    */
                 }
             }
-            echo "==========================" . "\n";
-            echo "\n";
+//            echo "==========================" . "\n";
+//            echo "\n";
+        }
+
+
+        foreach ($tables_columns as $table_name => $column)
+        {
+            echo "TABLE NAME = $table_name" . "\n";
+            foreach ($column as $column_name => $column_type)
+                echo "column name = {$column_name}; v = {$column_type}; " ."\n";
+
+            echo "====================================" ."\n";
         }
 
     }
