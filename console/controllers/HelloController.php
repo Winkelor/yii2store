@@ -69,8 +69,15 @@ class HelloController extends Controller
 
             foreach ($columns as $k => $c)
             {
-                if($columns[$k]["Type"] == "varchar(255)")
+                $pos = stripos($columns[$k]["Type"], "varchar");
+//                echo $columns[$k]["Type"] . " ";
+//                echo "varchar ";
+//                echo "POS: {$pos} " . "\n";
+                if($pos === (int) 0)
+                {
                     echo $columns[$k]["Field"] . "\n";
+                    // make migration command here!
+                }
             }
             echo "==========================" . "\n";
             echo "\n";
