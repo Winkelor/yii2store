@@ -5,7 +5,7 @@ namespace console\controllers;
 use yii\console\Controller;
 use yii\data\SqlDataProvider;
 
-//
+// php yii translate -db_name=winkelor_db -lang_table_name=languages
 
 class TranslateController extends Controller
 {
@@ -109,15 +109,10 @@ class TranslateController extends Controller
                 $coma = ($i++ > 0) ? ",":"";
                 $fields .= "{$coma}{$column_name}:{$column_type}";
             }
+
             $table_name_short = $this->getShortTableName($table_name, 4);
-            //$cmd = "php yii migrate/create trans_{$table_name_short} --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:notNull:foreignKey({$table_name}),{$fields}\"";
-
-            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:defaultValue(1):foreignKey,title:string,body:text\"";
-
-//            echo "\n" . "$cmd" . "\n";
-            // php yii translate -db_name=winkelor_db
+            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:defaultValue(1):foreignKey,{$fields}\"";
             $this->runConsole($cmd);
-
         }
 
     }
