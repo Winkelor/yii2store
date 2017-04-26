@@ -58,13 +58,12 @@ class TranslateController extends Controller
 
     public function runConsole($cmd)
     {
-        echo "\n";
+        echo "\n" . $cmd . "\n";
         $handle = popen($cmd, 'r');
-        echo "'$handle'; " . gettype($handle) . "\n";
+//        echo "'$handle'; " . gettype($handle) . "\n";
         $read = fread($handle, 2096);
         echo $read;
         pclose($handle);
-        echo "\n";
     }
 
     public function getShortTableName($name, $length_shn)
@@ -99,12 +98,16 @@ class TranslateController extends Controller
             $i = 0;
             foreach ($column as $column_name => $column_type)
             {
-                $coma = ($i++ > 0) ? " ,":"";
+                $coma = ($i++ > 0) ? ",":"";
                 $fields .= "{$coma}{$column_name}:{$column_type}";
             }
-            $table_name = $this->getShortTableName($table_name, 4);
-            $cmd = "php yii migrate/create trans_{$table_name} --fields=\"lang_id:integer:defaultValue(1):foreignKey(languages), {$table_name}_id:integer:defaultValue(1):foreignKey({$table_name}), {$fields}\"";
-            echo "$cmd" . "\n";
+            $table_name_short = $this->getShortTableName($table_name, 4);
+            //$cmd = "php yii migrate/create trans_{$table_name_short} --fields=\"lang_id:integer:notNull:foreignKey(languages),{$table_name_short}_id:integer:notNull:foreignKey({$table_name}),{$fields}\"";
+
+            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey(languages),{$table_name_short}_id:integer:defaultValue(1):foreignKey,title:string,body:text\"";
+
+//            echo "\n" . "$cmd" . "\n";
+            // php yii translate -db_name=winkelor_db
             $this->runConsole($cmd);
 
         }
