@@ -11,6 +11,10 @@ class TranslateController extends Controller
 {
     public $db_name;
     public $lang_table_name;
+    public $types_arr = [
+        "bigint(20)" => "bigint",
+        "int(11)" => "integer" ,
+    ];
 
     public function options($actionID)
     {
@@ -94,11 +98,12 @@ class TranslateController extends Controller
                 continue;
 
             $columns = $this->getColumns($db_name, $table_name);
+            $tables_columns[$table_name]->keyType =  $columns[0]["Type"]; // 'bigint(20)' 'int(11)'
+
             foreach ($columns as $k => $c)
                 if(stripos($columns[$k]["Type"], "varchar") === (int) 0)
                     $tables_columns[$table_name][$columns[$k]["Field"]] = "string";
         }
-
 
         foreach ($tables_columns as $table_name => $column)
         {
@@ -110,8 +115,9 @@ class TranslateController extends Controller
                 $fields .= "{$coma}{$column_name}:{$column_type}";
             }
 
+            $key_type = $this->types_arr[$tables_columns[$table_name]->keyType];
             $table_name_short = $this->getShortTableName($table_name, 4);
-            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:defaultValue(1):foreignKey,{$fields}\"";
+            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:defaultValue(1):foreignKey,{$fields}\"";
             $this->runConsole($cmd);
         }
 
