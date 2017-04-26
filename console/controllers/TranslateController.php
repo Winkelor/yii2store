@@ -5,20 +5,24 @@ namespace console\controllers;
 use yii\console\Controller;
 use yii\data\SqlDataProvider;
 
-// php yii translate -db_name=winkelor_db
+//
 
 class TranslateController extends Controller
 {
     public $db_name;
+    public $lang_table_name;
 
     public function options($actionID)
     {
-        return ['db_name'];
+        return ['db_name', 'lang_table_name'];
     }
 
     public function optionAliases()
     {
-        return ['db_name' => 'db_name'];
+        return [
+            'db_name' => 'db_name',
+            'lang_table_name' => 'lang_table_name',
+            ];
     }
 
     public function makeSql($sql)
@@ -85,6 +89,10 @@ class TranslateController extends Controller
         foreach ($tables as $k => $t)
         {
             $table_name = $tables[$k]["Tables_in_{$db_name}"];
+            
+            if($table_name == $this->lang_table_name)
+                continue;
+
             $columns = $this->getColumns($db_name, $table_name);
             foreach ($columns as $k => $c)
                 if(stripos($columns[$k]["Type"], "varchar") === (int) 0)
@@ -102,9 +110,9 @@ class TranslateController extends Controller
                 $fields .= "{$coma}{$column_name}:{$column_type}";
             }
             $table_name_short = $this->getShortTableName($table_name, 4);
-            //$cmd = "php yii migrate/create trans_{$table_name_short} --fields=\"lang_id:integer:notNull:foreignKey(languages),{$table_name_short}_id:integer:notNull:foreignKey({$table_name}),{$fields}\"";
+            //$cmd = "php yii migrate/create trans_{$table_name_short} --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:notNull:foreignKey({$table_name}),{$fields}\"";
 
-            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey(languages),{$table_name_short}_id:integer:defaultValue(1):foreignKey,title:string,body:text\"";
+            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:integer:defaultValue(1):foreignKey,title:string,body:text\"";
 
 //            echo "\n" . "$cmd" . "\n";
             // php yii translate -db_name=winkelor_db
