@@ -58,11 +58,13 @@ class TranslateController extends Controller
 
     public function runConsole($cmd)
     {
+        echo "\n";
         $handle = popen($cmd, 'r');
         echo "'$handle'; " . gettype($handle) . "\n";
         $read = fread($handle, 2096);
         echo $read;
         pclose($handle);
+        echo "\n";
     }
 
     public function getShortTableName($name, $length_shn)
@@ -103,6 +105,7 @@ class TranslateController extends Controller
             $table_name = $this->getShortTableName($table_name, 4);
             $cmd = "php yii migrate/create trans_{$table_name} --fields=\"lang_id:integer:defaultValue(1):foreignKey(languages), {$table_name}_id:integer:defaultValue(1):foreignKey({$table_name}), {$fields}\"";
             echo "$cmd" . "\n";
+            $this->runConsole($cmd);
 
         }
 
