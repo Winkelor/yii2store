@@ -124,7 +124,6 @@ class TranslateController extends Controller
 
             foreach ($column as $column_name => $column_type)
             {
-                echo "name: {$column_name} type: {$column_type} ///";
                 if ($column_name != 'keyType')
                 {
                     $coma = ($i++ > 0) ? "," : "";
