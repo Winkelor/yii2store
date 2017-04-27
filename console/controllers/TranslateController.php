@@ -5,20 +5,25 @@ namespace console\controllers;
 use yii\console\Controller;
 use yii\data\SqlDataProvider;
 
-// php yii translate -db_name=winkelor_db -lang_table_name=languages
+// php yii translate -db_name=winkelor_db -lang_table_name=languages -shorter_length=4
 
 class TranslateController extends Controller
 {
+    // Назва бази даних
     public $db_name;
+    // Назва таблиці мов
     public $lang_table_name;
+    // число символів у лексем що скорочуються
+    public $shorter_length;
+    // ковертор типів
     public $types_arr = [
-        "bigint(20)" => "bigint",
-        "int(11)" => "integer" ,
+        'bigint(20)' => 'bigInteger',
+        'int(11)' => 'integer',
     ];
 
     public function options($actionID)
     {
-        return ['db_name', 'lang_table_name'];
+        return ['db_name', 'lang_table_name', 'shorter_length'];
     }
 
     public function optionAliases()
@@ -26,6 +31,7 @@ class TranslateController extends Controller
         return [
             'db_name' => 'db_name',
             'lang_table_name' => 'lang_table_name',
+            'shorter_length' => 'shorter_length'
             ];
     }
 
@@ -98,15 +104,19 @@ class TranslateController extends Controller
                 continue;
 
             $columns = $this->getColumns($db_name, $table_name);
-            $tables_columns[$table_name]->keyType =  $columns[0]["Type"]; // 'bigint(20)' 'int(11)'
+            $tables_columns[$table_name]['keyType'] =  $columns[0]["Type"]; // 'bigint(20)' 'int(11)'
 
             foreach ($columns as $k => $c)
                 if(stripos($columns[$k]["Type"], "varchar") === (int) 0)
                     $tables_columns[$table_name][$columns[$k]["Field"]] = "string";
         }
 
+        $count = count($tables_columns);
+        $ti = 0; // table iterator
+        echo "\n";
         foreach ($tables_columns as $table_name => $column)
         {
+            echo ++$ti . " from " . $count . " tables. " . "\n";
             $fields = "";
             $i = 0;
             foreach ($column as $column_name => $column_type)
@@ -115,8 +125,8 @@ class TranslateController extends Controller
                 $fields .= "{$coma}{$column_name}:{$column_type}";
             }
 
-            $key_type = $this->types_arr[$tables_columns[$table_name]->keyType];
-            $table_name_short = $this->getShortTableName($table_name, 4);
+            $key_type = $this->types_arr[$tables_columns[$table_name]['keyType']];
+            $table_name_short = $this->getShortTableName($table_name, $this->shorter_length);
             $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:defaultValue(1):foreignKey,{$fields}\"";
             $this->runConsole($cmd);
         }

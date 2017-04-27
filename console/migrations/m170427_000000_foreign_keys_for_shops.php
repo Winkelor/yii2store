@@ -4,7 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 // http://www.yiiframework.com/doc-2.0/yii-db-migration.html
 // це просто вторичні ключі
-class m170501_000000_foreign_keys_for_shops extends Migration
+class m170427_000000_foreign_keys_for_shops extends Migration
 {
     public $indexes = [];
     public $foreign_keys = [];
