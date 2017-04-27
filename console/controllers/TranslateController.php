@@ -117,15 +117,21 @@ class TranslateController extends Controller
         foreach ($tables_columns as $table_name => $column)
         {
             echo ++$ti . " from " . $count . " tables. " . "\n";
+            $key_type = $this->types_arr[$tables_columns[$table_name]['keyType']];
+
             $fields = "";
             $i = 0;
+
             foreach ($column as $column_name => $column_type)
             {
-                $coma = ($i++ > 0) ? ",":"";
-                $fields .= "{$coma}{$column_name}:{$column_type}";
+                echo "name: {$column_name} type: {$column_type} ///";
+                if ($column_name != 'keyType')
+                {
+                    $coma = ($i++ > 0) ? "," : "";
+                    $fields .= "{$coma}{$column_name}:{$column_type}";
+                }
             }
 
-            $key_type = $this->types_arr[$tables_columns[$table_name]['keyType']];
             $table_name_short = $this->getShortTableName($table_name, $this->shorter_length);
             $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:defaultValue(1):foreignKey,{$fields}\"";
             $this->runConsole($cmd);
