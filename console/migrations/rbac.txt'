@@ -1,2 +1,2 @@
-yii migrate --migrationPath=@yii/rbac/migrations/
+php yii migrate --migrationPath=@yii/rbac/migrations/
 https://github.com/githubjeka/gui-rbac-yii2
