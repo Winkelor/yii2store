@@ -17,6 +17,7 @@ return [
       // admin panel for Winkelor
       'admin' => [
             'class' => 'backend\modules\admin\Admin',
+            'viewPath' => '@app/themes/adminlte/modules/admin/views',
         ],
         # RBAC GUI
       'rbac' => [
