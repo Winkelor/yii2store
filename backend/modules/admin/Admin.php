@@ -26,7 +26,8 @@ class Admin extends \yii\base\Module
                 'class' => 'backend\modules\admin\modules\rbac\RBAC',
             ],
             'guirbac' => [
-                'class' => 'githubjeka\rbac\Module',
+//                'class' => 'githubjeka\rbac\Module',
+                'class' => 'backend\modules\admin\modules\guirbac\GUIRBAC',
             ],
         ];
 
