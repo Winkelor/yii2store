@@ -26,6 +26,8 @@ class AdminlteAsset extends AssetBundle
               apply the skin class to the body tag so the changes take effect.
         */
         'dist/css/skins/skin-blue.min.css',
+
+        'css/guirbac.css', // GUIRBAC
     ];
     public $js = [
         /* jQuery 2.2.3 */
@@ -34,10 +36,17 @@ class AdminlteAsset extends AssetBundle
         'bootstrap/js/bootstrap.min.js',
         /* AdminLTE App */
         'dist/js/app.min.js',
+
+        "js/d3.js", // GUIRBAC
+        "js/d3tip.js", // GUIRBAC
+        "js/guirbac.js", // GUIRBAC
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+
+        'githubjeka\rbac\assets\D3TipAsset', // GUIRBAC
+        'githubjeka\rbac\assets\D3Asset', // GUIRBAC
     ];
 
 }

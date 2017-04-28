@@ -8,8 +8,8 @@ $country = Yii::$app->request->get('country');
 $culture = "{$lang}-{$country}";
 Yii::$app->language = $culture;
 
-
 $assets = AdminlteAsset::register($this);
+
 $this->beginPage();
 ?>
 <!DOCTYPE html>
