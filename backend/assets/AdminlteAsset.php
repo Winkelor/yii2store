@@ -27,7 +27,7 @@ class AdminlteAsset extends AssetBundle
         */
         'dist/css/skins/skin-blue.min.css',
 
-        'css/guirbac.css', // GUIRBAC
+//        'css/guirbac.css', // GUIRBAC
     ];
     public $js = [
         /* jQuery 2.2.3 */
@@ -37,16 +37,15 @@ class AdminlteAsset extends AssetBundle
         /* AdminLTE App */
         'dist/js/app.min.js',
 
-        "js/d3.js", // GUIRBAC
-        "js/d3tip.js", // GUIRBAC
-        "js/guirbac.js", // GUIRBAC
+//        "js/d3.js", // GUIRBAC
+//        "js/d3tip.js", // GUIRBAC
+//        "js/guirbac.js", // GUIRBAC
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-
-        'githubjeka\rbac\assets\D3TipAsset', // GUIRBAC
-        'githubjeka\rbac\assets\D3Asset', // GUIRBAC
+//        'githubjeka\rbac\assets\D3Asset', // GUIRBAC
+//        'githubjeka\rbac\assets\D3TipAsset', // GUIRBAC
     ];
 
 }

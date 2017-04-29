@@ -5,6 +5,8 @@ use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\View;
 
+//use backend\modules\admin\modules\guirbac\models\ItemForm;
+
 /* @var $this View */
 
 $routes = Json::encode([
@@ -125,16 +127,16 @@ $this->registerJs("var routes = $routes;", View::POS_BEGIN);
         </h4>
         <pre id="infoItem"></pre>
 
-<!--        <h4 class="page-header">-->
-<!--            <a href="https://github.com/yiisoft/yii2/blob/master/docs/guide/security-authorization.md#role-based-access-control-rbac">-->
-<!--                RBAC basic concepts-->
-<!--            </a>-->
-<!--        </h4>-->
-<!--        <h4 class="page-header">-->
-<!--            <a href="https://github.com/githubjeka/gui-rbac-yii2">-->
-<!--                Fork on github-->
-<!--            </a>-->
-<!--        </h4>-->
+        <h4 class="page-header">
+            <a href="https://github.com/yiisoft/yii2/blob/master/docs/guide/security-authorization.md#role-based-access-control-rbac">
+                RBAC basic concepts
+            </a>
+        </h4>
+        <h4 class="page-header">
+            <a href="https://github.com/githubjeka/gui-rbac-yii2">
+                Fork on github
+            </a>
+        </h4>
 
     </div>
 </div>

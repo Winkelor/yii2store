@@ -13,7 +13,7 @@ class DefaultController extends Controller
 {
     public function actionIndex()
     {
-//        $this->layout = "main.php";
+        $this->layout = "main.php";
         return $this->render('index');
     }
 
