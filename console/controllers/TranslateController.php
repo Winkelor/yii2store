@@ -122,6 +122,8 @@ class TranslateController extends Controller
             $fields = "";
             $i = 0;
 
+            $string_detect = false;
+
             foreach ($column as $column_name => $column_type)
             {
                 if ($column_name != 'keyType')
@@ -129,10 +131,21 @@ class TranslateController extends Controller
                     $coma = ($i++ > 0) ? "," : "";
                     $fields .= "{$coma}{$column_name}:{$column_type}";
                 }
+
+                if ($column_type == 'string')
+                    $string_detect = true;
             }
 
-            $table_name_short = $this->getShortTableName($table_name, $this->shorter_length);
-            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:defaultValue(1):foreignKey,{$fields}\"";
+            if($string_detect == false)
+            {
+                echo "table {$table_name} don`t have string columns.\n";
+                continue;
+            }
+
+//            $table_name_short = $this->getShortTableName($table_name, $this->shorter_length);
+            $table_name_short = $table_name;
+            //$cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:defaultValue(1):foreignKey,{$fields}\"";
+            $cmd = "php yii migrate/create create_trans_{$table_name_short}_table --fields=\"lang_id:integer:notNull:foreignKey({$this->lang_table_name}),{$table_name_short}_id:{$key_type}:foreignKey,{$fields}\"";
             $this->runConsole($cmd);
         }
 
