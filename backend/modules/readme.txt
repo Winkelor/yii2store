@@ -8,12 +8,3 @@ see main conf
         ],
 
 ===============================================================================
-SELLER
-backend\modules\seller\seller
-seller
-seller' => [
-            'class' => 'backend\modules\seller\seller',
-            'viewPath' => '@app/themes/adminlte/modules/seller/views',
-        ],
-
-CATALOG

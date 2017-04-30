@@ -1,0 +1,12 @@
+ADMIN
+backend\modules\admin\admin
+SELLER
+backend\modules\seller\seller
+seller
+seller' => [
+            'class' => 'backend\modules\seller\seller',
+            'viewPath' => '@app/themes/adminlte/modules/seller/views',
+        ],
+
+CATALOG
+backend\modules\seller\catalog\catalog
