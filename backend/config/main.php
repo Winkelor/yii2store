@@ -16,8 +16,13 @@ return [
     'modules' => [
       // admin panel for Winkelor
       'admin' => [
-            'class' => 'backend\modules\admin\Admin',
+            'class' => 'backend\modules\admin\admin',
             'viewPath' => '@app/themes/adminlte/modules/admin/views',
+        ],
+        // module for seller
+        'seller' => [
+            'class' => 'backend\modules\seller\seller',
+            'viewPath' => '@app/themes/adminlte/modules/seller/views',
         ],
 //        # RBAC GUI
 //      'rbac' => [

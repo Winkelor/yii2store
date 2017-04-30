@@ -16,7 +16,7 @@ return [
     'modules' => [
             // admin panel for seller
             'admin' => [
-                'class' => 'backend\modules\admin\Admin',
+                'class' => 'backend\modules\admin\admin',
             ],
         ],
     'components' => [

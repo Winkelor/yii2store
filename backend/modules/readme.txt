@@ -6,3 +6,5 @@ see main conf
             'class' => 'backend\modules\admin\Admin',
             'viewPath' => '@app/themes/adminlte/modules/admin/views',
         ],
+
+===============================================================================
