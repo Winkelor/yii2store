@@ -10,3 +10,7 @@ seller' => [
 
 CATALOG
 backend\modules\seller\catalog\catalog
+        'catalog' => [
+            'class' => 'backend\modules\seller\catalog\catalog',
+            'viewPath' => '@app/themes/adminlte/modules/catalog/views',
+        ],
