@@ -18,7 +18,7 @@ class m170317_130251_shipping_info extends Migration
             // дата приходу до клієнта
             'date_end' => Schema::TYPE_DATETIME,
             // статус
-            'status_id' => Schema::TYPE_BIGINT, /* в работе, доставлен, отменен итд */
+            'status_id' => Schema::TYPE_INTEGER, /* в работе, доставлен, отменен итд */
             //адрес доставки
             'address_id' => Schema::TYPE_BIGINT,
             //контакт доставки

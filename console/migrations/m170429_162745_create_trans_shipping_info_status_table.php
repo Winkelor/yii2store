@@ -19,7 +19,7 @@ class m170429_162745_create_trans_shipping_info_status_table extends Migration
         $this->createTable('trans_shipping_info_status', [
             'id' => $this->primaryKey(),
             'lang_id' => $this->integer()->notNull(),
-            'shipping_info_status_id' => $this->bigInteger(),
+            'shipping_info_status_id' => $this->Integer(),
             'name' => $this->string(),
             'description' => $this->string(),
         ]);
