@@ -22,7 +22,7 @@ class seller extends \yii\base\Module
         // custom initialization code goes here
         $this->modules = [
             'catalog' => [
-                'class' => 'backend\modules\seller\catalog\catalog',
+                'class' => 'backend\modules\seller\modules\catalog\catalog',
                 'viewPath' => '@app/themes/adminlte/modules/catalog/views',
             ],
 

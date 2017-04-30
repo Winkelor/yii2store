@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\seller\catalog;
+namespace backend\modules\seller\modules\catalog;
 
 /**
  * catalog module definition class
@@ -10,7 +10,7 @@ class catalog extends \yii\base\Module
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'backend\modules\seller\catalog\controllers';
+    public $controllerNamespace = 'backend\modules\seller\modules\catalog\controllers';
 
     /**
      * @inheritdoc

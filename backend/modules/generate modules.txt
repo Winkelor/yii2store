@@ -9,8 +9,8 @@ seller' => [
         ],
 
 CATALOG
-backend\modules\seller\catalog\catalog
-        'catalog' => [
-            'class' => 'backend\modules\seller\catalog\catalog',
+backend\modules\seller\modules\catalog\catalog
+'catalog' => [
+            'class' => 'backend\modules\seller\modules\catalog\catalog',
             'viewPath' => '@app/themes/adminlte/modules/catalog/views',
         ],

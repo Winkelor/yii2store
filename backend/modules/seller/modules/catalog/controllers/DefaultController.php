@@ -1,14 +1,13 @@
 <?php
 
-namespace backend\modules\seller\catalog\controllers;
+namespace backend\modules\seller\modules\catalog\controllers;
 
-use backend\controllers\BaseController;
 use yii\web\Controller;
 
 /**
  * Default controller for the `catalog` module
  */
-class DefaultController extends BaseController
+class DefaultController extends Controller
 {
     /**
      * Renders the index view for the module
