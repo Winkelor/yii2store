@@ -1,12 +1,12 @@
 <?php
 
-namespace backend\modules\seller\modules\catalog\controllers;
+namespace backend\modules\seller\modules\orders\controllers;
 
 use backend\controllers\BaseController;
 use yii\web\Controller;
 
 /**
- * Default controller for the `catalog` module
+ * Default controller for the `orders` module
  */
 class DefaultController extends BaseController
 {

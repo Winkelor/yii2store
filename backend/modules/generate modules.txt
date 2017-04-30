@@ -14,3 +14,6 @@ backend\modules\seller\modules\catalog\catalog
             'class' => 'backend\modules\seller\modules\catalog\catalog',
             'viewPath' => '@app/themes/adminlte/modules/catalog/views',
         ],
+
+ORDERS
+backend\modules\seller\modules\orders\orders

@@ -25,7 +25,10 @@ class seller extends \yii\base\Module
                 'class' => 'backend\modules\seller\modules\catalog\catalog',
                 'viewPath' => '@app/themes/adminlte/modules/catalog/views',
             ],
-
+            'orders' => [
+                'class' => 'backend\modules\seller\modules\orders\orders',
+                'viewPath' => '@app/themes/adminlte/modules/orders/views',
+            ],
         ];
 
     }
