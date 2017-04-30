@@ -14,9 +14,7 @@ class m170429_205558_shipping_box_info extends Migration
         $this->createTable('{{%shipping_box_info}}', [
             'id' => Schema::TYPE_BIGPK,
             // магазин
-            'shop_id' => Schema::TYPE_BIGINT,
-            // відділ магазину
-            'department_id' => Schema::TYPE_BIGINT, /* optional */
+            'shop_id' => Schema::TYPE_BIGINT, // хто створив
             // цінність пакунку
             'price' => Schema::TYPE_DECIMAL,
             // weight in kg вага

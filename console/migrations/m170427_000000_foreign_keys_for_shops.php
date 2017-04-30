@@ -1804,6 +1804,7 @@ class m170427_000000_foreign_keys_for_shops extends Migration
                 $foreign_key['column_name'],
                 $foreign_key['other_table_name'],
                 $foreign_key['other_table_key'],
+                $foreign_key['method'],
                 $foreign_key['method']
             );
         }

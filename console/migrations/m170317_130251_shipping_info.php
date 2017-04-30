@@ -23,6 +23,8 @@ class m170317_130251_shipping_info extends Migration
             'address_id' => Schema::TYPE_BIGINT,
             //контакт доставки
             'contact_id' => Schema::TYPE_BIGINT,
+            // пакунок
+            'shipping_box_info_id' => Schema::TYPE_BIGINT,
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,

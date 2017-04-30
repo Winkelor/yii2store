@@ -29,10 +29,15 @@ class m170309_135613_products_attributes_logistics_info extends Migration
             // кількість
             'count' => Schema::TYPE_INTEGER,
 
+            // пакунок
+            'shipping_box_info_id' => Schema::TYPE_BIGINT,
+
             // статус logistics_info
             'status_id' =>  Schema::TYPE_BIGINT,
             //активний чи ні (нашо воно ?)
             'is_action' => Schema::TYPE_BOOLEAN,
+
+
 
             'created_at' => Schema::TYPE_INTEGER,
             'updated_at' => Schema::TYPE_INTEGER,
