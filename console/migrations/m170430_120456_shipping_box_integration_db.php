@@ -7,12 +7,6 @@ use yii\db\Schema;
 class m170430_120456_shipping_box_integration_db extends Migration
 {
     public $keys = [
-        // SHIPPING_BOX_INFO_TYPE_PACKAGE
-        [
-            'table_name' => '{{%shipping_box_info_type_package}}',
-            'column_name' => 'culture_id',
-            'other_table_name' => '{{%cultures}}',
-        ],
 
         // SHIPPING_BOX_INFO
         [
