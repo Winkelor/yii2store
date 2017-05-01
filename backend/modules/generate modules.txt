@@ -24,3 +24,24 @@ backend\modules\seller\modules\catalog\modules\attributes\attributes
 DASHBOARD
 backend\modules\dashboard\dashboard
 
+MANAGERS
+backend\modules\seller\modules\managers\managers
+'managers' => [
+    'class' => 'backend\modules\seller\modules\managers\managers',
+],
+
+CUSTOMERS
+backend\modules\seller\modules\customers\customers
+'customers' => [
+    'class' => 'backend\modules\seller\modules\customers\customers',
+],
+
+
+SHIPPING
+backend\modules\seller\modules\shipping\shipping
+'shipping' => [
+    'class' => 'backend\modules\seller\modules\shipping\shipping',
+],
+
+
+
