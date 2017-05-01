@@ -20,3 +20,7 @@ backend\modules\seller\modules\orders\orders
 
 ATTRIBUTES
 backend\modules\seller\modules\catalog\modules\attributes\attributes
+
+DASHBOARD
+backend\modules\dashboard\dashboard
+

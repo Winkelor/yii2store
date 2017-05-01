@@ -15,7 +15,11 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
       // admin panel for Winkelor
-      'admin' => [
+        'dashboard' => [
+            'class' => 'backend\modules\dashboard\dashboard',
+            'viewPath' => '@app/themes/adminlte/modules/dashboard/views',
+        ],
+        'admin' => [
             'class' => 'backend\modules\admin\admin',
             'viewPath' => '@app/themes/adminlte/modules/admin/views',
         ],
