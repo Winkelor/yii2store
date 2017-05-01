@@ -20,5 +20,11 @@ class catalog extends \yii\base\Module
         parent::init();
 
         // custom initialization code goes here
+        $this->modules = [
+            'attributes' => [
+                'class' => 'backend\modules\seller\modules\catalog\modules\attributes\attributes',
+                'viewPath' => '@app/themes/adminlte/modules/attributes/views',
+            ],
+        ];
     }
 }

@@ -17,3 +17,6 @@ backend\modules\seller\modules\catalog\catalog
 
 ORDERS
 backend\modules\seller\modules\orders\orders
+
+ATTRIBUTES
+backend\modules\seller\modules\catalog\modules\attributes\attributes
