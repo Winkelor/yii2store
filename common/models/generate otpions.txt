@@ -1,4 +1,8 @@
 common\models inverseOf
+php yii gii/model addresses
+- tableName
+- modelClass
+php yii gii/model --tableName=addresses --modelClass=Addresses
 
 addresses
 attributes_categories
