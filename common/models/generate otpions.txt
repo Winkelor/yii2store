@@ -4,16 +4,14 @@ php yii gii/model addresses
 - modelClass
 php yii gii/model --tableName=addresses --modelClass=Addresses
 
+SHOW  TABLES in winkelor_db;
+
 addresses
 attributes_categories
 attributes_groups
 attributes_products
 attributes_products_group
 attributes_types
-auth_assignment
-auth_item
-auth_item_child
-auth_rule
 cart
 cart_details
 cart_details_status
@@ -56,39 +54,6 @@ shops_cultures
 shops_departments
 shops_departments_statuses
 shops_departments_types
-trans_addresses
-trans_attributes_categories
-trans_attributes_groups
-trans_attributes_products
-trans_attributes_types
-trans_cart_details_status
-trans_categories
-trans_contacts
-trans_countries
-trans_cultures
-trans_currencies
-trans_global_categories
-trans_image_info
-trans_image_types
-trans_order_comments
-trans_order_statuses
-trans_orders
-trans_orders_details_status
-trans_product_status
-trans_products
-trans_products_attributes_logistics_info_statuses
-trans_seo_info
-trans_shipping_info
-trans_shipping_info_status
-trans_shop_statuses
-trans_shop_types
-trans_shops
-trans_shops_commerce_data
-trans_shops_departments
-trans_shops_departments_statuses
-trans_shops_departments_types
-trans_usr_accounts_types
-trans_wishlist
 user_admin
 user_client
 usr_accounts_types
