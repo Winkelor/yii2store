@@ -51,7 +51,7 @@ return [
             'translations' => [
                 '*' => [ // * за все відповідає
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@app/messages',
+                    'basePath' => '@common/messages',
                     'sourceLanguage' => 'en-US',
                     'fileMap' => [ // дивно
 //                        'app' => 'app.php',
