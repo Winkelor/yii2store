@@ -3,6 +3,7 @@
 use yii\db\Migration;
 use yii\db\Schema;
 
+//СТворить заглушку фотки товару для всієї категорії
 class m170312_143014_image_info_products extends Migration
 {
     public function up()

@@ -52,7 +52,7 @@ return [
                 '*' => [ // * за все відповідає
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
-                    'sourceLanguage' => 'en-US',
+                    'sourceLanguage' => 'en',
                     'fileMap' => [ // дивно
 //                        'app' => 'app.php',
 //                        'app/error' => 'error.php',

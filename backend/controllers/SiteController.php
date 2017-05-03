@@ -74,7 +74,7 @@ class SiteController extends BaseController
 //        $country = Yii::$app->request->get('country');
 //        $culture = "{$lang}-{$country}";
 //        Yii::$app->language = $culture;
-
+//
 //        $culture = explode("-", Yii::$app->language);
 //        $lang = $culture[0];
 //        $country = $culture[1];
