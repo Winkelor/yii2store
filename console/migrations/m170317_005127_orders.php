@@ -11,7 +11,7 @@ class m170317_005127_orders extends Migration
 
         $this->createTable('{{%orders}}', [
             'id' => Schema::TYPE_BIGPK,
-            //ід користувача ORDER # 305-9848180-5927520
+            //ід користувача ORDER # 305-9848180-5927520 (не допускать в перекладі)
             'order_user_id' => Schema::TYPE_STRING,
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */

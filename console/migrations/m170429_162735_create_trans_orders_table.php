@@ -20,7 +20,7 @@ class m170429_162735_create_trans_orders_table extends Migration
             'id' => $this->primaryKey(),
             'lang_id' => $this->integer()->notNull(),
             'orders_id' => $this->bigInteger(),
-            'order_user_id' => $this->string(),
+//            'order_user_id' => $this->string(), це номер заказу який можна поставить вручну
             'comment' => $this->string(),
         ]);
 
