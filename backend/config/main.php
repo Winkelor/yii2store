@@ -147,6 +147,11 @@ return [
             ],
         ],
 
+        // get en or US from en-US
+        'cultureManager' => [
+            'class' => 'backend\components\MyComponents\cultureManager',
+        ],
+
         # моя поведінка
         'MyBehavior' => [
             'class' => 'backend\components\behaviors\MyBehavior',

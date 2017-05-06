@@ -9,11 +9,8 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1>Congratulations!</h1>
         <h1>Lang_app: <?php echo Yii::$app->language ?></h1>
-        <h1>lang: <?php echo $lang; ?></h1>
-        <h1>country: <?php echo $country; ?></h1>
-
+        <p>request: <?php echo Yii::$app->request->get('lang') . "-" . Yii::$app->request->get('country')?></p>
         <p class="lead">You have successfully created your Yii-powered application.</p>
-
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 

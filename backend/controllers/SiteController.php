@@ -78,11 +78,12 @@ class SiteController extends BaseController
 //        $culture = explode("-", Yii::$app->language);
 //        $lang = $culture[0];
 //        $country = $culture[1];
+//        echo "lang from component: " . Yii::$app->cultureManager->getLanguage();
+//        echo "\n";
+//        echo "country from component: " . Yii::$app->cultureManager->getCountry();
+//        exit;
 
-        return $this->render('index', [
-//            'lang' => $lang,
-//            'country' => $country,
-        ]);
+        return $this->render('index', []);
     }
 
     /**
