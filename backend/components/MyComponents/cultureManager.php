@@ -11,6 +11,14 @@ class cultureManager extends Component
     public $language = "";
     public $country = "";
 
+    public function makeCulture()
+    {
+        if(Yii::$app->request->get('lang') != "" and Yii::$app->request->get('country') != "")
+            Yii::$app->language =
+        Yii::$app->request->get('lang').'-'.
+        Yii::$app->request->get('country');
+    }
+
     public function setCulture()
     {
         $this->culture = Yii::$app->language;
