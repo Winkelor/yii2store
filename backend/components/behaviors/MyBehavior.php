@@ -44,15 +44,22 @@ class MyBehavior extends Behavior
         return "  Ця хуйня написана в поведінках в класі backend\\components\\behaviors\\MyBehavior; тепер треба понять нахуя ";
     }
 
-    public function events()
-    {
-        return [
-            ActiveRecord::EVENT_BEFORE_VALIDATE => 'beforeValidate',
-        ];
-    }
-
-    public function beforeValidate($event)
-    {
-        // ...
-    }
+//    public function events()
+//    {
+//        return [
+//            ActiveRecord::EVENT_BEFORE_VALIDATE => 'beforeValidate',
+//            ActiveRecord::EVENT_INIT => 'beforeInit',
+//        ];
+//    }
+//
+//    public function beforeValidate($event)
+//    {
+//        // ...
+//    }
+//
+//    public function beforeInit($event)
+//    {
+//        // ....
+//
+//    }
 }
