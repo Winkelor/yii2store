@@ -1,0 +1,4 @@
+shops
+shops_departament
+products
+users_clients
