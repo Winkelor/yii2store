@@ -22,6 +22,7 @@ use Yii;
  * @property CartDetails[] $cartDetails
  * @property Orders[] $orders
  * @property OrdersDetails[] $ordersDetails
+ * @property ProductsComments[] $productsComments
  * @property UsrAccountsTypes $accountType
  * @property Wishlist[] $wishlists
  * @property WishlistDetails[] $wishlistDetails
@@ -102,6 +103,14 @@ class UserClient extends \yii\db\ActiveRecord
     public function getOrdersDetails()
     {
         return $this->hasMany(OrdersDetails::className(), ['user_client_id' => 'id'])->inverseOf('userClient');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProductsComments()
+    {
+        return $this->hasMany(ProductsComments::className(), ['user_client_id' => 'id'])->inverseOf('userClient');
     }
 
     /**

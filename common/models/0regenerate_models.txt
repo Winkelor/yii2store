@@ -1,7 +1,0 @@
-comment_status
-products_comments
-
-shops
-shops_departament
-products
-users_clients

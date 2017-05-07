@@ -29,6 +29,7 @@ use Yii;
  * @property ProductStatus[] $productStatuses
  * @property Products[] $products
  * @property ProductsAttributesLogisticsInfo[] $productsAttributesLogisticsInfos
+ * @property ProductsComments[] $productsComments
  * @property ShopsCommerceData[] $shopsCommerceDatas
  * @property Addresses $address
  * @property Contacts $contact
@@ -164,6 +165,14 @@ class ShopsDepartments extends \yii\db\ActiveRecord
     public function getProductsAttributesLogisticsInfos()
     {
         return $this->hasMany(ProductsAttributesLogisticsInfo::className(), ['department_id' => 'id'])->inverseOf('department');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProductsComments()
+    {
+        return $this->hasMany(ProductsComments::className(), ['department_id' => 'id'])->inverseOf('department');
     }
 
     /**

@@ -33,6 +33,7 @@ use Yii;
  * @property SeoInfo $seo
  * @property Shops $shop
  * @property ProductsAttributesLogisticsInfo[] $productsAttributesLogisticsInfos
+ * @property ProductsComments[] $productsComments
  * @property TransProducts[] $transProducts
  * @property WishlistDetails[] $wishlistDetails
  */
@@ -171,6 +172,14 @@ class Products extends \yii\db\ActiveRecord
     public function getProductsAttributesLogisticsInfos()
     {
         return $this->hasMany(ProductsAttributesLogisticsInfo::className(), ['product_id' => 'id'])->inverseOf('product');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProductsComments()
+    {
+        return $this->hasMany(ProductsComments::className(), ['product_id' => 'id'])->inverseOf('product');
     }
 
     /**
