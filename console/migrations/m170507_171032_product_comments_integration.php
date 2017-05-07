@@ -5,36 +5,35 @@ use yii\db\Migration;
 class m170507_171032_product_comments_integration extends Migration
 {
     public $keys = [
-
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'shop_id',
             'other_table_name' => '{{%shops}}',
         ],
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'department_id',
             'other_table_name' => '{{%shops_departments}}',
         ],
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'product_id',
             'other_table_name' => '{{%products}}',
         ],
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'user_client_id',
             'other_table_name' => '{{%user_client}}',
         ],
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'parent_id',
-            'other_table_name' => '{{%comment_status}}',
+            'other_table_name' => '{{%products_comments}}',
         ],
         [
-            'table_name' => '{{%comment_status}}',
+            'table_name' => '{{%products_comments}}',
             'column_name' => 'status_id',
-            'other_table_name' => '{{%comment_status}}',
+            'other_table_name' => '{{%products_comments}}',
         ],
     ];
 

@@ -8,7 +8,7 @@ class m170507_161150_products_comments extends Migration
     public function up()
     {
         $tableOptions = null;
-        $this->createTable('{{%comment_status}}', [
+        $this->createTable('{{%products_comments}}', [
             'id' => Schema::TYPE_PK,
             'shop_id' => Schema::TYPE_BIGINT,
             'department_id' => Schema::TYPE_BIGINT, /* optional */
