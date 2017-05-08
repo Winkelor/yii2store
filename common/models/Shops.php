@@ -17,6 +17,7 @@ use Yii;
  * @property integer $contact_id
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $country_id
  *
  * @property AttributesCategories[] $attributesCategories
  * @property AttributesGroups[] $attributesGroups
@@ -43,6 +44,7 @@ use Yii;
  * @property ShopConfig[] $shopConfigs
  * @property Addresses $address
  * @property Contacts $contact
+ * @property Countries $country
  * @property UserAdmin $mainUser
  * @property ShopStatuses $status
  * @property ShopTypes $type
@@ -68,10 +70,11 @@ class Shops extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['main_user_id', 'type_id', 'status_id', 'address_id', 'contact_id', 'created_at', 'updated_at'], 'integer'],
+            [['main_user_id', 'type_id', 'status_id', 'address_id', 'contact_id', 'created_at', 'updated_at', 'country_id'], 'integer'],
             [['name', 'short_name'], 'string', 'max' => 255],
             [['address_id'], 'exist', 'skipOnError' => true, 'targetClass' => Addresses::className(), 'targetAttribute' => ['address_id' => 'id']],
             [['contact_id'], 'exist', 'skipOnError' => true, 'targetClass' => Contacts::className(), 'targetAttribute' => ['contact_id' => 'id']],
+            [['country_id'], 'exist', 'skipOnError' => true, 'targetClass' => Countries::className(), 'targetAttribute' => ['country_id' => 'id']],
             [['main_user_id'], 'exist', 'skipOnError' => true, 'targetClass' => UserAdmin::className(), 'targetAttribute' => ['main_user_id' => 'id']],
             [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShopStatuses::className(), 'targetAttribute' => ['status_id' => 'id']],
             [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShopTypes::className(), 'targetAttribute' => ['type_id' => 'id']],
@@ -94,6 +97,7 @@ class Shops extends \yii\db\ActiveRecord
             'contact_id' => Yii::t('shops', 'Contact ID'),
             'created_at' => Yii::t('shops', 'Created At'),
             'updated_at' => Yii::t('shops', 'Updated At'),
+            'country_id' => Yii::t('shops', 'Country ID'),
         ];
     }
 
@@ -295,6 +299,14 @@ class Shops extends \yii\db\ActiveRecord
     public function getContact()
     {
         return $this->hasOne(Contacts::className(), ['id' => 'contact_id'])->inverseOf('shops');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCountry()
+    {
+        return $this->hasOne(Countries::className(), ['id' => 'country_id'])->inverseOf('shops');
     }
 
     /**

@@ -19,6 +19,7 @@ use Yii;
  * @property integer $updated_at
  *
  * @property Cultures[] $cultures
+ * @property Shops[] $shops
  * @property TransCountries[] $transCountries
  */
 class Countries extends \yii\db\ActiveRecord
@@ -67,6 +68,14 @@ class Countries extends \yii\db\ActiveRecord
     public function getCultures()
     {
         return $this->hasMany(Cultures::className(), ['country_id' => 'id'])->inverseOf('country');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getShops()
+    {
+        return $this->hasMany(Shops::className(), ['country_id' => 'id'])->inverseOf('country');
     }
 
     /**
