@@ -4,7 +4,14 @@ use backend\components\Helpers\Url;
 ?>
 <li class="header">Admin</li>
 <!-- Optionally, you can add icons to the links -->
-<li <!--class="active"-->><a href="<?= Url::to(['/admin/default/index']) ?>"><i class="fa fa-folder"></i> <span>Admin</span></a></li>
+<li <!--class="active"--> ><a href="<?= Url::to(['/admin/default/index']) ?>"><i class="fa fa-folder"></i> <span>Admin Panel</span></a></li>
+<li>
+    <a href="<?= Url::toRoute(['/admin/shopsadministration']) ?>"><i class="fa fa-folder"></i> <span>Shops administration</span></a>
+    <ul class="treeview-menu">
+        <li><a href="<?= Url::toRoute(['/admin/shopsadministration/shops']) ?>">Shops</a></li>
+        <li><a href="#">Графіки</a></li>
+    </ul>
+</li>
 <li><a href="<?= Url::toRoute(['/rbac/default/index']) ?>"><i class="fa fa-folder"></i> <span>RBAC GUI</span></a></li>
 <li><a href="<?= Url::toRoute(['/admin/rbac']) ?>"><i class="fa fa-folder"></i> <span>RBAC</span></a></li>
 <li><a href="<?= Url::toRoute(['/gii']) ?>"><i class="fa fa-gg"></i> <span>gii</span></a></li>
@@ -17,4 +24,7 @@ use backend\components\Helpers\Url;
         <li><a href="#">Clients</a></li>
     </ul>
 </li>
-<li><a href="<?= Url::toRoute(['/admin/shops']) ?>"><i class="fa fa-folder"></i> <span>Shops</span></a></li>
+<li><a>Якись там пункт меню</a></li>
+<li><a>Якись там пункт меню</a></li>
+<li><a>Якись там пункт меню</a></li>
+<li><a>Якись там пункт меню</a></li>

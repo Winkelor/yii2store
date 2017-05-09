@@ -24,10 +24,16 @@ class admin extends \yii\base\Module
         $this->modules = [
             'rbac' => [
                 'class' => 'backend\modules\admin\modules\rbac\RBAC',
+//                'viewPath' => '@app/themes/adminlte/modules/rbac/views',
             ],
             'guirbac' => [
 //                'class' => 'githubjeka\rbac\Module',
                 'class' => 'backend\modules\admin\modules\guirbac\GUIRBAC',
+//                'viewPath' => '@app/themes/adminlte/modules/guirbac/views',
+            ],
+            'shopsadministration' => [
+                'class' => 'backend\modules\admin\modules\shopsadministration\shopsadministration',
+                'viewPath' => '@app/themes/adminlte/modules/shopsadministration/views',
             ],
         ];
 
