@@ -7,6 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\ShopsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+
 $this->title = Yii::t('shops', 'Shops');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -23,20 +24,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'name',
             'short_name',
             'main_user_id',
-            'type_id',
+//            [
+//                'attribute' => 'main_user_id',
+//                'value' => 'attribute_value',
+//                'filter' => Html::activeDropDownList($searchModel, 'attribute_name', ArrayHelper::map(ModelName::find()->asArray()->all(), 'ID', 'Name'),['class'=>'form-control','prompt' => 'Select Category']),
+//            ],
+             'type_id',
              'status_id',
              'address_id',
              'contact_id',
              'created_at',
              'updated_at',
              'country_id',
-
             ['class' => 'yii\grid\ActionColumn'],
+            // 'filter' => Html::activeDropDownList($searchModel, 'stats',
+            // Accounts::getStatusList(), ['class' => 'form-control', 'multiple' => true]),
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>
