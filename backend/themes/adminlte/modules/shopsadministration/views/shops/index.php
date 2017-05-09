@@ -28,11 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'short_name',
             'main_user_id',
-//            [
-//                'attribute' => 'main_user_id',
-//                'value' => 'attribute_value',
-//                'filter' => Html::activeDropDownList($searchModel, 'attribute_name', ArrayHelper::map(ModelName::find()->asArray()->all(), 'ID', 'Name'),['class'=>'form-control','prompt' => 'Select Category']),
-//            ],
              'type_id',
              'status_id',
              'address_id',
