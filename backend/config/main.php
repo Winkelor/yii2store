@@ -14,6 +14,10 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        // kartik
+        'gridview' => [
+            'class' => 'kartik\grid\Module'
+        ],
       // admin panel for Winkelor
         'dashboard' => [
             'class' => 'backend\modules\dashboard\dashboard',

@@ -9,6 +9,7 @@ use backend\components\Helpers\Url;
     <a href="<?= Url::toRoute(['/admin/shopsadministration']) ?>"><i class="fa fa-folder"></i> <span>Shops administration</span></a>
     <ul class="treeview-menu">
         <li><a href="<?= Url::toRoute(['/admin/shopsadministration/shops']) ?>">Shops</a></li>
+        <li><a href="<?= Url::toRoute(['/admin/shopsadministration/shops_kartik']) ?>">Shops</a></li>
         <li><a href="#">Графіки</a></li>
     </ul>
 </li>
