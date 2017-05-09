@@ -31,7 +31,7 @@ class AdminlteAsset extends AssetBundle
     ];
     public $js = [
         /* jQuery 2.2.3 */
-        'plugins/jQuery/jquery-2.2.3.min.js',
+//        'plugins/jQuery/jquery-2.2.3.min.js', подключаеться  в другом месте
         /* Bootstrap 3.3.6 */
         'bootstrap/js/bootstrap.min.js',
         /* AdminLTE App */

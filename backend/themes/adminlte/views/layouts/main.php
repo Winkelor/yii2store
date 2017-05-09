@@ -6,6 +6,7 @@ use yii\helpers\Url;
 $lang = Yii::$app->request->get('lang');
 $country = Yii::$app->request->get('country');
 $culture = "{$lang}-{$country}";
+
 Yii::$app->language = $culture;
 
 $assets = AdminlteAsset::register($this);
