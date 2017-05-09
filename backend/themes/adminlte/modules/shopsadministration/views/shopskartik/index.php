@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             # http://demos.krajee.com/grid#expand-row-column
             'class' => '\kartik\grid\ExpandRowColumn',
-            'enableRowClick' => false,
+            'enableRowClick' => true,
             'attribute'=>'id',
             'value' => function($model, $key, $index, $column) {return GridView::ROW_COLLAPSED; },
             'detailUrl'=>Yii::$app->urlManager->createUrl(['catalog/categories/view','id' => 1,]),
@@ -97,6 +97,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'class' => '\kartik\grid\DataColumn',
             'attribute' => 'name',
             'pageSummary' => true
+        ],
+        [
+            # http://demos.krajee.com/grid#expand-row-column
+            'class' => '\kartik\grid\ExpandRowColumn',
+            'enableRowClick' => false,
+            'attribute'=>'name',
+            'value' => function($model, $key, $index, $column) {return GridView::ROW_COLLAPSED; },
+//            'detailUrl'=>Yii::$app->urlManager->createUrl(['catalog/categories/view','id' => 1,]),
+//            'pageSummary' => 'pageSummary',
+            'extraData' => 'extraData',
+            'detail' => 'detal info',
         ],
         #'id',
 //        #'parent_id',
@@ -121,7 +132,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'group_access',
 //        [
 //            'class'=>'kartik\grid\BooleanColumn',
-//            'attribute'=>'displayed',
+//            'attribute'=>'is_active',
 //            'vAlign'=>'middle',
 //        ],
         [
@@ -174,8 +185,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'export'=>[
             'fontAwesome'=>true
         ],
-        # 'toggleDataContainer' => ['class' => 'btn-group-sm'], // for export
-        # 'exportContainer' => ['class' => 'btn-group-sm'],  // for export
+         'toggleDataContainer' => ['class' => 'btn-group-sm'], // for export
+         'exportContainer' => ['class' => 'btn-group-sm'],  // for export
 
     ]); /*Pjax::end();*/
     ?>
