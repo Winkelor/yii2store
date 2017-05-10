@@ -31,22 +31,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             [
-                'attribute'=>'mainUser.username',
-//                'filter'=>array("1"=>"Name1","2"=>"Name2"),
-                'filter' => Html::activeDropDownList($searchModel, 'mainUser',
+                'attribute'=>'main_user_id',
+                'filter' => Html::activeDropDownList($searchModel, 'main_user_id',
                     ArrayHelper::map(UserAdmin::find()->asArray()->all(),
-                        'id', 'mainUser'),
+                        'id', 'username'),
                     [
                         'class'=>'form-control',
                         'prompt' => 'Обрати шось'
                     ])
             ],
             [
-                'attribute'=>'mainUser.username',
-//                'filter'=>array("1"=>"Name1","2"=>"Name2"),
+                'attribute'=>'main_user_id',
                 'filter' => "<select>
-                                  <option>Пункт 1</option>
-                                  <option>Пункт 2</option>
+                                  <option value='1'>Пункт 1</option>
+                                  <option value='2'>Пункт 2</option>
                             </select>"
             ],
             'short_name',
