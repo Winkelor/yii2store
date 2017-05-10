@@ -31,6 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             [
+                'label' => 'label user',
+//                'attribute'=>'mainUser.username',
                 'attribute'=>'main_user_id',
                 'filter' => Html::activeDropDownList($searchModel, 'main_user_id',
                     ArrayHelper::map(UserAdmin::find()->asArray()->all(),
