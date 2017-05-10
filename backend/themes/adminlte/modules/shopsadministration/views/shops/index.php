@@ -41,6 +41,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         'prompt' => 'Обрати шось'
                     ])
             ],
+            [
+                'attribute'=>'mainUser.username',
+//                'filter'=>array("1"=>"Name1","2"=>"Name2"),
+                'filter' => "<select>
+                                  <option>Пункт 1</option>
+                                  <option>Пункт 2</option>
+                            </select>"
+            ],
             'short_name',
             'main_user_id',
              'type_id',
