@@ -42,12 +42,15 @@ class ShopsSearch extends Shops
     public function search($params)
     {
         $query = Shops::find();
+        $query->joinWith(['mainUser']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+
 
         $this->load($params);
 

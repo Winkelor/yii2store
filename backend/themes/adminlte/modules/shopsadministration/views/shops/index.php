@@ -30,33 +30,43 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
             'id',
             'name',
+//            [
+//                'label' => 'label user',
+////                'attribute'=>'mainUser.username',
+//                'attribute'=>'main_user_id',
+//                'filter' => Html::activeDropDownList($searchModel, 'main_user_id',
+//                    ArrayHelper::map(UserAdmin::find()->asArray()->all(),
+//                        'id', 'username'),
+//                    [
+//                        'class'=>'form-control',
+//                        'prompt' => 'Обрати шось'
+//                    ]),
+//                'format' =>'raw',
+//            ],
+//            [
+//                'attribute'=>'main_user_id',
+////                'filter' => "<select name='ShopsSearch[main_user_id]'>
+////                                  <option value='1'>Пункт 1</option>
+////                                  <option value='2'>Пункт 2</option>
+////                            </select>",
+//                'format' =>'raw',
+//                'value' => function ($model, $key, $index, $column) {
+//                    return Html::activeDropDownList(
+//                            $model,'main_user_id',
+//                            ArrayHelper::map(UserAdmin::find()->all(), 'id', 'username'));
+//                },
+//            ],
             [
-                'label' => 'label user',
-//                'attribute'=>'mainUser.username',
+//                'label' => 'Main User',
                 'attribute'=>'main_user_id',
-                'filter' => Html::activeDropDownList($searchModel, 'main_user_id',
-                    ArrayHelper::map(UserAdmin::find()->asArray()->all(),
-                        'id', 'username'),
-                    [
-                        'class'=>'form-control',
-                        'prompt' => 'Обрати шось'
-                    ]),
-                'format' =>'raw',
+                'value'=>'mainUser.username',
+//                'format' => 'text',
+//                'filter' => Html::activeDropDownList(
+//                        $searchModel, 'main_user_id',
+//                        ArrayHelper::map(UserAdmin::find()->asArray()->all(), 'id', 'username'),
+//                    ['class'=>'form-control','prompt' => 'User']),
             ],
-            [
-                'attribute'=>'main_user_id',
-//                'filter' => "<select name='ShopsSearch[main_user_id]'>
-//                                  <option value='1'>Пункт 1</option>
-//                                  <option value='2'>Пункт 2</option>
-//                            </select>",
-                'format' =>'raw',
-                'value' => function ($model, $key, $index, $column) {
-                    return Html::activeDropDownList(
-                            $model,'main_user_id',
-                            ArrayHelper::map(UserAdmin::find()->all(), 'id', 'username'));
-                },
-            ],
-            'main_user_id',
+            //UserAdmin main_user_id
             'short_name',
             'main_user_id',
              'type_id',
