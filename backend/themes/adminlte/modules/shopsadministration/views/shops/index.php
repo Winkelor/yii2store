@@ -40,15 +40,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'class'=>'form-control',
                         'prompt' => 'Обрати шось'
-                    ])
+                    ]),
+                'format' =>'raw',
             ],
             [
                 'attribute'=>'main_user_id',
-                'filter' => "<select>
-                                  <option value='1'>Пункт 1</option>
-                                  <option value='2'>Пункт 2</option>
-                            </select>"
+//                'filter' => "<select name='ShopsSearch[main_user_id]'>
+//                                  <option value='1'>Пункт 1</option>
+//                                  <option value='2'>Пункт 2</option>
+//                            </select>",
+                'format' =>'raw',
+                'value' => function ($model, $key, $index, $column) {
+                    return Html::activeDropDownList(
+                            $model,'main_user_id',
+                            ArrayHelper::map(UserAdmin::find()->all(), 'id', 'username'));
+                },
             ],
+            'main_user_id',
             'short_name',
             'main_user_id',
              'type_id',
