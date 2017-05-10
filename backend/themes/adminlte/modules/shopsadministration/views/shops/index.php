@@ -61,14 +61,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'main_user_id',
                 'value'=>'mainUser.username',
 //                'format' => 'text',
-//                'filter' => Html::activeDropDownList(
-//                        $searchModel, 'main_user_id',
-//                        ArrayHelper::map(UserAdmin::find()->asArray()->all(), 'id', 'username'),
-//                    ['class'=>'form-control','prompt' => 'User']),
+                'filter' => Html::activeDropDownList(
+                        $searchModel, 'main_user_id',
+                        ArrayHelper::map(UserAdmin::find()->asArray()->all(), 'id', 'username'),
+                    ['class'=>'form-control','prompt' => 'User']),
             ],
             //UserAdmin main_user_id
             'short_name',
-            'main_user_id',
+//            'main_user_id',
              'type_id',
              'status_id',
              'address_id',
