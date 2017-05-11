@@ -51,7 +51,9 @@ use Yii;
  * @property ShopsCommerceData[] $shopsCommerceDatas
  * @property ShopsCultures[] $shopsCultures
  * @property ShopsDepartments[] $shopsDepartments
+ * @property ShopsManagers[] $shopsManagers
  * @property TransShops[] $transShops
+ * @property UserAdmin[] $userAdmins
  * @property WishlistDetails[] $wishlistDetails
  */
 class Shops extends \yii\db\ActiveRecord
@@ -360,9 +362,25 @@ class Shops extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getShopsManagers()
+    {
+        return $this->hasMany(ShopsManagers::className(), ['shop_id' => 'id'])->inverseOf('shop');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getTransShops()
     {
         return $this->hasMany(TransShops::className(), ['shops_id' => 'id'])->inverseOf('shops');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserAdmins()
+    {
+        return $this->hasMany(UserAdmin::className(), ['active_shop_id' => 'id'])->inverseOf('activeShop');
     }
 
     /**

@@ -5,7 +5,7 @@ use backend\components\Helpers\Url;
 ?>
 <li class="header">Seller</li>
 <li class="treeview">
-    <a href="<?= Url::toRoute(['/seller/myshop']) ?>"><i class="fa fa-folder"></i> <span>My Shop</span></a>
+    <a href="<?= Url::toRoute(['/seller/myshop']) ?>"><i class="fa fa-folder"></i> <span>My Shops</span></a>
     <ul class="treeview-menu">
         <li><a href="#">My Shop Info</a></li>
         <li><a href="#">My Shop Info</a></li>

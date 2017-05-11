@@ -17,11 +17,14 @@ use Yii;
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $active_shop_id
  *
  * @property OrderComments[] $orderComments
  * @property Shops[] $shops
  * @property ShopsDepartments[] $shopsDepartments
+ * @property ShopsManagers[] $shopsManagers
  * @property UsrAccountsTypes $accountType
+ * @property Shops $activeShop
  */
 class UserAdmin extends \yii\db\ActiveRecord
 {
@@ -40,13 +43,14 @@ class UserAdmin extends \yii\db\ActiveRecord
     {
         return [
             [['username', 'auth_key', 'password_hash', 'email', 'created_at', 'updated_at'], 'required'],
-            [['account_type_id', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['account_type_id', 'status', 'created_at', 'updated_at', 'active_shop_id'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
             [['email'], 'unique'],
             [['password_reset_token'], 'unique'],
             [['account_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => UsrAccountsTypes::className(), 'targetAttribute' => ['account_type_id' => 'id']],
+            [['active_shop_id'], 'exist', 'skipOnError' => true, 'targetClass' => Shops::className(), 'targetAttribute' => ['active_shop_id' => 'id']],
         ];
     }
 
@@ -66,6 +70,7 @@ class UserAdmin extends \yii\db\ActiveRecord
             'status' => Yii::t('user_admin', 'Status'),
             'created_at' => Yii::t('user_admin', 'Created At'),
             'updated_at' => Yii::t('user_admin', 'Updated At'),
+            'active_shop_id' => Yii::t('user_admin', 'Active Shop ID'),
         ];
     }
 
@@ -96,9 +101,25 @@ class UserAdmin extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getShopsManagers()
+    {
+        return $this->hasMany(ShopsManagers::className(), ['manager_id' => 'id'])->inverseOf('manager');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getAccountType()
     {
         return $this->hasOne(UsrAccountsTypes::className(), ['id' => 'account_type_id'])->inverseOf('userAdmins');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getActiveShop()
+    {
+        return $this->hasOne(Shops::className(), ['id' => 'active_shop_id'])->inverseOf('userAdmins');
     }
 
     /**
