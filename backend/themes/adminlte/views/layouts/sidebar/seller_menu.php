@@ -4,6 +4,13 @@ use backend\components\Helpers\Url;
 
 ?>
 <li class="header">Seller</li>
+<li class="treeview">
+    <a href="<?= Url::toRoute(['/seller/myshop']) ?>"><i class="fa fa-folder"></i> <span>My Shop</span></a>
+    <ul class="treeview-menu">
+        <li><a href="#">My Shop Info</a></li>
+        <li><a href="#">My Shop Info</a></li>
+    </ul>
+</li>
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Orders</span></a></li>
 <li class="treeview">
     <a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Catalog</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>

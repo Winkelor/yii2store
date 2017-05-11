@@ -21,6 +21,10 @@ class seller extends \yii\base\Module
 
         // custom initialization code goes here
         $this->modules = [
+            'myshop' => [
+                'class' => 'backend\modules\seller\modules\myshop\myshop',
+                'viewPath' => '@app/themes/adminlte/modules/myshop/views',
+            ],
             'catalog' => [
                 'class' => 'backend\modules\seller\modules\catalog\catalog',
                 'viewPath' => '@app/themes/adminlte/modules/catalog/views',
