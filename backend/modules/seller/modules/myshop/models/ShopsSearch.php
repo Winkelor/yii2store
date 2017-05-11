@@ -47,6 +47,8 @@ class ShopsSearch extends Shops
             ->joinWith('shopsManagers')
             ->Where(['like', 'manager_id', Yii::$app->user->id]);
 
+        // echo $query->createCommand()->sql : SELECT `shops`.* FROM `shops` LEFT JOIN `user_admin` ON `shops`.`id` = `user_admin`.`active_shop_id` LEFT JOIN `shops_managers` ON `shops`.`id` = `shops_managers`.`shop_id` WHERE `manager_id` LIKE :qp0
+
         // add conditions that should always apply here
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
