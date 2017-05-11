@@ -42,13 +42,12 @@ class ShopsSearch extends Shops
      */
     public function search($params)
     {
-        $query = Shops::find();
-        echo "додати фільтр на юзерів згідно шоп менеджерс " . __FILE__ . "on line ". (1 + (int)__LINE__ ). "<br>"; exit;
-        // TODO: додати фільтр на юзерів згідно шоп менеджерс. подвійний джоін
-        $query->andFilterWhere(['like', 'main_user_id', 1]);
+        $query = Shops::find()
+            ->joinWith('userAdmins')
+            ->joinWith('shopsManagers')
+            ->Where(['like', 'manager_id', Yii::$app->user->id]);
 
         // add conditions that should always apply here
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
