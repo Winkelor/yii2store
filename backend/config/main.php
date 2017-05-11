@@ -63,16 +63,6 @@ return [
 //                        'user' => 'user.php',
                       ],
                 ],
-//                'user' => [
-//                    'class' => 'yii\i18n\PhpMessageSource',
-//                    'basePath' => '@app/messages',
-//                    'sourceLanguage' => 'en-US',
-//                    'fileMap' => [
-//                        'user' => 'user.php',
-//                        //'app' => 'app.php',
-//                        //'app/error' => 'error.php',
-//                    ],
-//                ],
             ],
         ],
         /*'assetManager' => [
@@ -88,7 +78,7 @@ return [
             ],
         ],
         'user' => [
-            'identityClass' => 'backend\models\User',
+            'identityClass' => 'common\models\UserAdmin',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],

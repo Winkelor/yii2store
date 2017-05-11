@@ -1,4 +1,4 @@
-<?php
+<?php // DONT USE IT !
 namespace backend\models;
 
 use Yii;
