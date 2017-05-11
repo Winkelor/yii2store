@@ -26,9 +26,32 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'options'=>['style' => 'white-space:nowrap;'], // http://stackoverflow.com/questions/35412564/yii2-how-can-i-specify-width-only-for-the-certain-column-in-gridview-widget
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'id',
+            [
+                'label'=>'html',
+                'format'=>'raw',
+                'value' => function($data){
+                    return "
+                    <span class=\"label label-success\">Approved</span>
+                    ";
+                },
+                'contentOptions'=>['style'=>'max-width: 100px;'],  // https://github.com/yiisoft/yii2/issues/5299
+            ],
+            [
+                'label'=>'html',
+                'format'=>'raw',
+                'value' => function($data){
+                    return "
+                    <div class=\"progress progress-xs\">
+                      <div class=\"progress-bar progress-bar-danger\" style=\"width: 55%\"></div>
+                    </div>
+                    ";
+                },
+                'contentOptions'=>['style'=>'max-width: 100px;'],  // https://github.com/yiisoft/yii2/issues/5299
+            ],
+//            'id',
             'name',
             'short_name',
             [
@@ -40,13 +63,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     ArrayHelper::map(UserAdmin::find()->all(), 'id', 'username'),
                     ['class'=>'form-control','prompt' => 'Select Main User']),
             ],
-             'type_id',
-             'status_id',
-             'address_id',
-             'contact_id',
-             'created_at:datetime',
-             'updated_at:datetime',
-             'country_id',
+
+//             'type_id',
+//             'status_id',
+//             'address_id',
+//             'contact_id',
+//             'created_at:datetime',
+//             'updated_at:datetime',
+//             'country_id',
+
 //image example
 //            [
 //                'label'=>'Image',
