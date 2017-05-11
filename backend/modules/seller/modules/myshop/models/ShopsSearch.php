@@ -44,10 +44,7 @@ class ShopsSearch extends Shops
     {
         $query = Shops::find();
 
-        echo "додати фільтр на юзерів згідно шоп менеджерс " . __FILE__ .
-            "<br>".
-            __LINE__ .
-            "<br>"; exit;
+        echo "додати фільтр на юзерів згідно шоп менеджерс " . __FILE__ . "on line ". (1 + (int)__LINE__ ). "<br>"; exit;
         $query->andFilterWhere(['like', 'main_user_id', 1]);
 
         // add conditions that should always apply here
