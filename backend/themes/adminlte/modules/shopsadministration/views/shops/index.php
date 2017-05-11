@@ -56,8 +56,6 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    return Html::img($url,['alt'=>'yii']);
 //                }
 //            ],
-
-            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>
