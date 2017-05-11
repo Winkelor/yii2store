@@ -47,6 +47,16 @@ $this->params['breadcrumbs'][] = $this->title;
              'created_at:datetime',
              'updated_at:datetime',
              'country_id',
+//image example
+//            [
+//                'label'=>'Image',
+//                'format'=>'raw',
+//                'value' => function($data){
+//                    $url = "http://www.itmathrepetitor.ru/wp-content/uploads/2015/02/yiidebug1.png";
+//                    return Html::img($url,['alt'=>'yii']);
+//                }
+//            ],
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
