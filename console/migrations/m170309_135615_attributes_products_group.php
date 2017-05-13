@@ -4,6 +4,7 @@ use yii\db\Migration;
 use yii\db\Schema;
 
 //ця таблиця відповідає за групування атрибутів, нп чоботи червоні, шкіряні - одна група атрибутів
+// це для самих фільтрів
 class m170309_135615_attributes_products_group extends Migration
 {
     public function up()
