@@ -13,10 +13,10 @@ use backend\components\Helpers\Url;
 </li>
 <li><a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Orders</span></a></li>
 <li class="treeview">
-    <a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Catalog</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+    <a href="<?= Url::toRoute(['/seller/catalog']) ?>"><i class="fa fa-folder"></i> <span>Catalog</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
     <ul class="treeview-menu">
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Categories</a></li>
+        <li><a href="<?= Url::toRoute(['/seller/catalog/products']) ?>">Products</a></li>
+        <li><a href="<?= Url::toRoute(['/seller/catalog/categories']) ?>">Categories</a></li>
         <li class="treeview">
             <a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Attributes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
             <ul class="treeview-menu">
