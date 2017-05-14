@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property integer $shop_id
  * @property integer $department_id
+ * @property string $vendor_code
  * @property integer $product_id
  * @property string $value
  * @property integer $created_at
@@ -39,7 +40,7 @@ class AttributesProducts extends \yii\db\ActiveRecord
     {
         return [
             [['shop_id', 'department_id', 'product_id', 'created_at', 'updated_at'], 'integer'],
-            [['value'], 'string', 'max' => 255],
+            [['vendor_code', 'value'], 'string', 'max' => 255],
             [['department_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShopsDepartments::className(), 'targetAttribute' => ['department_id' => 'id']],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Products::className(), 'targetAttribute' => ['product_id' => 'id']],
             [['shop_id'], 'exist', 'skipOnError' => true, 'targetClass' => Shops::className(), 'targetAttribute' => ['shop_id' => 'id']],
@@ -55,6 +56,7 @@ class AttributesProducts extends \yii\db\ActiveRecord
             'id' => Yii::t('attributes_products', 'ID'),
             'shop_id' => Yii::t('attributes_products', 'Shop ID'),
             'department_id' => Yii::t('attributes_products', 'Department ID'),
+            'vendor_code' => Yii::t('attributes_products', 'Vendor Code'),
             'product_id' => Yii::t('attributes_products', 'Product ID'),
             'value' => Yii::t('attributes_products', 'Value'),
             'created_at' => Yii::t('attributes_products', 'Created At'),
