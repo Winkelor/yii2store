@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * AttributesProductsGroupController implements the CRUD actions for AttributesProductsGroup model.
  */
-class Attributesproductsgroupcontroller extends BaseController
+class AttributesproductsgroupController extends BaseController
 {
     /**
      * @inheritdoc

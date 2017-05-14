@@ -18,10 +18,16 @@ use backend\components\Helpers\Url;
         <li><a href="<?= Url::toRoute(['/seller/catalog/products']) ?>">Products</a></li>
         <li><a href="<?= Url::toRoute(['/seller/catalog/categories']) ?>">Categories</a></li>
         <li class="treeview">
-            <a href="<?= Url::toRoute(['/admin']) ?>"><i class="fa fa-folder"></i> <span>Attributes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+            <a href="<?= Url::toRoute(['/seller/catalog/attributes'])?>"><i class="fa fa-folder"></i> <span>Attributes</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
             <ul class="treeview-menu">
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Categories</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/attributesproducts'])?>">Products</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/attributescategories'])?>">Categories</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/attributesgroups'])?>">Groups</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/attributesproductsgroup'])?>">Products Group</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/attributestypes'])?>">Types</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/productsattributeslogisticsinfo'])?>">productsattributeslogisticsinfo</a></li>
+                <li><a href="<?= Url::toRoute(['/seller/catalog/attributes/productsattributeslogisticsinfostatuses'])?>">productsattributeslogisticsinfostatuses</a></li>
+
             </ul>
 
     </ul>
