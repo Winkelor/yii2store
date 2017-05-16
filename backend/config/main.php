@@ -110,41 +110,23 @@ return [
                 // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                 [
                     // Lang rule
-                    // головне правило
                     'name' => 'lang_country',
-                    'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>', // . - domains // / - subdirectories  // http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html#rules-with-server-names
+                    'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
                     'route' => '<controller>/<action>',
                     //'defaults' => ['lang' => 'en', 'country' => 'US'], // если стоит это, то потом оно не попадает в ссылки почему-то О_О
                     //'suffix' => '.html',
                 ],
                 [
-                    // якщо є модулі
                     'name' => 'lang_country_module',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
-                // http://stackoverflow.com/questions/1420626/got-two-named-subpatterns-have-the-same-name-when-combining-2-regex-into-one/7166444#7166444
-                // http://stackoverflow.com/questions/27402923/custom-url-rules-with-modules-in-yii2
                 [
-                    // якщо є модулі
                     'name' => 'lang_country_module2',
                     'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
-                // http://www.yiiframework.com/doc-2.0/yii-web-groupurlrule.html
-//                new yii\web\GroupUrlRule([
-//                    'prefix' => 'en-us/seller/catalog',
-//                    'rules' => [
-//                        [
-//                            // якщо є модулі
-//                            'name' => 'lang_country_module3',
-//                            'pattern' => '<module>/<controller>/<action>',
-//                            'route' => '<module>/<controller>/<action>',
-//                        ],
-//                    ],
-//                ]),
                 [
-                    //якщо вказаний тільки модуль
                     'name' => 'lang_country_module_only',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>',
                     'route' => '<module>',
