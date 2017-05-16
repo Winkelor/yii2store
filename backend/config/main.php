@@ -123,20 +123,32 @@ return [
                 ],
                 [
                     'name' => 'lang_country_module2',
-                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
-                    'route' => '<module>/<controller>/<action>',
+                    'pattern' => '<lang:\w+>-<country:\w+>/seller/catalog/attributes/<module>/<controller>/<action>',
+                    'route' => 'seller/catalog/attributes/<module>/<controller>/<action>',
                 ],
+//                [
+//                    'name' => 'lang_country_module2',
+//                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
+//                    'route' => '<module>/<controller>/<action>',
+//                ],
                 [
                     'name' => 'lang_country_module_only',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>',
                     'route' => '<module>',
                 ],
-                [
-                    //якщо вказаний тільки модуль
-                    'name' => 'lang_country_module_only2',
-                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>',
-                    'route' => '<module>',
+
+                [ // http://yii2store/backend/web/en-us/seller/catalog/attributes/attributesproducts
+                    'name' => 'lang_country_module_only_2',
+                    'pattern' => '<lang:\w+>-<country:\w+>/seller/catalog/attributes/<module>',
+                    'route' => 'seller/catalog/attributes/<module>',
                 ],
+
+//                [
+//                    //якщо вказаний тільки модуль
+//                    'name' => 'lang_country_module_only2',
+//                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>',
+//                    'route' => '<module>',
+//                ],
 //                [
 //                    // Culture
 //                    // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
