@@ -123,10 +123,35 @@ return [
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
+                // http://stackoverflow.com/questions/1420626/got-two-named-subpatterns-have-the-same-name-when-combining-2-regex-into-one/7166444#7166444
+                [
+                    // якщо є модулі
+                    'name' => 'lang_country_module2',
+                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
+                    'route' => '<module>/<controller>/<action>',
+                ],
+//                [
+//                    // якщо є модулі
+//                    'name' => 'lang_country_module3',
+//                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
+//                    'route' => '(?J)<module>/<controller>/<action>',
+//                ],
+//                [
+//                    // якщо є модулі
+//                    'name' => 'lang_country_module4',
+//                    'pattern' => '<lang:\w+>-<country:\w+>/<module>/<module>/<module>/<module>/<controller>/<action>',
+//                    'route' => '<module>/<module>/<module>/<module>/<controller>/<action>',
+//                ],
                 [
                     //якщо вказаний тільки модуль
                     'name' => 'lang_country_module_only',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>',
+                    'route' => '<module>',
+                ],
+                [
+                    //якщо вказаний тільки модуль
+                    'name' => 'lang_country_module_only2',
+                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>',
                     'route' => '<module>',
                 ],
 //                [
