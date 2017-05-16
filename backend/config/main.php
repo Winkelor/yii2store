@@ -121,11 +121,6 @@ return [
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
-                [
-                    'name' => 'lang_country_module2',
-                    'pattern' => '<lang:\w+>-<country:\w+>/seller/catalog/attributes/<module>/<controller>/<action>',
-                    'route' => 'seller/catalog/attributes/<module>/<controller>/<action>',
-                ],
 //                [
 //                    'name' => 'lang_country_module2',
 //                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
@@ -137,10 +132,18 @@ return [
                     'route' => '<module>',
                 ],
 
+                // SELLER CATALOG ATTRIBUTES
                 [ // http://yii2store/backend/web/en-us/seller/catalog/attributes/attributesproducts
-                    'name' => 'lang_country_module_only_2',
+                    'name' => 'lang_country_seller_catalog_attributes',
                     'pattern' => '<lang:\w+>-<country:\w+>/seller/catalog/attributes/<module>',
                     'route' => 'seller/catalog/attributes/<module>',
+                ],
+                // SELLER CATALOG ATTRIBUTES
+                [
+                    // for http://yii2store/backend/web/en-us/seller/catalog/attributes/productsattributeslogisticsinfostatuses/index
+                    'name' => 'lang_country_seller_catalog',
+                    'pattern' => '<lang:\w+>-<country:\w+>/seller/catalog/<module>/<controller>/<action>',
+                    'route' => 'seller/catalog/<module>/<controller>/<action>',
                 ],
 
 //                [
