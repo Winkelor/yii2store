@@ -124,24 +124,25 @@ return [
                     'route' => '<module>/<controller>/<action>',
                 ],
                 // http://stackoverflow.com/questions/1420626/got-two-named-subpatterns-have-the-same-name-when-combining-2-regex-into-one/7166444#7166444
+                // http://stackoverflow.com/questions/27402923/custom-url-rules-with-modules-in-yii2
                 [
                     // якщо є модулі
                     'name' => 'lang_country_module2',
                     'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
-//                [
-//                    // якщо є модулі
-//                    'name' => 'lang_country_module3',
-//                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
-//                    'route' => '(?J)<module>/<controller>/<action>',
-//                ],
-//                [
-//                    // якщо є модулі
-//                    'name' => 'lang_country_module4',
-//                    'pattern' => '<lang:\w+>-<country:\w+>/<module>/<module>/<module>/<module>/<controller>/<action>',
-//                    'route' => '<module>/<module>/<module>/<module>/<controller>/<action>',
-//                ],
+                // http://www.yiiframework.com/doc-2.0/yii-web-groupurlrule.html
+//                new yii\web\GroupUrlRule([
+//                    'prefix' => 'en-us/seller/catalog',
+//                    'rules' => [
+//                        [
+//                            // якщо є модулі
+//                            'name' => 'lang_country_module3',
+//                            'pattern' => '<module>/<controller>/<action>',
+//                            'route' => '<module>/<controller>/<action>',
+//                        ],
+//                    ],
+//                ]),
                 [
                     //якщо вказаний тільки модуль
                     'name' => 'lang_country_module_only',
