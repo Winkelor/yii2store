@@ -2,7 +2,8 @@
 //use yii\helpers\Url;
 use backend\components\Helpers\Url;
 
-\Yii::$app->activeShop->getActiveShop();
+$shop = \Yii::$app->activeShop->getActiveShop();
+$shop_id = ($shop != null)? $shop->id : '';
 
 ?>
 <li class="header">Seller</li>
@@ -10,7 +11,7 @@ use backend\components\Helpers\Url;
     <a href="<?= Url::toRoute(['/seller/myshop', 'lang' => Yii::$app->request->get('lang'), 'country' => Yii::$app->request->get('country'),]) ?>"><i class="fa fa-folder"></i> <span>My Shops</span></a>
     <ul class="treeview-menu">
         <li>
-            <a href="<?= Url::toRoute(['/seller/myshop/shops', 'lang' => Yii::$app->request->get('lang'), 'country' => Yii::$app->request->get('country'),]) ?>"><i class="fa fa-folder"></i> <span>Active Shop</span></a>
+            <a href="<?= Url::toRoute(['/seller/myshop/shops/view?id='.$shop_id, 'lang' => Yii::$app->request->get('lang'), 'country' => Yii::$app->request->get('country'),]) ?>"><i class="fa fa-folder"></i> <span>Active Shop</span></a>
         </li>
         <li>
             <a href="<?= Url::toRoute(['/seller/myshop/shops', 'lang' => Yii::$app->request->get('lang'), 'country' => Yii::$app->request->get('country'),]) ?>"><i class="fa fa-folder"></i> <span>My Shops</span></a>
