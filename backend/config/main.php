@@ -109,6 +109,11 @@ return [
                 // Yii2 by Examples, p65
                 // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
                 [
+                    'name' => 'host', // http://yii2store/backend/web/en-US
+                    'pattern' => '<lang:\w+>-<country:\w+>',
+                    'route' => '/',
+                ],
+                [
                     // Lang rule
                     'name' => 'lang_country',
                     'pattern' => '<lang:\w+>-<country:\w+>/<controller>/<action>',
