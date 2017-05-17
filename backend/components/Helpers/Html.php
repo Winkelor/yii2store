@@ -6,7 +6,7 @@
  * Time: 11:46 PM
  */
 
-namespace backend\components\Helpers;
+namespace backend\components\helpers;
 
 use Yii;
 use yii\helpers\BaseHtml;
@@ -39,7 +39,7 @@ class Html extends BaseHtml
     public static function a($text, $url = null, $options = [])
     {
         $culture = Yii::$app->cultureManager->makeCulture();
-        var_dump($url); exit;
+        return $url;
         if ($url !== null) {
             $options['href'] = Url::to($url);
         }
