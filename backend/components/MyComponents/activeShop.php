@@ -15,7 +15,7 @@ class activeShop extends Component
        if($id == null)
            return null;
 
-       $user = UserAdmin::find($id)->all()[0];
+       $user = UserAdmin::findOne($id);
        return $user->activeShop;
    }
 }

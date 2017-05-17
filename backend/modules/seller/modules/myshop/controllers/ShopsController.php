@@ -121,4 +121,9 @@ class ShopsController extends BaseController
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    protected function updateShopsManagers($shop, $user)
+    {
+        // TODO: доробити оновлення шоп менеджерс після всіх дій з шопами
+    }
 }
