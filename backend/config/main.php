@@ -180,6 +180,10 @@ return [
             'class' => 'backend\components\MyComponents\cultureManager',
         ],
 
+        'activeShop' => [
+            'class' => 'backend\components\MyComponents\activeShop',
+        ],
+
         # моя поведінка
         'MyBehavior' => [
             'class' => 'backend\components\behaviors\MyBehavior',
