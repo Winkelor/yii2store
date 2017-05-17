@@ -39,10 +39,11 @@ class Html extends BaseHtml
     public static function a($text, $url = null, $options = [])
     {
         $culture = Yii::$app->cultureManager->makeCulture();
-        return $url;
+
         if ($url !== null) {
             $options['href'] = Url::to($url);
         }
+
         return static::tag('a', $text, $options);
     }
 }

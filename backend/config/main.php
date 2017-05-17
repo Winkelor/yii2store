@@ -121,17 +121,23 @@ return [
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>/<controller>/<action>',
                     'route' => '<module>/<controller>/<action>',
                 ],
-//                [
-//                    'name' => 'lang_country_module2',
-//                    'pattern' => '<lang:\w+>-<country:\w+>/(?J)<module>/<controller>/<action>',
-//                    'route' => '<module>/<controller>/<action>',
-//                ],
                 [
                     'name' => 'lang_country_module_only',
                     'pattern' => '<lang:\w+>-<country:\w+>/<module>',
                     'route' => '<module>',
                 ],
-
+                //SELLER
+                [
+                    'name' => 'lang_country_module_seller', // http://yii2store/backend/web/en-us/seller/catalog/products/create
+                    'pattern' => '<lang:\w+>-<country:\w+>/seller/<module>/<controller>/<action>',
+                    'route' => 'seller/<module>/<controller>/<action>',
+                ],
+                //SELLER
+                [
+                    'name' => 'lang_country_module_only_seller', // http://yii2store/backend/web/en-us/seller/catalog/products/create
+                    'pattern' => '<lang:\w+>-<country:\w+>/seller/<module>',
+                    'route' => 'seller/<module>',
+                ],
                 // SELLER CATALOG ATTRIBUTES
                 [ // http://yii2store/backend/web/en-us/seller/catalog/attributes/attributesproducts
                     'name' => 'lang_country_seller_catalog_attributes',

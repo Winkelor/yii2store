@@ -1,6 +1,6 @@
 <?php
 
-use yii\helpers\Html;
+use backend\components\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\AttributesCategories */
