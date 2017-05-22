@@ -64,6 +64,16 @@ return [
             /*'baseUrl' => '/backend/web',*/
             'rules' => $urlrules,
         ],
+
+        'view' => [
+            'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
+                'basePath' => '@app/themes/couponia',
+                'baseUrl' => '@web/themes/couponia',
+                'pathMap' => [
+                    '@app/views' => '@app/themes/couponia/views',
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
