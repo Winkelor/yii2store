@@ -1,4 +1,12 @@
+function rec(a) {
+    // if(a is li or a is ui)
 
+    a.addClass("active");
+    a = a.parent();
+    console.log(a);
+
+    rec(a);
+}
 
 var a = $('a.leftmenu[href="' + window.location.pathname + '"]');
 
@@ -7,14 +15,16 @@ var a = $('a.leftmenu[href="' + window.location.pathname + '"]');
         if(url.length > 1)
             if(url == window.location.pathname) {
                 // console.log("URL: " + url);
-                $(a).parent().addClass("active"); // целевое, продукт на пример
-                $(a).parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
-                $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
+                rec(a);
+
+                // $(a).parent().addClass("active"); // целевое, продукт на пример
+                // $(a).parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
+                // $(a).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().addClass("active");
             }
