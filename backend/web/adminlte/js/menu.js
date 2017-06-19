@@ -15,7 +15,7 @@ var a = $('a.leftmenu[href="' + window.location.pathname + '"]');
         if(url.length > 1)
             if(url == window.location.pathname) {
                 // console.log("URL: " + url);
-                rec(a);
+                // rec(a);
 
                 // $(a).parent().addClass("active"); // целевое, продукт на пример
                 // $(a).parent().parent().parent().addClass("active");
