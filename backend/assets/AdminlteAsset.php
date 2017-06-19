@@ -40,6 +40,7 @@ class AdminlteAsset extends AssetBundle
 //        "js/d3.js", // GUIRBAC
 //        "js/d3tip.js", // GUIRBAC
 //        "js/guirbac.js", // GUIRBAC
+        'js/menu.js', /* set active class*/
     ];
     public $depends = [
         'yii\web\YiiAsset',
