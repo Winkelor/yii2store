@@ -7,20 +7,20 @@ use yii\helpers\Html;
 <?php if (!\Yii::$app->user->isGuest): ?>
     <div class="user-panel">
         <div class="pull-left image">
-            <?php echo \cebe\gravatar\Gravatar::widget(
-                [
-                    'email'   => (\Yii::$app->user->identity->profile->gravatar_email === null)
-                                ? \Yii::$app->user->identity->email 
-                                : \Yii::$app->user->identity->profile->gravatar_email,
-                    'options' => [
-                        'alt' => \Yii::$app->user->identity->username
-                    ],
-                    'size'    => 64
-                ]
-            ); ?>
+<!--            --><?php //echo \cebe\gravatar\Gravatar::widget(
+//                [
+//                    'email'   => (\Yii::$app->user->identity->profile->gravatar_email === null)
+//                                ? \Yii::$app->user->identity->email
+//                                : \Yii::$app->user->identity->profile->gravatar_email,
+//                    'options' => [
+//                        'alt' => \Yii::$app->user->identity->username
+//                    ],
+//                    'size'    => 64
+//                ]
+//            ); ?>
         </div>
         <div class="pull-left info">
-            <p><?= \Yii::$app->user->identity->username ?></p>
+            <p><?= \Yii::$app->user->identity->username ?></p> 
 
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -55,7 +55,7 @@ foreach (\dmstr\helpers\Metadata::getModules() as $name => $module) {
         'icon' => 'cube',
         'label'   => $name,
         'url'     => ['/' . $name],
-        'visible' => Yii::$app->user->can($role) || (Yii::$app->user->identity && Yii::$app->user->identity->isAdmin),
+        'visible' => true, /* Yii::$app->user->can($role) || (Yii::$app->user->identity && Yii::$app->user->identity->isAdmin), */
         'items'   => []
     ];
 
@@ -78,14 +78,15 @@ foreach (\dmstr\helpers\Metadata::getModules() as $name => $module) {
 }
 
 // create developer menu, when user is admin
-if (Yii::$app->user->identity && Yii::$app->user->identity->isAdmin) {
+//if (Yii::$app->user->identity && Yii::$app->user->identity->isAdmin) {
+if(true){
     $menuItems[] = [
         'url' => '#',
         'icon' => 'cog',
         'label'   => 'Developer',
         'items'   => $developerMenuItems,
         'options' => ['class' => 'treeview'],
-        'visible' => Yii::$app->user->identity->isAdmin
+        'visible' => true,  /* Yii::$app->user->identity->isAdmin*/
     ];
 }
 

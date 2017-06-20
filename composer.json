@@ -21,7 +21,8 @@
         "githubjeka/yii2-gui-rbac": "1.0.2",
         "warrence/yii2-kartikgii": "dev-master",
         "kartik-v/yii2-grid": "@dev",
-        "dmstr/yii2-adminlte-asset": "2.*"
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "dmstr/yii2-helpers": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

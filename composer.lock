@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d30c8114643386f2b72aaea9d858c667",
+    "content-hash": "4762fa0b52717ac7bf866cdfbca5b0e5",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -581,6 +581,50 @@
                 "yii2"
             ],
             "time": "2017-03-30T09:04:16+00:00"
+        },
+        {
+            "name": "dmstr/yii2-helpers",
+            "version": "0.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dmstr/yii2-helpers.git",
+                "reference": "8503aea23d1e6829353f9b03197305968df9f8e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dmstr/yii2-helpers/zipball/8503aea23d1e6829353f9b03197305968df9f8e6",
+                "reference": "8503aea23d1e6829353f9b03197305968df9f8e6",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dmstr\\helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergej Kunz",
+                    "email": "s.kunz@herzogkommunikation.de"
+                },
+                {
+                    "name": "Tobias Munk",
+                    "email": "t.munk@herzogkommunikation.de"
+                }
+            ],
+            "description": "Yii2 Helpers",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "time": "2017-05-04T01:26:45+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
