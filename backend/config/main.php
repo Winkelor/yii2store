@@ -70,10 +70,14 @@ return [
         ],*/
         'view' => [
             'theme' => [ /* https://yiiframework.com.ua/ru/doc/guide/2/output-theming/ */
-                'basePath' => '@app/themes/adminlte',
-                'baseUrl' => '@web/themes/adminlte',
+//                'basePath' => '@app/themes/adminlte',
+//                'baseUrl' => '@web/themes/adminlte',
+                'basePath' => '@app/themes/adminlte_yii2_dmstr',
+                'baseUrl' => '@web/themes/adminlte_yii2_dmstr',
                 'pathMap' => [
-                    '@app/views' => '@app/themes/adminlte/views',
+//                    '@app/views' => '@app/themes/adminlte/views',
+                    '@app/views' => '@app/themes/adminlte_yii2_dmstr/views',
+//                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/phundament/app',
                 ],
             ],
         ],
